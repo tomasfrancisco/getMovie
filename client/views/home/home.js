@@ -260,10 +260,58 @@ Template.home.events({
         $("#grafo").css({"cursor":"pointer"});
 
         $("#seeMore1").animate({"opacity" : "1"},200);
+    },
+
+    "mouseover #s2": function() {
+        $("#seeMore2").animate({"opacity" : "1"},200);
+    },
+
+    "mouseover #s3": function() {
+        $("#seeMore3").animate({"opacity" : "1"},200);
+    },
+
+    "mouseover #s4": function() {
+        $("#seeMore4").animate({"opacity" : "1"},200);
+    },
+
+    "mouseover #s5": function() {
+        $("#seeMore5").animate({"opacity" : "1"},200);
+    },
+
+
+    "mouseleave #s1": function(){
+        $("#grafo").animate({"opacity": "1"},200);
+        $("#seeMore1").animate({"opacity" : "0"},200);
+    },
+
+    "mouseleave #s2": function(){
+        $("#seeMore2").animate({"opacity" : "0"},200);
+    },
+
+    "mouseleave #s3": function(){
+        $("#seeMore3").animate({"opacity" : "0"},200);
+    },
+
+    "mouseleave #s4": function(){
+        $("#seeMore4").animate({"opacity" : "0"},200);
+    },
+
+    "mouseleave #s5": function(){
+        $("#seeMore5").animate({"opacity" : "0"},200);
+    },
+
+    "click .menu": function(){
+        $(".menuBack").slideToggle(1000);
+    },
+
+    "click #s1": function(event) {
+        Router.go("/friends");
     }
 
-
 });
+
+/*
+PARA ALTERAR
 
 
 
@@ -281,100 +329,10 @@ $(function(){
 
 
 
-
-
-    $("#s1").mouseenter(function() {
-        $("#grafo").animate({"opacity" : "0.3"},200);
-        $("#grafo").css({"cursor":"pointer"});
-
-        $("#seeMore1").animate({"opacity" : "1"},200);
-    });
-
-
-    $("#s2").mouseenter(function() {
-        $("#seeMore2").animate({"opacity" : "1"},200);
-    });
-
-    $("#s3").mouseenter(function() {
-        $("#seeMore3").animate({"opacity" : "1"},200);
-    });
-
-    $("#s4").mouseenter(function() {
-        $("#seeMore4").animate({"opacity" : "1"},200);
-    });
-
-    $("#s5").mouseenter(function() {
-        $("#seeMore5").animate({"opacity" : "1"},200);
-    });
-
-
-
-
-    $("#s1").mouseleave(function() {
-        $("#grafo").animate({"opacity": "1"},200);
-        $("#seeMore1").animate({"opacity" : "0"},200);
-    });
-
-    $("#s2").mouseleave(function() {
-        $("#seeMore2").animate({"opacity" : "0"},200);
-    });
-
-    $("#s3").mouseleave(function() {
-        $("#seeMore3").animate({"opacity" : "0"},200);
-    });
-
-    $("#s4").mouseleave(function() {
-        $("#seeMore4").animate({"opacity" : "0"},200);
-    });
-
-    $("#s5").mouseleave(function() {
-        $("#seeMore5").animate({"opacity" : "0"},200);
-    });
-
-
-
-
     $( "#s1" ).click(function() {
         document.location = "friends.html";
     });
 
+});*/
 
-
-    $( ".menu" ).click(function() {
-        $(".menuBack").slideToggle(200);
-    });
-
-
-
-
-
-
-
-
-});
-
-
-
-
-/*
- $("#logoL").mouseenter(function() {
- alert("cao"):
- var Request = new XMLHttpRequest();
- var client_id = df0203fde4bb77e9392463f74d2ae53c415852d09711b7e7103b86afdd9ed3df;
- var redirect_uri = "https://www.google.com";
-
- Request.open('GET', 'https://api-v2launch.trakt.tv/oauth/authorize?response_type=code&client_id='+client_id+'&redirect_uri='+redirect_uri);
-
- Request.setRequestHeader('Content-Type', 'application/json');
-
- Request.onreadystatechange = function () {
- if (this.readyState === 4) {
- console.log('Status:', this.status);
- console.log('Headers:', this.getAllResponseHeaders());
- console.log('Body:', this.responseText);
- }
- };
-
- Request.send(JSON.stringify(body));
- });*/
 
