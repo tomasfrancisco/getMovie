@@ -8,3 +8,4 @@ meteor-platform
 iron:router
 http
 oauth2
+mrt:jquery-ui
