@@ -227,9 +227,8 @@ body{
     margin-left: 20px;
 }
 
-#doughnutTip {
+#doughnutChart {
     position: absolute;
-    background: rgba(0, 0, 0, 0.8);
     color: #ddd;
     font-size: 17px;
 }
