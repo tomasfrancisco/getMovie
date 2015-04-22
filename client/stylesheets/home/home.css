@@ -227,14 +227,10 @@ body{
     margin-left: 20px;
 }
 
-#doughnutChart {
+#chart-area {
     position: absolute;
-    color: #ddd;
-    font-size: 17px;
-}
-
-.chart path:hover {
-    opacity: 0.65;
+    width: 100%;
+    height: 100%;
 }
 
 .genreList {
