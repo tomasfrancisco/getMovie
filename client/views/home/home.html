@@ -1,4 +1,98 @@
 <template name="home">
-    <p>HOME</p>
 
+    <nav>
+        <div class = "top-nav">
+            <div id = "logo">
+                <img id="logoHome" src="img/logo.png">
+            </div>
+
+            <div class = "options">
+                <ul>
+                    <li>tfrancisco</li>
+                    <li class = "menu" style = "border-left: 1px #ffec00 solid">home</li>
+                    <li class = "logout">get <span>out</span></li>
+                </ul>
+            </div>
+
+            <div class = "options620px">
+                <img class = "menu" src="img/menuIcon.png">
+            </div>
+
+            <div class = "avatarIMG">
+                <img src="img/t.jpg">
+            </div>
+
+        </div>
+    </nav>
+
+    <section>
+        <div class = "content">
+            <div class ="section" id = "s1">
+                <p>VER <span class = "Name1">AMIGOS | </span><span class = "Name2">AMIGOS: <span class = "value">X</span> SEGUIDORES: <span class = "value">X</span></span></p>
+                <div id = "seeMore1"><img src="img/seeMore.png"></div>
+                <div id = "grafo"><img src="img/grafoImg.png"></div>
+
+            </div>
+
+
+            <div class = "section" id = "s2">
+                <p>SÉRIES <span class = "Name1">VISTAS</span></p>
+                <div id = "seeMore2"><img src="img/seeMore.png"></div>
+
+
+            </div>
+
+
+            <div class = "section" id = "s3">
+                <p>SÉRIES <span class = "Name1">RECOMENDADAS</span></p>
+                <div id = "seeMore3"><img src="img/seeMore.png"></div>
+
+            </div>
+
+
+            <div class = "section" id = "s4">
+                <p>FILMES <span class = "Name1">VISTOS</span></p>
+                <div id = "seeMore4"><img src="img/seeMore.png"></div>
+
+            </div>
+
+
+            <div class = "section" id = "s5">
+                <p>FILMES <span class = "Name1">RECOMENDADOS</span></p>
+                <div id = "seeMore5"><img src="img/seeMore.png"></div>
+
+            </div>
+
+
+            <div class = "section" id = "s6">
+                <p>GÉNEROS <span class = "Name1">FAVORITOS</span></p>
+                <div id = "sectionGenre">
+                    <div id="doughnutChart" class="chart"></div>
+                    <div class="genreList">
+                        <ul>
+                            <li id = "sq1"><div class = "square"></div>Drama</li>
+                            <li id = "sq2"><div class = "square"></div>Acção</li>
+                            <li id = "sq3"><div class = "square"></div>Comédia</li>
+                            <li id = "sq4"><div class = "square"></div>Triller</li>
+                            <li id = "sq5"><div class = "square"></div>Aventura</li>
+                            <li id = "sq6"><div class = "square"></div>Outros</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <div class = "menuBack">
+        <ul class="menuList">
+            <li>home</li>
+            <li>friends</li>
+            <li>recommendations</li>
+            <li>movies</li>
+            <li>shows</li>
+            <li>get out</li>
+        </ul>
+    </div>
 </template>

@@ -1,0 +1,43 @@
+body{
+    background-color:#1c1c1c;
+    font-family: "Quicksand", sans-serif;
+
+    margin:0;
+    padding: 0;
+
+}
+
+::selection{
+    background: #ffec00;
+}
+
+.menuBack{
+    position: fixed;
+    background-color: #1c1c1c;
+    width: 100%;
+    height: 100%;
+    display:none;
+
+
+}
+
+
+
+
+
+
+/*////////////////////////////////////////////
+////////////////////INDEX PAGE////////////////
+////////////////////////////////////////////*/
+
+#logoLogin{
+    width: 100%;
+
+}
+
+#logoLogin img{
+    width: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
