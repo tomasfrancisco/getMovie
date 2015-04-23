@@ -67,22 +67,28 @@
             <div class = "section" id = "s6">
                 <p>GÉNEROS <span class = "Name1">FAVORITOS</span></p>
                 <div id = "sectionGenre">
-                    <div id="doughnutChart" class="chart"></div>
-                    <div class="genreList">
-                        <ul>
-                            <li id = "sq1"><div class = "square"></div>Drama</li>
-                            <li id = "sq2"><div class = "square"></div>Acção</li>
-                            <li id = "sq3"><div class = "square"></div>Comédia</li>
-                            <li id = "sq4"><div class = "square"></div>Triller</li>
-                            <li id = "sq5"><div class = "square"></div>Aventura</li>
-                            <li id = "sq6"><div class = "square"></div>Outros</li>
-                        </ul>
+                    <div class="chart">
+
+                        <canvas id="chart-area" width="150" height="150"></canvas>
+                    </div>
+                    <div id="canvas-holder">
+                        <div class="genreList">
+                            <ul>
+                                <li id = "sq1"><div class = "square"></div>Drama</li>
+                                <li id = "sq2"><div class = "square"></div>Acção</li>
+                                <li id = "sq3"><div class = "square"></div>Comédia</li>
+                                <li id = "sq4"><div class = "square"></div>Triller</li>
+                                <li id = "sq5"><div class = "square"></div>Aventura</li>
+                                <li id = "sq6"><div class = "square"></div>Outros</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
             </div>
 
-        </div>
+                </div>
+
+
     </section>
 
     <div class = "menuBack">
@@ -95,4 +101,5 @@
             <li>get out</li>
         </ul>
     </div>
+
 </template>

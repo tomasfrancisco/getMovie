@@ -1,7 +1,41 @@
+var pieData = [
+    {
+        value: 300,
+        color:"#F7464A",
+        label: "Red"
+    },
+    {
+        value: 120,
+        color:"#F7464A",
+        label: "Red"
+    },
+    {
+        value: 50,
+        color: "#46BFBD",
+        label: "Green"
+    },
+    {
+        value: 100,
+        color: "#FDB45C",
+        label: "Yellow"
+    },
+    {
+        value: 40,
+        color: "#949FB1",
+        label: "Grey"
+    },
+    {
+        value: 120,
+        color: "#4D5360",
+        label: "Dark Grey"
+    }
 
+];
 
-
-
+Template.home.rendered = function() {
+    var ctx = document.getElementById("chart-area").getContext("2d");
+    window.myPie = new Chart(ctx).Pie(pieData);
+};
 
 
 Template.home.events({
@@ -56,12 +90,20 @@ Template.home.events({
 
     "click #s1": function (event) {
         Router.go("/friends");
+    },
+
+
+
+    "click #s4": function (event) {
+        Router.go("/movies");
+    },
+
+    "click #s5": function (event) {
+        Router.go("/moviesInfo")
     }
 
 
+
+
+
 });
-
-
-
-
-
