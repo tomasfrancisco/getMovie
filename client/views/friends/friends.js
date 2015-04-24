@@ -9,6 +9,11 @@ Template.friends.events({
 
     "click .asd": function(event) {
         Router.go("/profile");
+    },
+
+    "click img": function(event) {
+        Router.go("/profile");
     }
+
 
 });

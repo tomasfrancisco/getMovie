@@ -30,10 +30,9 @@ body{
     z-index: 2;
     width: 100px;
     height: 100px;
-    border-radius: 30px;
     margin: 10px;
     margin-left: 20px;
-    border: 1px #ffec00 solid;
+    border-bottom: 4px #ffec00 solid;
 }
 
 .top-nav .options{

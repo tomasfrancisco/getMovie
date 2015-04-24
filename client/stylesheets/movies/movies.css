@@ -63,10 +63,9 @@ body{
     z-index: 2;
     width: 100px;
     height: 100px;
-    border-radius: 30px;
     margin: 10px;
     margin-left: 20px;
-    border: 1px #ffec00 solid;
+    border-bottom: 4px #ffec00 solid;
 }
 
 .top-nav .options{
@@ -344,32 +343,8 @@ body{
 
 }
 
-.sectionP1 .profile{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
 
-.sectionP1 .profile img{
 
-    z-index: 2;
-    width: 60%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
-    border-radius: 50%;
-    border: 1px #ffec00 solid;
-}
-
-.sectionP1 .profile p{
-    width: 100%;
-    height: 10px;
-    text-align: center;
-    color: #ececec;
-    font-size: 1.2em;
-}
 
 .sectionP1 span{
     color:#ffec00;
