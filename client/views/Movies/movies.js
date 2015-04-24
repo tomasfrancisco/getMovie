@@ -53,6 +53,10 @@ Template.movies.events({
 
     "click .menu": function () {
         $(".menuBack").slideToggle(1000);
+    },
+
+    "click #f1": function (event) {
+        Router.go("/moviesInfo")
     }
 
 

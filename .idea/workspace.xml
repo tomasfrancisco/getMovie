@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fa2483d-3c7f-426e-910a-ee0be8db691e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/lib/index.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/auth/auth.css" afterPath="$PROJECT_DIR$/client/stylesheets/auth/auth.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/auth/auth.html" afterPath="$PROJECT_DIR$/client/views/auth/auth.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/friends/friends.css" afterPath="$PROJECT_DIR$/client/stylesheets/friends/friends.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/friends/friends.html" afterPath="$PROJECT_DIR$/client/views/friends/friends.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/head.html" afterPath="$PROJECT_DIR$/client/head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/home/home.css" afterPath="$PROJECT_DIR$/client/stylesheets/home/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/home/home.html" afterPath="$PROJECT_DIR$/client/views/home/home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/stylesheets/recommendations/recommendations.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/recommendations/recommendations.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/recommendations/recommendations.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/home/home.js" afterPath="$PROJECT_DIR$/client/views/home/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/movies/movies.css" afterPath="$PROJECT_DIR$/client/stylesheets/movies/movies.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/moviesInfo/moviesInfo.css" afterPath="$PROJECT_DIR$/client/stylesheets/moviesInfo/moviesInfo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/profile/profile.js" afterPath="$PROJECT_DIR$/client/views/profile/profile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/Movies/movies.js" afterPath="$PROJECT_DIR$/client/views/Movies/movies.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/router.js" afterPath="$PROJECT_DIR$/lib/router.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="getMovie.iws" />
@@ -38,21 +32,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/stylesheets/home/home.css">
+      <file leaf-file-name="moviesInfo.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/stylesheets/moviesInfo/moviesInfo.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="22.333334" vertical-offset="3813" max-vertical-offset="4860">
-              <caret line="214" column="1" selection-start-line="214" selection-start-column="1" selection-end-line="214" selection-end-column="1" />
+            <state vertical-scroll-proportion="-17.74074" vertical-offset="2026" max-vertical-offset="2730">
+              <caret line="167" column="1" selection-start-line="9" selection-start-column="0" selection-end-line="167" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="moviesInfo.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/stylesheets/moviesInfo/moviesInfo.css">
+      <file leaf-file-name="moviesInfo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.7777777" vertical-offset="666" max-vertical-offset="2730">
-              <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -61,61 +55,34 @@
       <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/home/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.160714" vertical-offset="0" max-vertical-offset="1800">
-              <caret line="23" column="24" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1234" max-vertical-offset="1905">
+              <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="friends.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/stylesheets/friends/friends.css">
+      <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.017857" vertical-offset="1275" max-vertical-offset="3555">
-              <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="855">
+              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="friends.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/views/friends/friends.html">
+      <file leaf-file-name="recommendations.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/views/recommendations/recommendations.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.11591963" vertical-offset="495" max-vertical-offset="1470">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/home/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.6125" vertical-offset="896" max-vertical-offset="1665">
-              <caret line="79" column="87" selection-start-line="79" selection-start-column="87" selection-end-line="79" selection-end-column="87" />
+            <state vertical-scroll-proportion="0.43293718" vertical-offset="0" max-vertical-offset="1140">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#5;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#5;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#5;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#5;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#5;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#5;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#li#3;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#5;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#5;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#5;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#li#5;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#5;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#li#5;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#5;n#div#0;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#nav#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#3;n#div#0;n#div#1;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#4;n#div#0;n#div#1;n#section#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#5;n#div#0;n#div#1;n#section#0;n#template#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/views/auth/auth.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -123,8 +90,48 @@
       <file leaf-file-name="movies.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/stylesheets/movies/movies.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.777778" vertical-offset="3936" max-vertical-offset="6060">
-              <caret line="280" column="23" selection-start-line="280" selection-start-column="23" selection-end-line="280" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3936" max-vertical-offset="6060">
+              <caret line="283" column="0" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="movies.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/Movies/movies.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1050">
+              <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="moviesInfo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-46.875" vertical-offset="0" max-vertical-offset="1230">
+              <caret line="75" column="10" selection-start-line="1" selection-start-column="4" selection-end-line="75" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recommendations.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/stylesheets/recommendations/recommendations.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1339" max-vertical-offset="2460">
+              <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recommendations.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/recommendations/recommendations.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -149,10 +156,8 @@
         <option value="$PROJECT_DIR$/client/views/teste/teste.html" />
         <option value="$PROJECT_DIR$/client/views/teste/teste.js" />
         <option value="$PROJECT_DIR$/client/views/Movies/mouvies.html" />
-        <option value="$PROJECT_DIR$/client/views/Movies/movies.js" />
         <option value="$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.js" />
         <option value="$PROJECT_DIR$/client/stylesheets/moviesInfo.css" />
-        <option value="$PROJECT_DIR$/lib/router.js" />
         <option value="$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.html" />
         <option value="$PROJECT_DIR$/client/views/friends/friends.js" />
         <option value="$PROJECT_DIR$/client/stylesheets/profile/profile.css" />
@@ -161,13 +166,18 @@
         <option value="$PROJECT_DIR$/client/views/profile/profile.html" />
         <option value="$PROJECT_DIR$/client/views/auth/auth.html" />
         <option value="$PROJECT_DIR$/client/stylesheets/auth/auth.css" />
-        <option value="$PROJECT_DIR$/client/views/home/home.js" />
         <option value="$PROJECT_DIR$/client/stylesheets/movies/movies.css" />
         <option value="$PROJECT_DIR$/client/views/home/home.html" />
         <option value="$PROJECT_DIR$/client/stylesheets/home/home.css" />
         <option value="$PROJECT_DIR$/client/stylesheets/moviesInfo/moviesInfo.css" />
         <option value="$PROJECT_DIR$/client/stylesheets/friends/friends.css" />
         <option value="$PROJECT_DIR$/client/views/friends/friends.html" />
+        <option value="$PROJECT_DIR$/client/views/recommendations/recommendations.js" />
+        <option value="$PROJECT_DIR$/lib/router.js" />
+        <option value="$PROJECT_DIR$/client/views/Movies/movies.js" />
+        <option value="$PROJECT_DIR$/client/views/home/home.js" />
+        <option value="$PROJECT_DIR$/client/stylesheets/recommendations/recommendations.css" />
+        <option value="$PROJECT_DIR$/client/views/recommendations/recommendations.html" />
       </list>
     </option>
   </component>
@@ -249,10 +259,6 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -300,7 +306,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="profile" />
+              <option name="myItemId" value="recommendations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -319,6 +325,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="getMovie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="getMovie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MoviesInfo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="getMovie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="getMovie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Movies" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -358,33 +408,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="stylesheets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="friends" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="getMovie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="getMovie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auth" />
+              <option name="myItemId" value="recommendations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -660,14 +688,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="13" y="35" width="1623" height="969" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18053928" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18096358" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13171037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13171037" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39742085" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25791326" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -703,27 +731,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/views/profile/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="526" max-vertical-offset="1110">
-          <caret line="65" column="14" selection-start-line="40" selection-start-column="4" selection-end-line="65" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/auth/auth.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="150">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/home/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1530">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/home/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4650">
@@ -920,34 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="795">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/Movies/movies.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="412" max-vertical-offset="960">
-          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="548">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="241" max-vertical-offset="1230">
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/stylesheets/profile/profile.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="2610">
@@ -960,14 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38251367" vertical-offset="0" max-vertical-offset="549">
           <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/Movies/movies.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8819048" vertical-offset="602" max-vertical-offset="1380">
-          <caret line="71" column="14" selection-start-line="28" selection-start-column="8" selection-end-line="71" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1006,8 +977,7 @@
         <state vertical-scroll-proportion="-0.75" vertical-offset="0" max-vertical-offset="195">
           <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#template#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1016,14 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4107144" vertical-offset="480" max-vertical-offset="1020">
           <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/stylesheets/movies/movies.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.777778" vertical-offset="3936" max-vertical-offset="6060">
-          <caret line="280" column="23" selection-start-line="280" selection-start-column="23" selection-end-line="280" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1056,22 +1018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/home/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.160714" vertical-offset="0" max-vertical-offset="1800">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/stylesheets/moviesInfo/moviesInfo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.7777777" vertical-offset="666" max-vertical-offset="2730">
-          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/stylesheets/home/home.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="22.333334" vertical-offset="3813" max-vertical-offset="4860">
@@ -1090,9 +1036,102 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/friends/friends.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.11591963" vertical-offset="495" max-vertical-offset="1470">
+        <state vertical-scroll-proportion="3.125" vertical-offset="495" max-vertical-offset="1470">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/Movies/movies.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.291666" vertical-offset="602" max-vertical-offset="1380">
+          <caret line="71" column="14" selection-start-line="28" selection-start-column="8" selection-end-line="71" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="855">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/Movies/movies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1050">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/home/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1234" max-vertical-offset="1905">
+          <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/recommendations/recommendations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="671">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-46.875" vertical-offset="0" max-vertical-offset="1230">
+          <caret line="75" column="10" selection-start-line="1" selection-start-column="4" selection-end-line="75" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/stylesheets/moviesInfo/moviesInfo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.74074" vertical-offset="2026" max-vertical-offset="2730">
+          <caret line="167" column="1" selection-start-line="9" selection-start-column="0" selection-end-line="167" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/stylesheets/movies/movies.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3936" max-vertical-offset="6060">
+          <caret line="283" column="0" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/stylesheets/recommendations/recommendations.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1504" max-vertical-offset="2460">
+          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/recommendations/recommendations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43293718" vertical-offset="0" max-vertical-offset="1140">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#nav#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#3;n#div#0;n#div#1;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#4;n#div#0;n#div#1;n#section#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#5;n#div#0;n#div#1;n#section#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

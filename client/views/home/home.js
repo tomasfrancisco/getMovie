@@ -94,14 +94,21 @@ Template.home.events({
         Router.go("/friends");
     },
 
+    "click #s2": function (event) {
+        Router.go("/movies");
+    },
 
+
+    "click #s3": function (event) {
+        Router.go("/recommendations");
+    },
 
     "click #s4": function (event) {
         Router.go("/movies");
     },
 
     "click #s5": function (event) {
-        Router.go("/moviesInfo")
+        Router.go("/recommendations");
     }
 });
 
