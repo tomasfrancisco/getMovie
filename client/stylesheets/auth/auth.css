@@ -30,12 +30,7 @@ body{
 ////////////////////INDEX PAGE////////////////
 ////////////////////////////////////////////*/
 
-#logoLogin{
-    width: 100%;
-
-}
-
-#logoLogin img{
+#login {
     width: 350px;
     display: block;
     margin-left: auto;

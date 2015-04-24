@@ -10,3 +10,8 @@ http
 oauth2
 mrt:jquery-ui
 chartjs
+underscore
+d3
+accounts-ui
+accounts-trakt
+autopublish

@@ -1,5 +1,15 @@
 <template name="auth">
-    <div id = "logoLogin">
-        <img id = "logoL" class="auth-btn" src="img/logo.png">
-    </div>
+
+    <button id="logoLogin">
+        <img id = "login" src="img/logo.png">
+    </button>
+
+    {{>loginButtons}}
+
+
+    {{#if isLogged}}
+        <p>LOGGED</p>
+    {{/if}}
+
+
 </template>

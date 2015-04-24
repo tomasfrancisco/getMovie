@@ -1,6 +1,9 @@
 <template name = "profile">
 
+    {{#with getProfile}}
+    {{/with}}
 
+    {{#with profile}}
     <nav>
         <div class = "top-nav">
             <div id = "logo">
@@ -41,7 +44,7 @@
     <section class = "sectionProfile">
         <div class = "sectionP1">
             <div class = "profile">
-                <img src="img/g.jpg">
+                <img src="{{data.user.images.avatar.full}}">
 
                 <p>AMIGOS: <span id = "friendsProfile">50</span></p>
                 <p>SEGUIDORES: <span id = "followersProfile">100</span></p>
@@ -52,18 +55,17 @@
 
         <div class = "sectionP2">
             <div class = "profileInfo">
-                <p id = "usernameInfo">gdsneves</p>
-                <p id = "nameInfo">GONÇALO NEVES</p>
-                <p id = "descriptionInfo">Estudante na licenciatura de Design e Multimédia da Universidade de Coimbra,<br>criativo e profissional nesta área.<br>
-                    Os meus gostos circundam a minha área de estudo, gosto de comunicar de forma <br> simples e objetiva. Cinema e Música são 2 outras áreas onde gosto de focar o meu tempo<br>querendo sempre conhecer e aprender mais.</p>
-                <p id = "dataInfo"><span style = "color: #ffec00">Data de Nascimento:</span> 14/07/1992</p>
-                <p id = "localInfo"><span style = "color: #ffec00">Localidade:</span> Coimbra</p>
+                <p id = "usernameInfo">{{data.user.username}}</p>
+                <p id = "nameInfo">{{data.user.name}}</p>
+                <p id = "descriptionInfo">{{data.user.about}}</p>
+                <p id = "dataInfo"><span style = "color: #ffec00">Idade:</span> {{data.user.age}}</p>
+                <p id = "localInfo"><span style = "color: #ffec00">Localidade:</span> {{data.user.location}}</p>
 
             </div>
         </div>
 
 
     </section>
-
+    {{/with}}
 
 </template>
