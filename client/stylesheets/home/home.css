@@ -218,17 +218,14 @@ body{
     color: #ffec00;
 }
 
-#chart-area {
+#genre-chart {
     position: absolute;
     width: 150px;
     height: 40%;
-    margin-top: 15px;
+    margin-top: 35px;
     margin-left: 20px;
 }
 
-#chart-area path:hover {
-    opacity: 0.90;
-}
 
 
 
@@ -271,14 +268,7 @@ body{
     height: 10px;
     margin-left: -20px;
     margin-right: 10px;
-    background: yellow;
 }
-
-
-
-
-
-
 
 
 
