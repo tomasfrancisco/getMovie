@@ -91,7 +91,7 @@ Template.home.events({
     },
 
     "click #s1": function (event) {
-        Router.go("/friends");
+        Router.go("/testes");
     },
 
     "click #s2": function (event) {

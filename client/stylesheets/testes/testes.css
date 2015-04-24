@@ -1,0 +1,25 @@
+body{
+    background-color: #1c1c1c;
+}
+
+.link {
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.node{
+    stroke-width: 5px;
+}
+
+.node:hover{
+    stroke: #fff;
+    stroke-width: 4px;
+    cursor:pointer;
+}
+
+.node text {
+    stroke-width: 1px;
+    stroke: #fff;
+    pointer-events: none;
+    font: 10px sans-serif;
+}

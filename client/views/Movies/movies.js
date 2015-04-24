@@ -26,7 +26,6 @@ Template.movies.events({
         $("#seeMore6").animate({"opacity": "1"}, 200);
     },
 
-
     "mouseleave #f1": function () {
 
         $("#seeMore1").animate({"opacity": "0"}, 200);
@@ -58,8 +57,5 @@ Template.movies.events({
     "click #f1": function (event) {
         Router.go("/moviesInfo")
     }
-
-
-
 
 });
