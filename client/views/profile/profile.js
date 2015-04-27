@@ -11,6 +11,7 @@ Template.profile.events({
 
 });
 
+
 Template.profile.helpers({
     profile: function() {
 
@@ -31,7 +32,7 @@ Template.profile.helpers({
         if(Meteor.user()) {
             Meteor.call('getSettings', Meteor.user().profile.accessToken, function (err, result) {
 
-                Session.set("profile", result);
+                Session.setPersistent("profile", result);
                 //return result;
             });
         }

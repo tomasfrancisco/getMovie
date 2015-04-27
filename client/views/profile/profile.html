@@ -1,33 +1,11 @@
 <template name = "profile">
 
+    {{> navbar}}
+
     {{#with getProfile}}
     {{/with}}
 
     {{#with profile}}
-    <nav>
-        <div class = "top-nav">
-            <div id = "logo">
-                <img src="img/logo.png">
-            </div>
-
-            <div class = "options">
-                <ul>
-                    <li>tfrancisco</li>
-                    <li class = "menu" style = "border-left: 1px #ffec00 solid">profile</li>
-                    <li class = "logout">get <span>out</span></li>
-                </ul>
-            </div>
-
-            <div class = "options620px">
-                <img src="img/menuIcon.png">
-            </div>
-
-            <div class = "avatarIMG">
-                <img src="img/t.jpg">
-            </div>
-
-        </div>
-    </nav>
 
 
     <div class = "menuBack">

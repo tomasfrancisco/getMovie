@@ -8,7 +8,13 @@ Template.auth.events({
 });
 
 Template.auth.helpers({
-    isLogged: function() {
-        console.log(Meteor.user());
+    displayLogin: function() {
+        if(Meteor.user()) {
+            Router.go('/home');
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 })

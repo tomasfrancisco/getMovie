@@ -57,16 +57,68 @@ Template.home.events({
 
 });
 
+var pieData = [
+    {
+        value: 30,
+        color:"#edda2f"
+    },
+    {
+        value : 25,
+        color : "#ffec00"
+    },
+    {
+        value : 20,
+        color : "#a8941a"
+    },
+    {
+        value : 15,
+        color : "#fff803"
+    },
+    {
+        value : 10,
+        color : "#efde97"
+    },
+    {
+        value : 5,
+        color : "#e2c73d"
+    }
+];
+
+
+var pieOptions = {
+    segmentShowStroke : false,
+    animateScale : true,
+
+
+}
+
+
+Template.home.rendered = function() {
+    var ctx = document.getElementById("genre-chart").getContext("2d");
+    window.myPie = new Chart(ctx).Pie(pieData, pieOptions);
+};
+
 
 Template.home.helpers({
-    userInfo: function() {
-        if(Meteor.user())
-            return Meteor.user().profile;
-        else
-            return null;
+    chartGenre: function() {
+        if(Meteor.user()) {
+            console.log(Session.get("genresChart"));
+            if(Session.get("genresChart")) {
+                return Session.get("genresChart");
+            }
+        }
+    },
+
+    getChartGenre: function() {
+        if(Meteor.user()) {
+            console.log(Session.get("genresChart"));
+            if(Session.get("genresChart") === undefined) {
+                Meteor.call('getStatsGenres', Meteor.user().profile.username, function (err, result) {
+                    Session.setPersistent("genresChart", result);
+                    console.log(result);
+                });
+           }
+        }
     }
 });
-
-
-
 

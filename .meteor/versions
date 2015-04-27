@@ -1,8 +1,8 @@
 accounts-base@1.2.0
 accounts-oauth@1.1.5
 accounts-trakt@1.0.0
-accounts-ui@1.1.5
 accounts-ui-unstyled@1.1.7
+amplify@1.0.0
 autopublish@1.0.3
 autoupdate@1.2.1
 base64@1.0.3
@@ -34,7 +34,6 @@ iron:url@1.0.7
 jquery@1.11.3_2
 json@1.0.3
 launch-screen@1.0.2
-less@1.0.14
 livedata@1.0.13
 localstorage@1.0.3
 logging@1.0.7
@@ -61,6 +60,7 @@ spacebars@1.0.6
 spacebars-compiler@1.0.6
 templating@1.1.1
 tracker@1.0.7
+u2622:persistent-session@0.3.3
 ui@1.0.6
 underscore@1.0.3
 url@1.0.4

@@ -1,182 +1,25 @@
 body{
-    background-color:#1c1c1c;
-    font-family: "Quicksand", sans-serif;
-
-    margin:0;
-    padding: 0;
-
+    background-color: #1c1c1c;
 }
 
-.top-nav{
-    position: absolute;
+.link {
+    stroke: #fff;
+    stroke-width: 2px;
 }
 
-.top-nav #logo{
-    position: fixed;
-    width: 100%;
-    z-index: 1;
+.node{
+    stroke-width: 5px;
 }
 
-.top-nav #logo img{
-    width: 150px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.node:hover{
+    stroke: #fff;
+    stroke-width: 4px;
+    cursor:pointer;
 }
 
-
-.top-nav .avatarIMG img{
-    position: fixed;
-    z-index: 2;
-    width: 100px;
-    height: 100px;
-    border-radius: 30px;
-    margin: 10px;
-    margin-left: 20px;
-    border: 1px #ffec00 solid;
+.node text {
+    stroke-width: 1px;
+    stroke: #fff;
+    pointer-events: none;
+    font: 10px sans-serif;
 }
-
-.top-nav .options{
-
-    position: fixed;
-    z-index: 3;
-    background-color: transparent;
-    width: 40%;
-    height: 100px;
-    margin-left: 100px;
-
-}
-
-
-
-.top-nav .options ul{
-    background-color: transparent;
-    list-style: none;
-    text-decoration: none;
-    color: #ececec;
-    font-size: 1.3em;
-}
-
-.top-nav .options ul span{
-    color: #ffec00;
-}
-
-.top-nav .options li{
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-
-    margin-bottom: 5px;
-    padding-left: 5px;
-    border-left: 1px #ececec solid;
-}
-
-.top-nav .options li:hover{
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-
-    border-left: 1px #ffec00 solid;
-    color: #ffec00;
-
-    cursor: pointer;
-}
-
-.top-nav .options620px img{
-    position: fixed;
-    z-index: 3;
-    background-color: transparent;
-    width: 40px;
-    right: 20px;
-    margin-top: 50px;
-    visibility: hidden;
-}
-
-.menu{
-    color: #ffec00;
-
-}
-
-
-
-/*menu*/
-
-.menuList{
-    padding-left: 0px;
-    margin-left: 0px;
-    text-align: center;
-    margin-top: 250px;
-
-}
-
-.menuList li{
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-
-    list-style: none;
-    font-size: 3em;
-    font-weight: 300;
-    color: #ececec;
-    margin-bottom: 10px;
-}
-
-.menuList li:hover{
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-
-    color: #ffec00;
-    cursor: pointer;
-}
-
-
-
-
-@media (max-width: 1240px) {
-
-
-
-    .menuList li{
-        font-size: 3em;
-    }
-
-}
-
-@media (max-width: 720px) {
-
-
-    .top-nav .options620px img{
-        visibility: visible;
-        cursor: pointer;
-    }
-
-    .top-nav .avatarIMG{
-        display: none;
-    }
-
-    .top-nav .options{
-        margin-left: -20px;
-        padding-left: 0px;
-
-    }
-
-    .menuList li{
-        font-size: 2em;
-    }
-
-
-}
-
-svg circle {
-    fill: #663399;
-}
-

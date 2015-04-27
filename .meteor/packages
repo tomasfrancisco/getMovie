@@ -12,6 +12,7 @@ mrt:jquery-ui
 chartjs
 underscore
 d3
-accounts-ui
 accounts-trakt
 autopublish
+accounts-ui-unstyled
+u2622:persistent-session

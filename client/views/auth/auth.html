@@ -1,15 +1,11 @@
 <template name="auth">
-
-    <button id="logoLogin">
-        <img id = "login" src="img/logo.png">
-    </button>
-
-    {{>loginButtons}}
-
-
-    {{#if isLogged}}
-        <p>LOGGED</p>
-    {{/if}}
-
-
+    {{#with displayLogin}}
+        <div class = "logoLogin">
+            <img id = "logoL" src="img/logo.png">
+            <p id = "inLogin">Get <span style="color: #ffec00">In</span><br>with <span style="color: #ffec00">trakt.tv</span></p>
+            <button id="loginBtn">
+                {{>loginButtons}}
+            </button>
+        </div>
+    {{/with}}
 </template>
