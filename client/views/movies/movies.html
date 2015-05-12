@@ -1,13 +1,77 @@
-<template name="movies">
+<template name= "movies">
+
+    {{> navbar}}
+
+
+    <section>
+        <div class = "content">
+            <div class ="section" id = "f1">
+                <p><span class = "Name1">FILME 1 | </span><span class = "Name2">VOTES: <span class = "value">4.5K</span> RANKING: <span class = "value">2K</span></span></p>
+                <div id = "seeMore1"><img src="img/seeMore.png"></div>
+
+
+            </div>
+
+
+            <div class = "section" id = "f2">
+                <p><span class = "Name1">FILME 2 | </span><span class = "Name2">VOTES: <span class = "value">4.5K</span> RANKING: <span class = "value">2K</span></span></p>
+                <div id = "seeMore2"><img src="img/seeMore.png"></div>
+
+
+            </div>
+
+
+            <div class = "section" id = "f3">
+                <p><span class = "Name1">FILME 3 | </span><span class = "Name2">VOTES: <span class = "value">4.5K</span> RANKING: <span class = "value">2K</span></span></p>
+                <div id = "seeMore3"><img src="img/seeMore.png"></div>
+
+            </div>
+
+
+            <div class = "section" id = "f4">
+                <p><span class = "Name1">FILME 4 | </span><span class = "Name2">VOTES: <span class = "value">4.5K</span> RANKING: <span class = "value">2K</span></span></p>
+                <div id = "seeMore4"><img src="img/seeMore.png"></div>
+
+            </div>
+
+
+            <div class = "section" id = "f5">
+                <p><span class = "Name1">FILME 5 | </span><span class = "Name2">VOTES: <span class = "value">4.5K</span> RANKING: <span class = "value">2K</span></span></p>
+                <div id = "seeMore5"><img src="img/seeMore.png"></div>
+
+            </div>
+
+
+            <div class = "section" id = "f6">
+                <p><span class = "Name1">FILME 6 | </span><span class = "Name2">VOTES: <span class = "value">4.5K</span> RANKING: <span class = "value">2K</span></span></p>
+                <div id = "seeMore6"><img src="img/seeMore.png"></div>
+            </div>
+
+        </div>
+    </section>
+
+
     {{#with getWatched}}
 
     {{/with}}
-    <h1>Fora</h1>
     <ul>
-    {{#with watched}}
+        {{#with watched}}
 
-    {{/with}}
+        {{/with}}
     </ul>
+
+
+
+    <div class = "menuBack">
+        <ul class="menuList">
+            <li>home</li>
+            <li>friends</li>
+            <li>recommendations</li>
+            <li>movies</li>
+            <li>shows</li>
+            <li>get out</li>
+        </ul>
+    </div>
 
 
 </template>

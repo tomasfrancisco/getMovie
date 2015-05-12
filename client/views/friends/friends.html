@@ -1,15 +1,83 @@
 <template name = "friends">
 
+    {{> navbar}}
+
+
+
+    <section>
+        <div class = "contentFriends">
+            <div class ="sectionFriends">
+                <p><span class = "Name1">Person</span></p>
+                <img src="img/g.jpg">
+            </div>
+            <div class ="sectionFriends">
+                <p><span class = "Name1">Person</span></p>
+                <img src="img/g.jpg">
+            </div>
+            <div class ="sectionFriends">
+                <p><span class = "Name1">Person</span></p>
+                <img src="img/g.jpg">
+            </div>
+            <div class ="sectionFriends">
+                <p><span class = "Name1">Person</span></p>
+                <img src="img/g.jpg">
+            </div>
+            <div class ="sectionFriends">
+                <p><span class = "Name1">Person</span></p>
+                <img src="img/g.jpg">
+            </div>
+            <div class ="sectionFriends">
+                <p><span class = "Name1">Person</span></p>
+                <img src="img/g.jpg">
+            </div>
+            <div class ="sectionFriends">
+                <p><span class = "Name1">Person</span></p>
+                <img src="img/g.jpg">
+            </div>
+            <div class ="sectionFriends">
+                <p><span class = "Name1">Person</span></p>
+                <img src="img/g.jpg">
+            </div>
+            <div class ="sectionFriends">
+                <p><span class = "Name1">Person</span></p>
+                <img src="img/g.jpg">
+            </div>
+
+        </div>
+
+
+
+    </section>
+
 
     {{#with getFriends}}
     {{/with}}
 
     <h1>Fora</h1>
     <ul>
-    {{#with friends}}
-        {{#each data}}
-            <li>{{this.user.name}}</li>
-        {{/each}}
-    {{/with}}
+        {{#with friends}}
+            {{#each data}}
+                <li>{{this.user.name}}</li>
+            {{/each}}
+        {{/with}}
     </ul>
+
+
+
+
+
+
+    <div class = "menuBack">
+        <ul class="menuList">
+            <li>home</li>
+            <li>friends</li>
+            <li>recommendations</li>
+            <li>movies</li>
+            <li>shows</li>
+            <li>get out</li>
+        </ul>
+    </div>
+
+
+
 </template>

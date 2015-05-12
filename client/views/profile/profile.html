@@ -5,45 +5,46 @@
     {{#with getProfile}}
     {{/with}}
 
+
+
+        <div class = "menuBack">
+            <ul class="menuList">
+                <li>home</li>
+                <li>friends</li>
+                <li>recommendations</li>
+                <li>movies</li>
+                <li>shows</li>
+                <li>get out</li>
+            </ul>
+        </div>
+
+        <section class = "sectionProfile">
+            <div class = "sectionP1">
+                <div class = "profile">
+                    <img src="{{data.user.images.avatar.full}}">
+
+                    <p>AMIGOS: <span id = "friendsProfile">50</span></p>
+                    <p>SEGUIDORES: <span id = "followersProfile">100</span></p>
+                    <p>TEMPO GASTO: <span id = "timeWasteProfile">50H</span></p>
+                    <p style = "text-decoration: underline; cursor: pointer;">FACEBOOK</p>
+                </div>
+            </div>
+
+            <div class = "sectionP2">
+                <div class = "profileInfo">
+                    <p id = "usernameInfo">{{data.user.username}}</p>
+                    <p id = "nameInfo">{{data.user.name}}</p>
+                    <p id = "descriptionInfo">{{data.user.about}}</p>
+                    <p id = "dataInfo"><span style = "color: #ffec00">Idade:</span> {{data.user.age}}</p>
+                    <p id = "localInfo"><span style = "color: #ffec00">Localidade:</span> {{data.user.location}}</p>
+
+                </div>
+            </div>
+
+
+        </section>
     {{#with profile}}
 
-
-    <div class = "menuBack">
-        <ul class="menuList">
-            <li>home</li>
-            <li>friends</li>
-            <li>recommendations</li>
-            <li>movies</li>
-            <li>shows</li>
-            <li>get out</li>
-        </ul>
-    </div>
-
-    <section class = "sectionProfile">
-        <div class = "sectionP1">
-            <div class = "profile">
-                <img src="{{data.user.images.avatar.full}}">
-
-                <p>AMIGOS: <span id = "friendsProfile">50</span></p>
-                <p>SEGUIDORES: <span id = "followersProfile">100</span></p>
-                <p>TEMPO GASTO: <span id = "timeWasteProfile">50H</span></p>
-                <p style = "text-decoration: underline; cursor: pointer;">FACEBOOK</p>
-            </div>
-        </div>
-
-        <div class = "sectionP2">
-            <div class = "profileInfo">
-                <p id = "usernameInfo">{{data.user.username}}</p>
-                <p id = "nameInfo">{{data.user.name}}</p>
-                <p id = "descriptionInfo">{{data.user.about}}</p>
-                <p id = "dataInfo"><span style = "color: #ffec00">Idade:</span> {{data.user.age}}</p>
-                <p id = "localInfo"><span style = "color: #ffec00">Localidade:</span> {{data.user.location}}</p>
-
-            </div>
-        </div>
-
-
-    </section>
     {{/with}}
 
 </template>

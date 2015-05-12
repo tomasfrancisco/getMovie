@@ -1,5 +1,4 @@
 
-
 Template.home.events({
     "mouseover #s1": function () {
         $("#grafo").animate({"opacity": "0.3"}, 200);
@@ -52,6 +51,14 @@ Template.home.events({
 
     "click #s1": function (event) {
         Router.go("/friends");
+    },
+
+    "click #s4": function (event) {
+        Router.go("/movies");
+    },
+
+    "click #s5": function (event) {
+        Router.go("/recommendations");
     }
 
 
@@ -117,10 +124,10 @@ Template.home.helpers({
                     console.log("Session now: " + Session.get("genresStats"));
                 });
             }
-            else {
+            else
+            {
                 console.log(stats);
             }
         }
     }
 });
-

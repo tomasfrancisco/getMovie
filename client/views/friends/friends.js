@@ -1,4 +1,3 @@
-
 Template.friends.helpers({
     friends: function() {
         //console.log(Meteor.user());
