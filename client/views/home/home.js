@@ -88,8 +88,6 @@ var pieData = [
 var pieOptions = {
     segmentShowStroke : false,
     animateScale : true,
-
-
 }
 
 
@@ -100,7 +98,7 @@ Template.home.rendered = function() {
 
 
 Template.home.helpers({
-    chartGenre: function() {
+    /*chartGenre: function() {
         if(Meteor.user()) {
             console.log(Session.get("genresChart"));
             if(Session.get("genresChart")) {
@@ -108,16 +106,20 @@ Template.home.helpers({
             }
         }
     },
-
+*/
     getChartGenre: function() {
         if(Meteor.user()) {
-            console.log(Session.get("genresChart"));
-            if(Session.get("genresChart") === undefined) {
-                Meteor.call('getStatsGenres', Meteor.user().profile.username, function (err, result) {
-                    Session.setPersistent("genresChart", result);
-                    console.log(result);
+            console.log("Session: " + Session.get("genresStats"));
+            var stats = Session.get("genresStats");
+            if(stats === undefined) {
+                Meteor.call('getStatsGenres', Meteor.user().profile.username, function(err, result) {
+                    Session.setPersistent("genresStats", result);
+                    console.log("Session now: " + Session.get("genresStats"));
                 });
-           }
+            }
+            else {
+                console.log(stats);
+            }
         }
     }
 });
