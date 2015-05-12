@@ -1,0 +1,159 @@
+
+.sectionI1{
+    width: 45%;
+    height: 100%;
+    float: left;
+
+}
+
+
+.sectionI1 .movieInfo{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.sectionI1 .movieInfo img{
+    z-index: 2;
+    width: 45%;
+    right: 100px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    border-bottom: #ffec00 solid 4px;
+
+
+}
+
+.sectionI1 .movieInfo p{
+    width: 100%;
+    height: 10px;
+    text-align: center;
+    color: #ececec;
+    font-size: 1.2em;
+}
+
+.sectionI1 span{
+    color:#ffec00;
+}
+
+.sectionI2{
+    width: 55%;
+    height: 100%;
+    float: right;
+}
+
+
+.sectionI2 .profileInfo{
+    width: 100%;
+    position: fixed;
+    margin-top: 200px;
+}
+
+.sectionI2 #movieNameInfo{
+    color: #ffec00;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.sectionI2 #subNameInfo{
+    margin-top: -30px;
+    color: #ececec;
+    font-size: 2.2em;
+    width: 40%;
+}
+
+.sectionI2 #resumeInfo{
+    color: #ececec;
+    width: 40%;
+}
+
+.sectionI2 #diretorInfo{
+    color: #ececec;
+}
+
+.sectionI2 #atorInfo{
+    color: #ececec;
+    width: 40%;
+}
+
+.sectionI2 #genresInfo{
+    color: #ececec;
+}
+
+
+
+
+
+@media (max-width: 1240px) {
+
+
+
+    .menuList li{
+        font-size: 3em;
+    }
+
+}
+
+@media (max-width: 720px) {
+
+
+    .top-nav .options620px img{
+        visibility: visible;
+        cursor: pointer;
+    }
+
+    .top-nav .avatarIMG{
+        display: none;
+    }
+
+    .top-nav .options{
+        margin-left: -20px;
+        padding-left: 0px;
+
+    }
+
+    .menuList li{
+        font-size: 2em;
+    }
+
+
+}
+
+
+/*menu*/
+
+.menuList{
+    padding-left: 0px;
+    margin-left: 0px;
+    text-align: center;
+    margin-top: 250px;
+
+}
+
+.menuList li{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    list-style: none;
+    font-size: 3em;
+    font-weight: 300;
+    color: #ececec;
+    margin-bottom: 10px;
+}
+
+.menuList li:hover{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    color: #ffec00;
+    cursor: pointer;
+}

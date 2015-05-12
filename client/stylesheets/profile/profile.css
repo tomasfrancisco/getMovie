@@ -1,6 +1,5 @@
 
 
-
 .sectionProfile{
     position: fixed;
     width: 100%;
@@ -123,38 +122,3 @@
 
 }
 
-
-/*menu*/
-
-.menuList{
-    padding-left: 0px;
-    margin-left: 0px;
-    text-align: center;
-    margin-top: 250px;
-
-}
-
-.menuList li{
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-
-    list-style: none;
-    font-size: 3em;
-    font-weight: 300;
-    color: #ececec;
-    margin-bottom: 10px;
-}
-
-.menuList li:hover{
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-
-    color: #ffec00;
-    cursor: pointer;
-}

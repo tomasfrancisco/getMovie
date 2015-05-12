@@ -1,0 +1,156 @@
+
+body{
+    background-color:#1c1c1c;
+    font-family: "Quicksand", sans-serif;
+
+    margin:0;
+    padding: 0;
+
+}
+
+
+.menu{
+    color: #ffec00;
+
+}
+
+
+
+/*menu*/
+
+.menuList{
+    padding-left: 0px;
+    margin-left: 0px;
+    text-align: center;
+    margin-top: 250px;
+
+}
+
+.menuList li{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    list-style: none;
+    font-size: 3em;
+    font-weight: 300;
+    color: #ececec;
+    margin-bottom: 10px;
+}
+
+.menuList li:hover{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    color: #ffec00;
+    cursor: pointer;
+}
+
+
+
+.content{
+    position: absolute;
+    margin-top: 250px;
+
+    width: 100%;
+    height: 50%;
+}
+
+.content .section{
+    display: inline-block;
+    width: 33%;
+    height: 50%;
+    margin-right: 0px;
+    margin-left: 0px;
+
+
+}
+
+
+
+
+
+#seeMore1, #seeMore2, #seeMore3, #seeMore4, #seeMore5, #seeMore6{
+    opacity: 0;
+    position: absolute;
+    width: 33%;
+    height: 50%;
+}
+
+#seeMore1 img, #seeMore2 img, #seeMore3 img, #seeMore4 img, #seeMore5 img,  #seeMore6 img{
+
+    width: 120px;
+    display: block;
+    margin-top: 40px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+
+
+/*////////////////////////////////////////////
+////////////////////PROFILE PAGE//////////////
+////////////////////////////////////////////*/
+
+.sectionProfile{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.sectionP1{
+    width: 45%;
+    height: 100%;
+    float: left;
+
+}
+
+.sectionP2{
+    width: 55%;
+    height: 100%;
+    float: right;
+
+}
+
+
+
+
+.sectionP1 span{
+    color:#ffec00;
+}
+
+.sectionP2 .profileInfo{
+    width: 100%;
+    position: fixed;
+    margin-top: 200px;
+
+}
+
+.sectionP2 #usernameInfo{
+    color: #ffec00;
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.sectionP2 #nameInfo{
+    color: #ececec;
+    font-size: 2.2em;
+}
+
+.sectionP2 #descriptionInfo{
+    color: #ececec;
+}
+
+.sectionP2 #dataInfo{
+    color: #ececec;
+}
+
+.sectionP2 #localInfo{
+    color: #ececec;
+}

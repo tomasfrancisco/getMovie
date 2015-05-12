@@ -9,7 +9,7 @@ iron:router
 http
 oauth2
 mrt:jquery-ui
-chartjs
+gerardnantel:chartjs
 underscore
 d3
 accounts-trakt

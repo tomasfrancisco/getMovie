@@ -23,3 +23,133 @@ body{
     pointer-events: none;
     font: 10px sans-serif;
 }
+
+
+
+/*List of Friends*/
+.contentFriends{
+    position: absolute;
+    margin-top: 1050px;
+
+    width: 100%;
+    height: 50%;
+}
+
+.contentFriends .sectionFriends{
+    display: inline-block;
+    width: 19.5%;
+    height: auto;
+    margin-right: 0px;
+    margin-left: 4.3%;
+    margin-bottom: 3%;
+}
+
+
+.sectionFriends p{
+    width: 18%;
+    color: #ececec;
+    position: absolute;
+
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+
+}
+
+.sectionFriends .Name1{
+    width: 19.5%;
+    color: #ffec00;
+}
+
+
+.sectionFriends img{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 3px #ffec00 solid;
+}
+
+.sectionFriends img:hover{
+    cursor: pointer;
+
+}
+
+
+
+
+
+/*menu*/
+
+.menuList{
+    padding-left: 0px;
+    margin-left: 0px;
+    text-align: center;
+    margin-top: 250px;
+
+}
+
+.menuList li{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    list-style: none;
+    font-size: 3em;
+    font-weight: 300;
+    color: #ececec;
+    margin-bottom: 10px;
+}
+
+.menuList li:hover{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    color: #ffec00;
+    cursor: pointer;
+}
+
+
+
+
+@media (max-width: 1240px) {
+
+
+
+    .menuList li{
+        font-size: 3em;
+    }
+
+}
+
+@media (max-width: 720px) {
+
+
+    .top-nav .options620px img{
+        visibility: visible;
+        cursor: pointer;
+    }
+
+    .top-nav .avatarIMG{
+        display: none;
+    }
+
+    .top-nav .options{
+        margin-left: -20px;
+        padding-left: 0px;
+
+    }
+
+    .menuList li{
+        font-size: 2em;
+    }
+
+
+}
+
+
