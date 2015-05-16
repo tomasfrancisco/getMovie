@@ -105,28 +105,50 @@ Template.home.rendered = function() {
 
 
 Template.home.helpers({
-    /*chartGenre: function() {
+    chartGenre: function() {
         if(Meteor.user()) {
-            console.log(Session.get("genresChart"));
-            if(Session.get("genresChart")) {
-                return Session.get("genresChart");
+            var obj = Session.get("genresStats");
+            console.log(obj);
+            if(obj) {
+
+                var total = 0;
+                var top = [];
+                var counter = 0;
+                for(var item in obj) {
+                    if(counter < 5) {
+                        top[item] = obj[item];
+                        total += top[item].value;
+                    }
+                    else
+                        break;
+                    counter++;
+                }
+                top.push({name:'other', value: 1.0 - total});
+
+                console.log(top);
+
+                return top;
             }
         }
+        else {
+            return null;
+        }
     },
-*/
+
     getChartGenre: function() {
         if(Meteor.user()) {
             console.log("Session: " + Session.get("genresStats"));
-            var stats = Session.get("genresStats");
+            var stats = /*undefined;*/Session.get("genresStats");
             if(stats === undefined) {
                 Meteor.call('getStatsGenres', Meteor.user().profile.username, function(err, result) {
+
                     Session.setPersistent("genresStats", result);
                     console.log("Session now: " + Session.get("genresStats"));
                 });
             }
             else
             {
-                console.log(stats);
+                //console.log(stats);
             }
         }
     }

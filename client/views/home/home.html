@@ -50,12 +50,19 @@
                     {{#with getChartGenre}}
                     {{/with}}
 
-                    {{#with chartGenre}}
+
                         <div id="canvas-holder">
                             <div class="genreList">
                                 <ul>
-                                    {{#each chart}}
-                                        <li id = "sq1"><div class = "square" style="background-color: #edda2f"></div>{{this.name}} - <span style="color: #ffec00; font-weight: 500;">{{this.value}}</span></li>
+                                    {{#each chartGenre}}
+                                        <li id = "sq1">
+                                            <div class = "square" style="background-color: #edda2f">
+                                            </div>
+                                            {{this.name}} -
+                                            <span style="color: #ffec00; font-weight: 500;">
+                                                {{this.value}}
+                                            </span>
+                                        </li>
                                     {{/each}}
                                     <!--<li id = "sq2"><div class = "square" style="background-color: #ffec00"></div>Acção - <span style="color: #ffec00; font-weight: 500;">25%</span></li>
                                     <li id = "sq3"><div class = "square" style="background-color: #a8941a"></div>Comédia - <span style="color: #ffec00; font-weight: 500;">20%</span></li>
@@ -65,7 +72,7 @@
                                 </ul>
                             </div>
                         </div>
-                    {{/with}}
+
                 </div>
             </div>
 

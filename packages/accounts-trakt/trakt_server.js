@@ -278,8 +278,6 @@ Meteor.methods({
 
     getStatsGenres: function(username) {
 
-        var moviesStats = {};
-
         var watchedMovies = Meteor.call("getWatched", username, 'movies');
         var watchedMoviesTotal = 0;
 
@@ -304,7 +302,17 @@ Meteor.methods({
         }
 
         console.log(watchedGenres);
-        return watchedGenres;
+
+        var result = [];
+        for (var key in watchedGenres)
+            result.push({name:key,value:watchedGenres[key]});
+
+
+        result.sort(function(a,b) {
+            return parseFloat(b.value) - parseFloat(a.value);
+        });
+
+        return result;
     }
 });
 
