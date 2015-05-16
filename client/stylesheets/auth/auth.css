@@ -50,7 +50,7 @@ body{
 
 }
 
-.logoLogin #getIn{
+.logoLogin #loginBtn #getIn{
     width: 100px;
     display: block;
     margin-left: auto;
@@ -59,4 +59,25 @@ body{
 
 .logoLogin #getIn:hover{
     cursor: pointer;
+}
+
+
+#login-buttons-trakt {
+    position: absolute;
+    z-index: 50;
+    height: 100px;
+    background-image: url("img/logIn.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    color: #1c1c1c;
+}
+
+#loginBtn {
+    background-color: transparent;
+    border: none;
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

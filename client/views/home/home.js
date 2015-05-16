@@ -1,44 +1,3 @@
-var pieData = [
-    {
-        value: 30,
-        color:"#edda2f"
-    },
-    {
-        value : 25,
-        color : "#ffec00"
-    },
-    {
-        value : 20,
-        color : "#a8941a"
-    },
-    {
-        value : 15,
-        color : "#fff803"
-    },
-    {
-        value : 10,
-        color : "#efde97"
-    },
-    {
-        value : 5,
-        color : "#e2c73d"
-    }
-];
-
-
-var pieOptions = {
-    segmentShowStroke : false,
-    animateScale : true,
-
-
-}
-
-
-Template.home.rendered = function() {
-    var ctx = document.getElementById("genre-chart").getContext("2d");
-    window.myPie = new Chart(ctx).Pie(pieData, pieOptions);
-};
-
 
 Template.home.events({
     "mouseover #s1": function () {
@@ -91,16 +50,7 @@ Template.home.events({
     },
 
     "click #s1": function (event) {
-        Router.go("/testes");
-    },
-
-    "click #s2": function (event) {
-        Router.go("/movies");
-    },
-
-
-    "click #s3": function (event) {
-        Router.go("/recommendations");
+        Router.go("/friends");
     },
 
     "click #s4": function (event) {
@@ -110,13 +60,96 @@ Template.home.events({
     "click #s5": function (event) {
         Router.go("/recommendations");
     }
+
+
 });
 
+var pieData = [
+    {
+        value: 30,
+        color:"#edda2f"
+    },
+    {
+        value : 25,
+        color : "#ffec00"
+    },
+    {
+        value : 20,
+        color : "#a8941a"
+    },
+    {
+        value : 15,
+        color : "#fff803"
+    },
+    {
+        value : 10,
+        color : "#efde97"
+    },
+    {
+        value : 5,
+        color : "#e2c73d"
+    }
+];
+
+
+var pieOptions = {
+    segmentShowStroke : false,
+    animateScale : true,
+}
+
+
+Template.home.rendered = function() {
+    var ctx = document.getElementById("genre-chart").getContext("2d");
+    window.myPie = new Chart(ctx).Pie(pieData, pieOptions);
+};
+
+
 Template.home.helpers({
-    userInfo: function() {
-        if(Meteor.user())
-            return Meteor.user().profile;
-        else
+    chartGenre: function() {
+        if(Meteor.user()) {
+            var obj = Session.get("genresStats");
+            console.log(obj);
+            if(obj) {
+
+                var total = 0;
+                var top = [];
+                var counter = 0;
+                for(var item in obj) {
+                    if(counter < 5) {
+                        top[item] = obj[item];
+                        total += top[item].value;
+                    }
+                    else
+                        break;
+                    counter++;
+                }
+                top.push({name:'other', value: 1.0 - total});
+
+                console.log(top);
+
+                return top;
+            }
+        }
+        else {
             return null;
+        }
+    },
+
+    getChartGenre: function() {
+        if(Meteor.user()) {
+            console.log("Session: " + Session.get("genresStats"));
+            var stats = /*undefined;*/Session.get("genresStats");
+            if(stats === undefined) {
+                Meteor.call('getStatsGenres', Meteor.user().profile.username, function(err, result) {
+
+                    Session.setPersistent("genresStats", result);
+                    console.log("Session now: " + Session.get("genresStats"));
+                });
+            }
+            else
+            {
+                //console.log(stats);
+            }
+        }
     }
 });

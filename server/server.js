@@ -1,5 +1,8 @@
 if (Meteor.isServer) {
-    Meteor.startup(function () {
-        // code to run on server at startup
+    // Allows client to delete user db
+    Meteor.users.allow({
+        remove: function() {
+            return true
+        }
     });
 }

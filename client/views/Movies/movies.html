@@ -1,29 +1,7 @@
 <template name= "movies">
 
-    <nav>
-        <div class = "top-nav">
-            <div id = "logo">
-                <img src="img/logo.png">
-            </div>
+    {{> navbar}}
 
-            <div class = "options">
-                <ul>
-                    <li>tfrancisco</li>
-                    <li class = "menu" style = "border-left: 1px #ffec00 solid">movies</li>
-                    <li class = "logout">get <span>out</span></li>
-                </ul>
-            </div>
-
-            <div class = "options620px">
-                <img class = "menu" src="img/menuIcon.png">
-            </div>
-
-            <div class = "avatarIMG">
-                <img src="img/t.jpg">
-            </div>
-
-        </div>
-    </nav>
 
     <section>
         <div class = "content">
@@ -71,6 +49,18 @@
 
         </div>
     </section>
+
+
+    {{#with getWatched}}
+
+    {{/with}}
+    <ul>
+        {{#with watched}}
+
+        {{/with}}
+    </ul>
+
+
 
     <div class = "menuBack">
         <ul class="menuList">

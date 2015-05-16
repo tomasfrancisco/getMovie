@@ -1,14 +1,5 @@
 
-
-
-.sectionProfile{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-}
-
-.sectionP1{
+.sectionI1{
     width: 45%;
     height: 100%;
     float: left;
@@ -16,13 +7,13 @@
 }
 
 
-.sectionP1 .movieInfo{
+.sectionI1 .movieInfo{
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-.sectionP1 .movieInfo img{
+.sectionI1 .movieInfo img{
     z-index: 2;
     width: 45%;
     right: 100px;
@@ -36,7 +27,7 @@
 
 }
 
-.sectionP1 .movieInfo p{
+.sectionI1 .movieInfo p{
     width: 100%;
     height: 10px;
     text-align: center;
@@ -44,51 +35,51 @@
     font-size: 1.2em;
 }
 
-.sectionP1 span{
+.sectionI1 span{
     color:#ffec00;
 }
 
-.sectionP2{
+.sectionI2{
     width: 55%;
     height: 100%;
     float: right;
 }
 
 
-.sectionP2 .profileInfo{
+.sectionI2 .profileInfo{
     width: 100%;
     position: fixed;
     margin-top: 200px;
 }
 
-.sectionP2 #movieNameInfo{
+.sectionI2 #movieNameInfo{
     color: #ffec00;
     font-weight: 700;
     font-size: 2em;
 }
 
-.sectionP2 #subNameInfo{
+.sectionI2 #subNameInfo{
     margin-top: -30px;
     color: #ececec;
     font-size: 2.2em;
     width: 40%;
 }
 
-.sectionP2 #resumeInfo{
+.sectionI2 #resumeInfo{
     color: #ececec;
     width: 40%;
 }
 
-.sectionP2 #diretorInfo{
+.sectionI2 #diretorInfo{
     color: #ececec;
 }
 
-.sectionP2 #atorInfo{
+.sectionI2 #atorInfo{
     color: #ececec;
     width: 40%;
 }
 
-.sectionP2 #genresInfo{
+.sectionI2 #genresInfo{
     color: #ececec;
 }
 
@@ -166,11 +157,3 @@
     color: #ffec00;
     cursor: pointer;
 }
-
-
-
-
-
-
-
-

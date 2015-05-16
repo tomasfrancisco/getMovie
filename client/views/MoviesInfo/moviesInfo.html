@@ -1,31 +1,8 @@
 <template name="moviesInfo">
-    <nav>
-        <div class = "top-nav">
-            <div id = "logo">
-                <img src="img/logo.png">
-            </div>
-
-            <div class = "options">
-                <ul>
-                    <li>tfrancisco</li>
-                    <li class = "menu" style = "border-left: 1px #ffec00 solid">Movie Info</li>
-                    <li class = "logout">get <span>out</span></li>
-                </ul>
-            </div>
-
-            <div class = "options620px">
-                <img class = "menu" src="img/menuIcon.png">
-            </div>
-
-            <div class = "avatarIMG">
-                <img src="img/t.jpg">
-            </div>
-
-        </div>
-    </nav>
+    {{> navbar}}
 
     <section class = "sectionMovieInfo">
-        <div class = "sectionP1">
+        <div class = "sectionI1">
             <div class = "movieInfo">
                 <img src="img/f1.jpg">
                 <p>VOTES: <span id = "votes">50</span></p>
@@ -35,7 +12,7 @@
             </div>
         </div>
 
-        <div class = "sectionP2">
+        <div class = "sectionI2">
             <div class = "profileInfo">
                 <p id = "movieNameInfo">HOBBIT</p>
                 <p id = "subNameInfo">The Battle of the Five Armies (2014)</p>

@@ -7,135 +7,6 @@ body{
 
 }
 
-.top-nav{
-    position: absolute;
-}
-
-.top-nav #logo{
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-}
-
-.top-nav #logo img{
-    width: 150px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.top-nav .avatarIMG img{
-    position: fixed;
-    z-index: 2;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    margin-left: 20px;
-    border-bottom: 4px #ffec00 solid;
-}
-
-.top-nav .options{
-
-    position: fixed;
-    z-index: 3;
-    background-color: transparent;
-    width: 40%;
-    height: 100px;
-    margin-left: 100px;
-
-}
-
-
-
-.top-nav .options ul{
-    background-color: transparent;
-    list-style: none;
-    text-decoration: none;
-    color: #ececec;
-    font-size: 1.3em;
-}
-
-.top-nav .options ul span{
-    color: #ffec00;
-}
-
-.top-nav .options li{
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-
-    margin-bottom: 5px;
-    padding-left: 5px;
-    border-left: 1px #ececec solid;
-}
-
-.top-nav .options li:hover{
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-
-    border-left: 1px #ffec00 solid;
-    color: #ffec00;
-
-    cursor: pointer;
-}
-
-.top-nav .options620px img{
-    position: fixed;
-    z-index: 3;
-    background-color: transparent;
-    width: 40px;
-    right: 20px;
-    margin-top: 50px;
-    visibility: hidden;
-}
-
-.menu{
-    color: #ffec00;
-
-}
-
-
-
-/*menu*/
-
-.menuList{
-    padding-left: 0px;
-    margin-left: 0px;
-    text-align: center;
-    margin-top: 250px;
-
-}
-
-.menuList li{
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-
-    list-style: none;
-    font-size: 3em;
-    font-weight: 300;
-    color: #ececec;
-    margin-bottom: 10px;
-}
-
-.menuList li:hover{
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-
-    color: #ffec00;
-    cursor: pointer;
-}
 
 
 
@@ -156,10 +27,6 @@ body{
 
 
 }
-
-
-
-
 
 /*section GRAFO*/
 
@@ -218,56 +85,51 @@ body{
     color: #ffec00;
 }
 
-#genre-chart {
-    position: absolute;
-    width: 150px;
-    height: 40%;
-    margin-top: 70px;
-    margin-left: 20px;
+#sectionGenre {
+    width: 100%;
+    margin-top: 10%;
+}
+
+.chart {
+    position: relative;
+    width: auto;
+    float: left;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+.canvas-holder {
+    position: relative;
+    float: right;
+}
 
 
 
 .genreList {
-    position: absolute;
     color: #ddd;
     font-size: 17px;
 
 }
 
 .genreList ul{
-    margin-top: 21%;
-    margin-left: 200px;
     list-style: none;
     text-decoration: none;
+
 }
 
-.genreList li{
+.genreList ul li{
     margin-bottom: 2px;
     font-weight: 300;
+    width: 50%;
+    margin-left: 150px;
+
 }
 
 .square{
     display: inline-block;
     width: 10px;
     height: 10px;
-    margin-left: -20px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 

@@ -1,6 +1,6 @@
 
 .sectionR1{
-    width: 45%;
+    width: 35%;
     height: 100%;
     float: left;
 
@@ -20,7 +20,7 @@
     height: auto;
     display: block;
     margin-left: auto;
-    margin-right: auto;
+
     margin-top: 200px;
     border-bottom: #ffec00 solid 4px;
 
@@ -29,18 +29,45 @@
 
 .sectionR1 .movieInfo p{
     width: 100%;
-    height: 10px;
-    text-align: center;
+    height: 320px;
+    text-align: right;
+    padding-right: 10px;
     color: #ececec;
     font-size: 1.2em;
 }
+
+.sectionR1 #resumeInfo{
+    color: #ececec;
+    position: relative;
+    width: 70%;
+    overflow: scroll;
+    overflow-x: hidden;
+    heigth:400px;
+    border-right:1px solid #ffec00;
+    scrollbar-base-color:#ffec00;
+    scrollbar-face-color:#ffec00;
+    display: block;
+    margin-left: auto;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffec00;
+} /* this will style the thumb, ignoring the track */
+
+
 
 .sectionR1 span{
     color:#ffec00;
 }
 
 .sectionR2{
-    width: 55%;
+    width: 60%;
     height: 100%;
     float: right;
 }
@@ -65,10 +92,6 @@
     width: 40%;
 }
 
-.sectionR2 #resumeInfo{
-    color: #ececec;
-    width: 40%;
-}
 
 .sectionR2 #diretorInfo{
     color: #ececec;
@@ -83,7 +106,46 @@
     color: #ececec;
 }
 
+.sectionR2 #trailerBox{
+    position: relative;
 
+    margin-top: 400px;
+    width: 80%;
+    height: 400px;
+    border:1px solid #ffec00;
+}
+
+
+.sectionR3{
+    position: absolute;
+    bottom: 0;
+
+    width: 96%;
+    height: 50px;
+    margin-bottom:20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.sectionR3 #recommendationList{
+    width: 98%;
+    position: absolute;
+    padding-top: 0;
+    margin-top: 0;
+    color: #ececec;
+    list-style: none;
+    display: inline;
+    text-align: center;
+    font-size: 1.4em;
+
+}
+
+.sectionR3 #recommendationList p{
+    width: 100px;
+    display: inline;
+
+}
 
 
 
