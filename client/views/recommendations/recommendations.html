@@ -1,6 +1,25 @@
 <template name="recommendations">
     {{> navbar}}
 
+
+    {{#with getMoviesRecommendation}}
+
+    {{/with}}
+
+
+
+
+    <ul>
+        {{#with moviesRecommendation}}
+            {{#each data}}
+                <li>{{this.title}}</li>
+            {{/each}}
+
+        {{/with}}
+    </ul>
+
+
+
     <section class = "sectionMovieInfo">
         <div class = "sectionR1">
             <div class = "movieInfo">
@@ -37,6 +56,8 @@
 
 
         </div>
+
+
 
 
     </section>

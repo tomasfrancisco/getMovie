@@ -114,6 +114,7 @@ body{
 .genreList ul{
     list-style: none;
     text-decoration: none;
+    width: 80%;
 
 }
 

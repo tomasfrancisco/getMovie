@@ -25,5 +25,9 @@ Template.navbar.events({
         Session.clear();
         Meteor.users.remove({_id: Meteor.user()._id});
         Router.go("/");
+    },
+
+    "click #profilePage": function (event) {
+        Router.go("/profile");
     }
 });

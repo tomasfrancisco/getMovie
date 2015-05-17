@@ -1,6 +1,5 @@
 Template.friends.helpers({
     friends: function() {
-        //console.log(Meteor.user());
         if(Meteor.user()) {
             if(Session.get("friends")) {
                 console.log(Session.get("friends"));
@@ -9,6 +8,7 @@ Template.friends.helpers({
         }
 
     },
+
     getFriends: function() {
         console.log(Meteor.user().profile.username);
         if(Meteor.user()) {
@@ -25,10 +25,6 @@ Template.friends.helpers({
  */
 Template.friends.rendered = function() {
     // d3 code
-
-
-
-
     var friends = {
         "nodes":[
             {"name":"Gonçalo","group":0},

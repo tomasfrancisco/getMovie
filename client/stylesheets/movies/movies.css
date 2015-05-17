@@ -61,96 +61,46 @@ body{
     height: 50%;
 }
 
-.content .section{
+.content .sectionM{
     display: inline-block;
     width: 33%;
-    height: 50%;
+    height: auto;
     margin-right: 0px;
     margin-left: 0px;
-
-
 }
 
-
-
-
-
-#seeMore1, #seeMore2, #seeMore3, #seeMore4, #seeMore5, #seeMore6{
-    opacity: 0;
-    position: absolute;
-    width: 33%;
-    height: 50%;
-}
-
-#seeMore1 img, #seeMore2 img, #seeMore3 img, #seeMore4 img, #seeMore5 img,  #seeMore6 img{
-
-    width: 120px;
+.content .sectionM img{
     display: block;
-    margin-top: 40px;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
+    width: 70%;
+    height: auto;
+    border-bottom: 4px solid #ffec00;
 }
 
-
-
-/*////////////////////////////////////////////
-////////////////////PROFILE PAGE//////////////
-////////////////////////////////////////////*/
-
-.sectionProfile{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
+.content .sectionM img:hover{
+    cursor: pointer;
 }
 
-.sectionP1{
-    width: 45%;
-    height: 100%;
-    float: left;
-
-}
-
-.sectionP2{
-    width: 55%;
-    height: 100%;
-    float: right;
-
-}
-
-
-
-
-.sectionP1 span{
-    color:#ffec00;
-}
-
-.sectionP2 .profileInfo{
-    width: 100%;
-    position: fixed;
-    margin-top: 200px;
-
-}
-
-.sectionP2 #usernameInfo{
+.sectionM .movieName{
     color: #ffec00;
-    font-weight: 500;
-    font-size: 2em;
+    font-size: 1em;
+
 }
 
-.sectionP2 #nameInfo{
+.sectionM .Name2{
     color: #ececec;
-    font-size: 2.2em;
+    font-size: 0.7em;
 }
 
-.sectionP2 #descriptionInfo{
-    color: #ececec;
+.sectionM .value{
+    color: #ffec00;
 }
 
-.sectionP2 #dataInfo{
-    color: #ececec;
+.sectionM p{
+    text-align: center;
+
 }
 
-.sectionP2 #localInfo{
-    color: #ececec;
-}
+
+

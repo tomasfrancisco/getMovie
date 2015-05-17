@@ -1,71 +1,21 @@
 <template name = "friends">
 
     {{> navbar}}
-
+    {{#with getFriends}}
+    {{/with}}
 
 
     <section>
         <div class = "contentFriends">
-            <div class ="sectionFriends">
-                <p><span class = "Name1">Person</span></p>
-                <img src="img/g.jpg">
-            </div>
-            <div class ="sectionFriends">
-                <p><span class = "Name1">Person</span></p>
-                <img src="img/g.jpg">
-            </div>
-            <div class ="sectionFriends">
-                <p><span class = "Name1">Person</span></p>
-                <img src="img/g.jpg">
-            </div>
-            <div class ="sectionFriends">
-                <p><span class = "Name1">Person</span></p>
-                <img src="img/g.jpg">
-            </div>
-            <div class ="sectionFriends">
-                <p><span class = "Name1">Person</span></p>
-                <img src="img/g.jpg">
-            </div>
-            <div class ="sectionFriends">
-                <p><span class = "Name1">Person</span></p>
-                <img src="img/g.jpg">
-            </div>
-            <div class ="sectionFriends">
-                <p><span class = "Name1">Person</span></p>
-                <img src="img/g.jpg">
-            </div>
-            <div class ="sectionFriends">
-                <p><span class = "Name1">Person</span></p>
-                <img src="img/g.jpg">
-            </div>
-            <div class ="sectionFriends">
-                <p><span class = "Name1">Person</span></p>
-                <img src="img/g.jpg">
-            </div>
-
+            {{#with friends}}
+                {{#each data}}
+                    <div class ="sectionFriends">
+                        <p><span class = "Name1">{{this.user.username}}</span></p>
+                    </div>
+                {{/each}}
+            {{/with}}
         </div>
-
-
-
     </section>
-
-
-    {{#with getFriends}}
-    {{/with}}
-
-    <h1>Fora</h1>
-    <ul>
-        {{#with friends}}
-            {{#each data}}
-                <li>{{this.user.name}}</li>
-            {{/each}}
-        {{/with}}
-    </ul>
-
-
-
-
-
 
     <div class = "menuBack">
         <ul class="menuList">

@@ -313,7 +313,7 @@ Meteor.methods({
         });
 
         return result;
-    }
+    },
 
     getMoviesRecommendation: function(accessToken) {
         try {

@@ -2,63 +2,31 @@
 
     {{> navbar}}
 
-
-    <section>
-        <div class = "content">
-            <div class ="section" id = "f1">
-                <p><span class = "Name1">FILME 1 | </span><span class = "Name2">VOTES: <span class = "value">4.5K</span> RANKING: <span class = "value">2K</span></span></p>
-                <div id = "seeMore1"><img src="img/seeMore.png"></div>
-
-
-            </div>
-
-
-            <div class = "section" id = "f2">
-                <p><span class = "Name1">FILME 2 | </span><span class = "Name2">VOTES: <span class = "value">4.5K</span> RANKING: <span class = "value">2K</span></span></p>
-                <div id = "seeMore2"><img src="img/seeMore.png"></div>
-
-
-            </div>
-
-
-            <div class = "section" id = "f3">
-                <p><span class = "Name1">FILME 3 | </span><span class = "Name2">VOTES: <span class = "value">4.5K</span> RANKING: <span class = "value">2K</span></span></p>
-                <div id = "seeMore3"><img src="img/seeMore.png"></div>
-
-            </div>
-
-
-            <div class = "section" id = "f4">
-                <p><span class = "Name1">FILME 4 | </span><span class = "Name2">VOTES: <span class = "value">4.5K</span> RANKING: <span class = "value">2K</span></span></p>
-                <div id = "seeMore4"><img src="img/seeMore.png"></div>
-
-            </div>
-
-
-            <div class = "section" id = "f5">
-                <p><span class = "Name1">FILME 5 | </span><span class = "Name2">VOTES: <span class = "value">4.5K</span> RANKING: <span class = "value">2K</span></span></p>
-                <div id = "seeMore5"><img src="img/seeMore.png"></div>
-
-            </div>
-
-
-            <div class = "section" id = "f6">
-                <p><span class = "Name1">FILME 6 | </span><span class = "Name2">VOTES: <span class = "value">4.5K</span> RANKING: <span class = "value">2K</span></span></p>
-                <div id = "seeMore6"><img src="img/seeMore.png"></div>
-            </div>
-
-        </div>
-    </section>
-
-
     {{#with getWatched}}
 
     {{/with}}
-    <ul>
-        {{#with watched}}
 
+
+    <section>
+        {{#with watched}}
+            <div class = "content">
+
+                {{#each data}}
+                        <div class ="sectionM" id = "f1">
+                                <img src="img/thumb.jpg">
+
+                            <p><span class = "movieName">{{this.movie.title}} | </span><span class = "Name2">VOTES: <span class = "value">x</span> RANKING: <span class = "value">x</span></span></p>
+
+                        </div>
+                {{/each}}
+
+            </div>
         {{/with}}
-    </ul>
+    </section>
+
+
+
+
 
 
 
