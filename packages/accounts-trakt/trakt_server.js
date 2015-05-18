@@ -247,6 +247,32 @@ Meteor.methods({
         }
     },
 
+    getMovieImages: function(id) {
+        try {
+            var config = ServiceConfiguration.configurations.findOne({service: 'trakt'});
+            if (!config)
+                throw new ServiceConfiguration.ConfigError();
+
+            var options = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'trakt-api-version': '2',
+                    'trakt-api-key': config.clientId
+                }
+            };
+
+            return HTTP.get(
+                'https://api-v2launch.trakt.tv/movies/' +
+                id +
+                "?extended=images",
+                options);
+        } catch (err) {
+            throw _.extend(new Error("Failed to fetch movie from Trakt. " + err.message),
+                {response: err.response});
+        }
+    },
+
+
     getStats: function(username) {
         try {
             var config = ServiceConfiguration.configurations.findOne({service: 'trakt'});

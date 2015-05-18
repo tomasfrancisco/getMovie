@@ -1,6 +1,10 @@
 <template name="moviesInfo">
     {{> navbar}}
 
+    {{#with movie}}
+
+
+
     <section class = "sectionMovieInfo">
         <div class = "sectionI1">
             <div class = "movieInfo">
@@ -14,7 +18,7 @@
 
         <div class = "sectionI2">
             <div class = "profileInfo">
-                <p id = "movieNameInfo">HOBBIT</p>
+                <p id = "movieNameInfo">{{this.data.title}}</p>
                 <p id = "subNameInfo">The Battle of the Five Armies (2014)</p>
                 <p id = "resumeInfo">Mere seconds after the events of "Desolation", Bilbo and Company continue to claim a mountain
                     of treasure that was guarded long ago: But with Gandalf the Grey also facing some formidable foes of his own,
@@ -31,7 +35,11 @@
         </div>
 
 
+
+
     </section>
+
+    {{/with}}
 
 
 

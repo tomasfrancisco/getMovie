@@ -13,7 +13,7 @@ Template.friends.helpers({
         console.log(Meteor.user().profile.username);
         if(Meteor.user()) {
             Meteor.call('getFriends', Meteor.user().profile.username, function (err, result) {
-                //console.log(result);
+                console.log(result);
                 Session.setPersistent("friends", result);
             });
         }
@@ -24,6 +24,7 @@ Template.friends.helpers({
  * Created by goncaloneves on 24/04/15.
  */
 Template.friends.rendered = function() {
+
     // d3 code
     var friends = {
         "nodes":[

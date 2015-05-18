@@ -94,7 +94,7 @@ var pieData = [
 
 var pieOptions = {
     segmentShowStroke : false,
-    animateScale : true,
+    animateScale : true
 }
 
 
@@ -117,15 +117,50 @@ Template.home.helpers({
                 for(var item in obj) {
                     if(counter < 5) {
                         top[item] = obj[item];
+                        top[item].value = Math.round(top[item].value * 100);
                         total += top[item].value;
+                        console.log(total);
+
                     }
                     else
                         break;
                     counter++;
                 }
-                top.push({name:'other', value: 1.0 - total});
-
+                top.push({name:'other', value: (1.0 - total/100 ) * 100})
                 console.log(top);
+
+                pieData = [
+                    {
+                        value: top[0].value,
+                        color:"#edda2f"
+                    },
+                    {
+                        value : top[1].value,
+                        color : "#ffec00"
+                    },
+                    {
+                        value : top[2].value,
+                        color : "#a8941a"
+                    },
+                    {
+                        value : top[3].value,
+                        color : "#fff803"
+                    },
+                    {
+                        value : top[4].value,
+                        color : "#efde97"
+                    },
+                    {
+                        value : top[5].value,
+                        color : "#e2c73d"
+                    }
+                ];
+
+
+
+                //console.log(document.getElementById("genre-chart"));
+                //var ctx = document.getElementById("genre-chart").getContext("2d");
+                //window.myPie = new Chart(ctx).Pie(pieData, pieOptions);
 
                 return top;
             }

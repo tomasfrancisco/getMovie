@@ -44,11 +44,15 @@
             <div class = "section" id = "s6">
                 <p>GÉNEROS <span class = "Name1">FAVORITOS</span></p>
                 <div id = "sectionGenre">
+
+                    {{#with getChartGenre}}
+                    {{/with}}
+
+
                     <div class="chart">
                         <canvas id="genre-chart" width="150" height="150"></canvas>
                     </div>
-                    {{#with getChartGenre}}
-                    {{/with}}
+
 
 
                         <div id="canvas-holder">
@@ -60,7 +64,7 @@
                                             </div>
                                             {{this.name}} -
                                             <span style="color: #ffec00; font-weight: 500;">
-                                                {{this.value}}
+                                                {{this.value}} %
                                             </span>
                                         </li>
                                     {{/each}}
