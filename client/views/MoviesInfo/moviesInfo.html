@@ -1,45 +1,38 @@
 <template name="moviesInfo">
     {{> navbar}}
 
-    {{#with movie}}
+            <section class = "sectionMovieInfo">
+                <div class = "sectionI1">
+                    <div class = "movieInfo">
+
+                        {{#with movieImages}}
+                            <img src="{{this.data.images.poster.medium}}">
+                        {{/with}}
+
+
+                        {{#with movie}}
+                            <p>VOTES: <span id = "votes">{{this.data.votes}}</span></p>
+                            <p>RATE: <span id = "rate">{{this.data.rating}}</span></p>
+                            <p>VER <a style="text-decoration: none" href="{{this.data.trailer}}" target="_blank" ><span id = "seeTrailer">TRAILER</span></a></p>
+                        {{/with}}
+
+                    </div>
+                </div>
+
+                {{#with movie}}
+                    <div class = "sectionI2">
+                        <div class = "profileInfo">
+                            <p id = "movieNameInfo">{{this.data.title}} <span style = "color: #ececec; font-weight: 100; font-size: 0.7em;">({{this.data.released}})</span></p>
+                            <p id = "subNameInfo">{{this.data.tagline}}</p>
+                            <p id = "resumeInfo">{{this.data.overview}}</p>
+                            <p id = "genresInfo"><span style = "color: #ffec00">Géneros:</span> {{this.data.genres}} </p>
+                        </div>
+                    </div>
+                {{/with}}
+            </section>
 
 
 
-    <section class = "sectionMovieInfo">
-        <div class = "sectionI1">
-            <div class = "movieInfo">
-                <img src="img/f1.jpg">
-                <p>VOTES: <span id = "votes">50</span></p>
-                <p>RATE: <span id = "rate">100</span></p>
-                <p>VER <span id = "seeTrailer">TRAILER</span></p>
-                <p><span id = "partilha">PARTILHAR</span></p>
-            </div>
-        </div>
-
-        <div class = "sectionI2">
-            <div class = "profileInfo">
-                <p id = "movieNameInfo">{{this.data.title}}</p>
-                <p id = "subNameInfo">The Battle of the Five Armies (2014)</p>
-                <p id = "resumeInfo">Mere seconds after the events of "Desolation", Bilbo and Company continue to claim a mountain
-                    of treasure that was guarded long ago: But with Gandalf the Grey also facing some formidable foes of his own,
-                    the Hobbit is outmatched when the brutal army of orcs led by Azog the Defiler returns. But with other armies such as the elves
-                    and the men of Lake-Town, which are unsure to be trusted, are put to the ultimate test when Smaug's wrath, Azog's sheer strength,
-                    and Sauron's force of complete ends attack. All in all, the trusted armies have two choices: unite or die. But even worse, Bilbo
-                    gets put on a knife edge and finds himself fighting with Hobbit warfare with all of his might for his dwarf-friends, as the hope
-                    for Middle-Earth is all put in Bilbo's hands. The one "precious" thing to end it all.<br>querendo sempre conhecer e aprender mais.</p>
-                <p id = "diretorInfo"><span style = "color: #ffec00">Data de Nascimento:</span> 14/07/1992</p>
-                <p id = "atorInfo"><span style = "color: #ffec00">Actores:</span> Martin Freeman, Ian McKellen, Richard Armitage, Aindan Turner, Orlando Bloom, John Bell</p>
-                <p id = "genresInfo"><span style = "color: #ffec00">Géneros:</span> Aventura, Acção</p>
-
-            </div>
-        </div>
-
-
-
-
-    </section>
-
-    {{/with}}
 
 
 

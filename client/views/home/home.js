@@ -95,7 +95,7 @@ var pieData = [
 var pieOptions = {
     segmentShowStroke : false,
     animateScale : true
-}
+};
 
 
 Template.home.rendered = function() {
@@ -128,6 +128,7 @@ Template.home.helpers({
                 }
                 top.push({name:'other', value: (1.0 - total/100 ) * 100})
                 console.log(top);
+
 
                 pieData = [
                     {
