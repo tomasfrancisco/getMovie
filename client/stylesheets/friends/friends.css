@@ -37,22 +37,22 @@ body{
 
 .contentFriends .sectionFriends{
     display: inline-block;
-    width: 19.5%;
+    width: 15%;
     height: auto;
     margin-right: 0px;
     margin-left: 4.3%;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
 
 }
 
 
 .sectionFriends p{
-    width: 18%;
     color: #ececec;
     position: absolute;
-    border-bottom: 3px #ffec00 solid;
+
     padding-bottom: 10px;
     margin-top: 10px;
+
     font-size: 1.5em;
     font-weight: 300;
     text-align: center;
@@ -60,15 +60,16 @@ body{
 }
 
 .sectionFriends .Name1{
-    width: 19.5%;
+    width: 60%;
     color: #ececec;
-
-
+    text-align: center;
 }
 
 
+
 .sectionFriends img{
-    width: 90%;
+    width: 70%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     border-bottom: 3px #ffec00 solid;

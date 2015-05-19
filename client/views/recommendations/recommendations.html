@@ -8,59 +8,41 @@
 
 
 
+    {{#with moviesRecommendation}}
+        {{#each data}}
+            <section class = "sectionMovieInfo">
+                    <div class = "sectionR1">
+                        <div class = "movieInfo">
+                            <img src="{{this.images.poster.medium}}">
+                            <p id = "resumeInfo">{{this.overview}}</p>
+                        </div>
+                    </div>
 
-    <ul>
-        {{#with moviesRecommendation}}
-            {{#each data}}
-                <li>{{this.title}}</li>
-            {{/each}}
+                    <div class = "sectionR2">
+                        <div class = "profileInfo">
+                            <p id = "movieNameInfo">{{this.title}}</p>
+                            <p id = "subNameInfo">{{this.tagline}}</p>
 
-        {{/with}}
-    </ul>
-
-
-
-    <section class = "sectionMovieInfo">
-        <div class = "sectionR1">
-            <div class = "movieInfo">
-                <img src="img/f1.jpg">
-                <p id = "resumeInfo">Mere seconds after the events of "Desolation", Bilbo and Company continue to claim a mountain
-                    of treasure that was guarded long ago: But with Gandalf the Grey also facing some formidable foes of his own,
-                    the Hobbit is outmatched when the brutal army of orcs led by Azog the Defiler returns. But with other armies such as the elves
-                    and the men of Lake-Town, which are unsure to be trusted, are put to the ultimate test when Smaug's wrath, Azog's sheer strength,
-                    and Sauron's force of complete ends attack. All in all, the trusted armies have two choices: unite or die. But even worse, Bilbo
-                    gets put on a knife edge and finds himself fighting with Hobbit warfare with all of his might for his dwarf-friends, as the hope
-                    for Middle-Earth is all put in Bilbo's hands. The one "precious" thing to end it all.</p>
-            </div>
-        </div>
-
-        <div class = "sectionR2">
-            <div class = "profileInfo">
-                <p id = "movieNameInfo">HOBBIT</p>
-                <p id = "subNameInfo">The Battle of the Five Armies (2014)</p>
-
-            </div>
-            <div >
-                <iframe id = "trailerBox" width="auto" height="399" border="none" src="http://www.youtube.com/embed/DaGGZ7bBkYI?"></iframe>
-            </div>
-        </div>
-        <div class = "sectionR3">
-            <ul id = "recommendationList">
-                <li><p>VOTES: <span id = "votesR" style="color:#ffec00"> 50 </span>|</p>
-                    <p>RATE: <span id = "rateR" style="color:#ffec00"> 100 </span>|</p>
-                    <p>VER MAIS<span id = "moreInfoR" style="color:#ffec00"> INFORMAÇÃO </span>|</p>
-                    <p>RESCUSAR<span id = "refuseR" style="color:#ffec00"> RECOMENDAÇÃO </span></p>
-                </li>
-
-            </ul>
-
-
-        </div>
+                        </div>
+                        <div >
+                            <iframe id = "trailerBox" width="70%" height="auto" border="none" src='{{this.trailer}}+"&output=embed"'></iframe>
+                        </div>
+                        <ul id = "recommendationList">
+                            <li><p>VOTES: <span id = "votesR" style="color:#ffec00"> {{this.votes}} </span>|</p>
+                                <p>RATE: <span id = "rateR" style="color:#ffec00"> {{this.rating}} </span>|</p>
+                                <!--<p>VER MAIS<span id = "moreInfoR" style="color:#ffec00"> INFORMAÇÃO </span>|</p>-->
+                                <p>RECUSAR<span id = "refuseR" style="color:#ffec00"> RECOMENDAÇÃO </span></p>
+                            </li>
+                        </ul>
+                    </div>
 
 
 
+            </section>
 
-    </section>
+        {{/each}}
+
+    {{/with}}
 
 
 

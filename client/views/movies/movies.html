@@ -22,9 +22,9 @@
 
                     {{#each data}}
                             <div class ="sectionM" id = "f1">
-                                    <img class = "thumb" src="img/thumb.jpg">
+                                    <img class = "thumb" src="{{this.movie.images.poster.medium}}">
 
-                                <p><span class = "movieName">{{this.movie.title}} | </span><span class = "Name2">VOTES: <span class = "value">x</span> RANKING: <span class = "value">x</span></span></p>
+                                <p><span class = "movieName">{{this.movie.title}} <br> </span><span class = "Name2">VOTES: <span class = "value">{{this.movie.votes}}</span> RANKING: <span class = "value">{{this.movie.rating}}</span></span></p>
 
                             </div>
                     {{/each}}

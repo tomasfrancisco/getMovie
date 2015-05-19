@@ -6,6 +6,8 @@
 
 Template.recommendations.helpers({
 
+
+
     moviesRecommendation: function() {
         if(Meteor.user()) {
             if (Session.get("moviesRecommendation")) {
@@ -24,3 +26,6 @@ Template.recommendations.helpers({
         }
     }
 });
+
+
+

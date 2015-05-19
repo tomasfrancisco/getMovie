@@ -63,10 +63,11 @@ body{
 
 .content .sectionM{
     display: inline-block;
-    width: 33%;
+    width: 24%;
     height: auto;
     margin-right: 0px;
     margin-left: 0px;
+    margin-bottom: 30px;
 }
 
 .content .sectionM img{
@@ -84,13 +85,13 @@ body{
 
 .sectionM .movieName{
     color: #ffec00;
-    font-size: 1em;
+    font-size: 0.8em;
 
 }
 
 .sectionM .Name2{
     color: #ececec;
-    font-size: 0.7em;
+    font-size: 0.5em;
 }
 
 .sectionM .value{

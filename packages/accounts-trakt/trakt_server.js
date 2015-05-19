@@ -160,7 +160,7 @@ Meteor.methods({
                 "https://api-v2launch.trakt.tv/users" +
                 "/" + username +
                 "/watched" +
-                "/" + type,
+                "/" + type +"/?extended=images,full",
                 options);
 
         } catch (err) {
@@ -214,7 +214,8 @@ Meteor.methods({
             return HTTP.get(
                 'https://api-v2launch.trakt.tv/users/' +
                 username +
-                '/following',
+                '/following' +
+                "?extended=full,images",
                 options);
         } catch (err) {
             throw _.extend(new Error("Failed to fetch friends from Trakt. " + err.message),
@@ -360,7 +361,7 @@ Meteor.methods({
             };
 
             return HTTP.get(
-                "https://api-v2launch.trakt.tv/recommendations/movies",
+                "https://api-v2launch.trakt.tv/recommendations/movies/?extended=full,images",
                 options);
         } catch (err) {
             throw _.extend(new Error("Failed to fetch movie recommendation from Trakt. " + err.message),
