@@ -1,4 +1,6 @@
 <template name="recommendations">
+
+
     {{> navbar}}
 
 
@@ -8,8 +10,13 @@
 
 
 
+
+
+
     {{#with moviesRecommendation}}
         {{#each data}}
+
+
             <section class = "sectionMovieInfo">
                     <div class = "sectionR1">
                         <div class = "movieInfo">
@@ -25,7 +32,7 @@
 
                         </div>
                         <div >
-                            <iframe id = "trailerBox" width="70%" height="auto" border="none" src='{{this.trailer}}+"&output=embed"'></iframe>
+                            <iframe id = "trailerBox" width="70%" height="auto" border="none" src="{{this.trailer}}"></iframe>
                         </div>
                         <ul id = "recommendationList">
                             <li><p>VOTES: <span id = "votesR" style="color:#ffec00"> {{this.votes}} </span>|</p>
