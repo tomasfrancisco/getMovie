@@ -4,7 +4,7 @@
     {{> navbar}}
 
 
-    {{#with getMoviesRecommendation}}
+    {{#with getShowsRecommendation}}
 
     {{/with}}
 
@@ -13,26 +13,23 @@
 
 
 
-    {{#with moviesRecommendation}}
+    {{#with showsRecommendation}}
         {{#each data}}
 
 
             <section class = "sectionMovieInfo">
-                <div class = "sectionR1">
+                <div class = "sectionRs1">
                     <div class = "movieInfo">
                         <img src="{{this.images.poster.medium}}">
-                        <p id = "resumeInfo">{{this.overview}}</p>
                     </div>
                 </div>
 
-                <div class = "sectionR2">
+                <div class = "sectionRs2">
                     <div class = "profileInfo">
                         <p id = "movieNameInfo">{{this.title}}</p>
                         <p id = "subNameInfo">{{this.tagline}}</p>
+                        <p id = "resumeInfo">{{this.overview}}</p>
 
-                    </div>
-                    <div >
-                        <iframe id = "trailerBox" width="70%" height="auto" border="none" src="{{this.trailer}}"></iframe>
                     </div>
                     <ul id = "recommendationList">
                         <li><p>VOTES: <span id = "votesR" style="color:#ffec00"> {{this.votes}} </span>|</p>

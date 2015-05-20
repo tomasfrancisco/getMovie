@@ -392,6 +392,33 @@ Meteor.methods({
             throw _.extend(new Error("Failed to fetch movie recommendation from Trakt. " + err.message),
                 {response: err.response});
         }
+    },
+
+    getShowsRecommendation: function(accessToken) {
+        try {
+            var config = ServiceConfiguration.configurations.findOne({service: 'trakt'});
+            if (!config)
+                throw new ServiceConfiguration.ConfigError();
+
+            var options = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + accessToken,
+                    'trakt-api-version': '2',
+                    'trakt-api-key': config.clientId
+                },
+                params: {
+                    access_token: accessToken
+                }
+            };
+
+            return HTTP.get(
+                "https://api-v2launch.trakt.tv/recommendations/shows/?extended=full,images",
+                options);
+        } catch (err) {
+            throw _.extend(new Error("Failed to fetch movie recommendation from Trakt. " + err.message),
+                {response: err.response});
+        }
     }
 });
 
