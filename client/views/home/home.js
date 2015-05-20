@@ -56,6 +56,10 @@ Template.home.events({
         Router.go("/shows");
     },
 
+    "click #s3": function (event) {
+        Router.go("/showsRecommendations");
+    },
+
     "click #s4": function (event) {
         Router.go("/movies");
     },

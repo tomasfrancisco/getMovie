@@ -10,11 +10,10 @@ Template.showsInfo.helpers({
     show: function() {
         if(Meteor.user()) {
             var movieToShow = Session.get("movie-to-show");
-            console.log(movieToShow);
+            console.log(Session.get("show"));
             if (movieToShow) {
                 var show = Session.get("movie-id-" + movieToShow);
                 console.log(movieToShow);
-
                 return show;
             }
         }

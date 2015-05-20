@@ -34,7 +34,6 @@ Template.shows.helpers({
     watched: function() {
         if(Meteor.user()) {
             if (Session.get("watched")) {
-                console.log("update");
                 Session.set("watchedListed", true);
                 console.log(Session.get("watched"));
                 return Session.get("watched");
