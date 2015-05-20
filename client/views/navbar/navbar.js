@@ -27,6 +27,10 @@ Template.navbar.events({
         Router.go("/");
     },
 
+    "click #logoHome": function () {
+        Router.go("/home");
+    },
+
     "click .menu": function () {
         $(".menuBack").slideToggle(1000);
     },

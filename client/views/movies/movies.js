@@ -10,9 +10,6 @@ Template.movies.events({
         $(".menuBack").slideToggle(1000);
     },
 
-    /*"click #f1": function (event) {
-        Router.go("/moviesInfo");
-    },*/
 
     'click #f1':function(e,t){
         //console.log(this.movie.title);

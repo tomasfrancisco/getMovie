@@ -1,5 +1,8 @@
 
 Template.home.events({
+    "click .menu": function () {
+        $(".menuBack").slideToggle(1000);
+    },
 
     "mouseover #s1": function () {
         $("#grafo").animate({"opacity": "0.3"}, 200);
@@ -18,10 +21,12 @@ Template.home.events({
 
     "mouseover #s4": function () {
         $("#seeMore4").animate({"opacity": "1"}, 200);
+
     },
 
     "mouseover #s5": function () {
         $("#seeMore5").animate({"opacity": "1"}, 200);
+
     },
 
     "mouseleave #s1": function () {
@@ -39,6 +44,7 @@ Template.home.events({
 
     "mouseleave #s4": function () {
         $("#seeMore4").animate({"opacity": "0"}, 200);
+
     },
 
     "mouseleave #s5": function () {
@@ -137,6 +143,7 @@ var pieOptions = {
 };
 
 
+
 Template.home.rendered = function() {
     var ctx = document.getElementById("genre-chart").getContext("2d");
     window.myPie = new Chart(ctx).Pie(pieData, pieOptions);
@@ -172,27 +179,33 @@ Template.home.helpers({
                 pieData = [
                     {
                         value: top[0].value,
-                        color:"#edda2f"
+                        color:"#edda2f",
+                        label: obj[0].name
                     },
                     {
                         value : top[1].value,
-                        color : "#ffec00"
+                        color : "#ffec00",
+                        label: obj[1].name
                     },
                     {
                         value : top[2].value,
-                        color : "#a8941a"
+                        color : "#a8941a",
+                        label: obj[2].name
                     },
                     {
                         value : top[3].value,
-                        color : "#fff803"
+                        color : "#fff803",
+                        label: obj[3].name
                     },
                     {
                         value : top[4].value,
-                        color : "#efde97"
+                        color : "#efde97",
+                        label: obj[4].name
                     },
                     {
                         value : top[5].value,
-                        color : "#e2c73d"
+                        color : "#e2c73d",
+                        label: "other"
                     }
                 ];
 
@@ -243,5 +256,49 @@ Template.home.helpers({
                 Session.setPersistent("stats", result);
             });
         }
+    },
+
+    moviesRecommendation: function() {
+        if(Meteor.user()) {
+
+            if (Session.get("moviesRecommendation")) {
+                /*var mrec = Session.get("moviesRecommendation");
+                var randomImg = mrec.data[Math.round(Math.random(10))].images.thumb.full;
+                console.log(randomImg);*/
+                return Session.get("moviesRecommendation");
+            }
+        }
+    },
+
+
+    getMoviesRecommendation: function() {
+        if(Meteor.user()) {
+
+            Meteor.call('getMoviesRecommendation', Meteor.user().profile.accessToken, function (err, result) {
+                Session.setPersistent("moviesRecommendation", result);
+            });
+        }
+    },
+
+    popularMovies: function() {
+        if(Meteor.user()) {
+            if(Session.get("popularMovies")) {
+                var mrec = Session.get("popularMovies");
+                var idPop = mrec.data[0].ids.trakt;
+                console.log(mrec);
+
+                return Session.get("popularMovies");
+            }
+        }
+    },
+
+    getPopularMovies: function() {
+        if(Meteor.user()) {
+
+            Meteor.call('getPopularMovies', Meteor.user().profile.accessToken, function (err, result) {
+                Session.setPersistent("popularMovies", result);
+            });
+        }
     }
+
 });

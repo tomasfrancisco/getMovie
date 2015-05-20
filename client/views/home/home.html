@@ -5,6 +5,22 @@
     {{#with getStats}}
     {{/with}}
 
+    {{#with getMoviesRecommendation}}
+    {{/with}}
+
+    {{#with moviesRecommendation}}
+    {{/with}}
+
+    {{#with getPopularMovies}}
+    {{/with}}
+
+
+
+
+
+
+
+
     <section>
         <div class = "content">
             <div class ="section" id = "s1">
@@ -20,14 +36,14 @@
             <div class = "section" id = "s2">
                 <p>SHOWS <span class = "Name1">WATCHED</span></p>
                 <div id = "seeMore2"><img src="img/seeMore.png"></div>
-
-
+                <div class = "thumbH"><img src="img/thumb.jpg"></div>
             </div>
 
 
             <div class = "section" id = "s3">
                 <p>SHOWS <span class = "Name1">RECOMMENDED</span></p>
                 <div id = "seeMore3"><img src="img/seeMore.png"></div>
+                <div class = "thumbH"><img src="img/thumb.jpg"></div>
 
             </div>
 
@@ -35,15 +51,19 @@
             <div class = "section" id = "s4">
                 <p>MOVIES <span class = "Name1">WATCHED</span></p>
                 <div id = "seeMore4"><img src="img/seeMore.png"></div>
+                <div class = "thumbH"><img src="img/thumb.jpg"></div>
 
             </div>
 
 
-            <div class = "section" id = "s5">
-                <p>MOVIES <span class = "Name1">RECOMMENDED</span></p>
-                <div id = "seeMore5"><img src="img/seeMore.png"></div>
+                <div class = "section" id = "s5">
+                    <p>MOVIES <span class = "Name1">RECOMMENDED</span></p>
+                    <div id = "seeMore5"><img src="img/seeMore.png"></div>
+                    {{#with popularMovies}}
+                        <div class = "thumbH"><img src="img/thumb.jpg"></div>
+                    {{/with}}
+                </div>
 
-            </div>
 
 
             <div class = "section" id = "s6">

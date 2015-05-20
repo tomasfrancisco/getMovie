@@ -419,6 +419,30 @@ Meteor.methods({
             throw _.extend(new Error("Failed to fetch movie recommendation from Trakt. " + err.message),
                 {response: err.response});
         }
+    },
+
+    getPopularMovies: function(){
+        try {
+            var config = ServiceConfiguration.configurations.findOne({service: 'trakt'});
+            if (!config)
+                throw new ServiceConfiguration.ConfigError();
+
+            var options = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'trakt-api-version': '2',
+                    'trakt-api-key': config.clientId
+                }
+            };
+
+            return HTTP.get(
+                "https://api-v2launch.trakt.tv/movies/popular/?extended=full,images/?page=1&limit=1",
+                options);
+        } catch (err) {
+            throw _.extend(new Error("Failed to fetch movie recommendation from Trakt. " + err.message),
+                {response: err.response});
+        }
+
     }
 });
 
