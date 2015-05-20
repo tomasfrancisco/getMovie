@@ -187,5 +187,22 @@ Template.home.helpers({
                 //console.log(stats);
             }
         }
+    },
+
+    stats: function() {
+        if(Meteor.user()) {
+            if(Session.get("stats")) {
+                console.log(Session.get("stats"))
+                return Session.get("stats");
+            }
+        }
+    },
+
+    getStats: function(){
+        if(Meteor.user()) {
+            Meteor.call('getStats', Meteor.user().profile.username, function (err, result) {
+                Session.setPersistent("stats", result);
+            });
+        }
     }
 });

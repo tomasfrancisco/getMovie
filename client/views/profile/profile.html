@@ -5,7 +5,10 @@
     {{#with getProfile}}
     {{/with}}
 
-    {{#with profile}}
+    {{#with getStats}}
+    {{/with}}
+
+
 
         <div class = "menuBack">
             <ul class="menuList">
@@ -21,30 +24,36 @@
         <section class = "sectionProfile">
             <div class = "sectionP1">
                 <div class = "profile">
-                    <img src="{{data.user.images.avatar.full}}">
+                    {{#with profile}}
+                        <img src="{{data.user.images.avatar.full}}">
+                    {{/with}}
 
-                    <p>AMIGOS: <span id = "friendsProfile">50</span></p>
-                    <p>SEGUIDORES: <span id = "followersProfile">100</span></p>
-                    <p>TEMPO GASTO: <span id = "timeWasteProfile">50H</span></p>
-                    <p style = "text-decoration: underline; cursor: pointer;">FACEBOOK</p>
+                    {{#with stats}}
+                        <p>FOLLOWING: <span id = "friendsProfile">{{data.network.following}}</span></p>
+                        <p>FOLLOWERS: <span id = "followersProfile">{{data.network.followers}}</span></p>
+                        <p>MOVIES WATCHED: <span id = "timeWasteProfile">{{data.movies.watched}}</span></p>
+                        <p>SHOWS WATCHED: <span id = "timeWasteProfile">{{data.shows.watched}}</span></p>
+                    {{/with}}
                 </div>
             </div>
 
             <div class = "sectionP2">
-                <div class = "profileInfo">
-                    <p id = "usernameInfo">{{data.user.username}}</p>
-                    <p id = "nameInfo">{{data.user.name}}</p>
-                    <p id = "descriptionInfo">{{data.user.about}}</p>
-                    <p id = "dataInfo"><span style = "color: #ffec00">Idade:</span> {{data.user.age}}</p>
-                    <p id = "localInfo"><span style = "color: #ffec00">Localidade:</span> {{data.user.location}}</p>
+                {{#with profile}}
+                    <div class = "profileInfo">
+                        <p id = "usernameInfo">{{data.user.username}}</p>
+                        <p id = "nameInfo">{{data.user.name}}</p>
+                        <p id = "descriptionInfo">{{data.user.about}}</p>
+                        <p id = "dataInfo"><span style = "color: #ffec00">Idade:</span> {{data.user.age}}</p>
+                        <p id = "localInfo"><span style = "color: #ffec00">Localidade:</span> {{data.user.location}}</p>
 
-                </div>
+                    </div>
+                {{/with}}
             </div>
 
 
         </section>
 
 
-    {{/with}}
+
 
 </template>

@@ -11,7 +11,21 @@ Template.recommendations.helpers({
         if(Meteor.user()) {
 
             if (Session.get("moviesRecommendation")) {
+                var movieRec = Session.get("moviesRecommendation");
+
+                for(var i = 0; i < movieRec.data.length; i++){
+
+                    //var url = movieRec.data[i].trailer;
+                    //console.log(url);
+                    movieRec.data[i].trailer = movieRec.data[i].trailer.replace('watch?v=', 'embed/');
+                    //embedURL =
+                    //console.log(embedURL);
+
+                }
+                console.dir(movieRec);
+
                 console.log(Session.get("moviesRecommendation"));
+
                 return Session.get("moviesRecommendation");
             }
         }

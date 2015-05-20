@@ -11,26 +11,34 @@ Template.profile.events({
 
 Template.profile.helpers({
     profile: function() {
-
-        //if(Session.get("watchedListed") === undefined || Session.get("watchedListed") === false) {
-        //console.log("updated");
         if(Meteor.user()) {
             if(Session.get("profile")) {
-                console.log("update");
-                //Session.set("watchedListed", true);
-                console.log(Session.get("profile"));
                 return Session.get("profile");
             }
         }
-        //}
     },
 
     getProfile: function() {
         if(Meteor.user()) {
             Meteor.call('getSettings', Meteor.user().profile.accessToken, function (err, result) {
-
                 Session.setPersistent("profile", result);
-                //return result;
+            });
+        }
+    },
+
+    stats: function() {
+        if(Meteor.user()) {
+            if(Session.get("stats")) {
+                console.log(Session.get("stats"))
+                return Session.get("stats");
+            }
+        }
+    },
+
+    getStats: function(){
+        if(Meteor.user()) {
+            Meteor.call('getStats', Meteor.user().profile.username, function (err, result) {
+                Session.setPersistent("stats", result);
             });
         }
     }

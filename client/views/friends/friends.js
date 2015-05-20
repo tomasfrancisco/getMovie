@@ -54,7 +54,7 @@ Template.friends.rendered = function() {
     var width = 1200,
         height = 900;
 
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("#grafo").append("svg")
         .attr("width", width)
         .attr("height", height);
 

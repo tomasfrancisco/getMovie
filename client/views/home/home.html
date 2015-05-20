@@ -2,18 +2,23 @@
 
     {{> navbar}}
 
+    {{#with getStats}}
+    {{/with}}
+
     <section>
         <div class = "content">
             <div class ="section" id = "s1">
-                <p>VER <span class = "Name1">AMIGOS | </span><span class = "Name2">AMIGOS: <span class = "value">X</span> SEGUIDORES: <span class = "value">X</span></span></p>
-                <div id = "seeMore1"><img src="img/seeMore.png"></div>
-                <div id = "grafo"><img src="img/grafoImg.png"></div>
+                {{#with stats}}
+                    <p>WATCH <span class = "Name1">FRIENDS | </span><span class = "Name2">FOLLOWERS: <span class = "value">{{data.network.followers}}</span> FOLLOWING: <span class = "value">{{data.network.following}}</span></span></p>
+                    <div id = "seeMore1"><img src="img/seeMore.png"></div>
+                    <div id = "grafo"><img src="img/grafoImg.png"></div>
+                {{/with}}
 
             </div>
 
 
             <div class = "section" id = "s2">
-                <p>SÉRIES <span class = "Name1">VISTAS</span></p>
+                <p>SHOWS <span class = "Name1">WATCHED</span></p>
                 <div id = "seeMore2"><img src="img/seeMore.png"></div>
 
 
@@ -21,28 +26,28 @@
 
 
             <div class = "section" id = "s3">
-                <p>SÉRIES <span class = "Name1">RECOMENDADAS</span></p>
+                <p>SHOWS <span class = "Name1">RECOMMENDED</span></p>
                 <div id = "seeMore3"><img src="img/seeMore.png"></div>
 
             </div>
 
 
             <div class = "section" id = "s4">
-                <p>FILMES <span class = "Name1">VISTOS</span></p>
+                <p>MOVIES <span class = "Name1">WATCHED</span></p>
                 <div id = "seeMore4"><img src="img/seeMore.png"></div>
 
             </div>
 
 
             <div class = "section" id = "s5">
-                <p>FILMES <span class = "Name1">RECOMENDADOS</span></p>
+                <p>MOVIES <span class = "Name1">RECOMMENDED</span></p>
                 <div id = "seeMore5"><img src="img/seeMore.png"></div>
 
             </div>
 
 
             <div class = "section" id = "s6">
-                <p>GÉNEROS <span class = "Name1">FAVORITOS</span></p>
+                <p>FAVORITE <span class = "Name1">GENRES</span></p>
                 <div id = "sectionGenre">
 
                     {{#with getChartGenre}}
@@ -60,12 +65,8 @@
                                 <ul>
                                     {{#each chartGenre}}
                                         <li id = "sq1">
-                                            <div class = "square" style="background-color: #edda2f">
-                                            </div>
-                                            {{this.name}} -
-                                            <span style="color: #ffec00; font-weight: 500;">
-                                                {{this.value}} %
-                                            </span>
+                                            <div class = "square" style="background-color: #edda2f"></div>
+                                            {{this.name}} - <span style="color: #ffec00; font-weight: 500;"> {{this.value}} % </span>
                                         </li>
                                     {{/each}}
 
