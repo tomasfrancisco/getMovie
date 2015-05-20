@@ -27,6 +27,10 @@ Template.navbar.events({
         Router.go("/");
     },
 
+    "click .menu": function () {
+        $(".menuBack").slideToggle(1000);
+    },
+
     "click #profilePage": function (event) {
         Router.go("/profile");
     }

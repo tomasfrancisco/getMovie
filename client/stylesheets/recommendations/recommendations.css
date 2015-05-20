@@ -1,15 +1,14 @@
 .sectionMovieInfo{
     position: relative;
     height: 800px;
+    margin-bottom: 100px;
 }
 
 .sectionR1{
     width: 35%;
     height: 100%;
     float: left;
-
 }
-
 
 .sectionR1 .movieInfo{
     position: relative;
@@ -24,11 +23,8 @@
     height: auto;
     display: block;
     margin-left: auto;
-
     margin-top: 200px;
     border-bottom: #ffec00 solid 4px;
-
-
 }
 
 .sectionR1 .movieInfo p{
@@ -128,21 +124,14 @@
     display: inline-block;
     margin-top: 20px;
     margin-left: 0;
-
-
-
 }
 
 
 
 @media (max-width: 1240px) {
-
-
-
     .menuList li{
         font-size: 3em;
     }
-
 }
 
 @media (max-width: 720px) {
@@ -166,8 +155,6 @@
     .menuList li{
         font-size: 2em;
     }
-
-
 }
 
 

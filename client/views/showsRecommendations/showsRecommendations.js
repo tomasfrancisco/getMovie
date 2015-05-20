@@ -1,9 +1,38 @@
-/**
- * Created by goncaloneves on 20/05/15.
- */
-/**
- * Created by goncaloneves on 24/04/15.
- */
+Template.showsRecommendations.events({
+
+
+    /*MENU LINKS E HIPERLIGAÇÕES*/
+
+    "click .hlink": function (event) {
+        Router.go("/home");
+    },
+
+    "click .flink": function (event) {
+        Router.go("/friends");
+    },
+
+    "click .mlink": function (event) {
+        Router.go("/movies");
+    },
+
+    "click .rmlink": function (event) {
+        Router.go("/recommendations");
+    },
+
+    "click .slink": function (event) {
+        Router.go("/shows");
+    },
+
+    "click .rslink": function (event) {
+        Router.go("/showsRecommendations");
+    },
+
+    'click .olink': function() {
+        Session.clear();
+        Meteor.users.remove({_id: Meteor.user()._id});
+        Router.go("/");
+    }
+});
 
 
 

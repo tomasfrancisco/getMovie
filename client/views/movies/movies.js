@@ -5,6 +5,7 @@
 
 Template.movies.events({
 
+
     "click .menu": function () {
         $(".menuBack").slideToggle(1000);
     },
@@ -18,9 +19,36 @@ Template.movies.events({
 
         Session.setPersistent("movie-to-show", this.movie.ids.trakt);
         Router.go("/moviesInfo");
+    },
 
+    "click .hlink": function (event) {
+        Router.go("/home");
+    },
 
+    "click .flink": function (event) {
+        Router.go("/friends");
+    },
 
+    "click .mlink": function (event) {
+        Router.go("/movies");
+    },
+
+    "click .rmlink": function (event) {
+        Router.go("/recommendations");
+    },
+
+    "click .slink": function (event) {
+        Router.go("/shows");
+    },
+
+    "click .rslink": function (event) {
+        Router.go("/showsRecommendations");
+    },
+
+    'click .olink': function() {
+        Session.clear();
+        Meteor.users.remove({_id: Meteor.user()._id});
+        Router.go("/");
     }
 
 });

@@ -8,10 +8,17 @@
 
     {{/with}}
 
-
-
-
-
+    <div class = "menuBack">
+        <ul class="menuList">
+            <li class = "hlink">Home</li>
+            <li class = "flink">Friends</li>
+            <li class = "mlink">Movies</li>
+            <li class = "rmlink">Movies Recommendations</li>
+            <li class = "slink">Shows</li>
+            <li class = "rslink">Shows recommendations</li>
+            <li class = "olink">Get out</li>
+        </ul>
+    </div>
 
     {{#with moviesRecommendation}}
         {{#each data}}
@@ -43,8 +50,6 @@
                         </ul>
                     </div>
 
-
-
             </section>
 
         {{/each}}
@@ -53,14 +58,5 @@
 
 
 
-    <div class = "menuBack">
-        <ul class="menuList">
-            <li>home</li>
-            <li>friends</li>
-            <li>recommendations</li>
-            <li>movies</li>
-            <li>shows</li>
-            <li>get out</li>
-        </ul>
-    </div>
+
 </template>
