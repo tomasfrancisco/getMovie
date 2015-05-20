@@ -240,7 +240,7 @@ Meteor.methods({
             return HTTP.get(
                 'https://api-v2launch.trakt.tv/movies/' +
                 id +
-                "?extended=full",
+                "?extended=full,images",
                 options);
         } catch (err) {
             throw _.extend(new Error("Failed to fetch movie from Trakt. " + err.message),
@@ -266,6 +266,31 @@ Meteor.methods({
                 'https://api-v2launch.trakt.tv/movies/' +
                 id +
                 "?extended=images",
+                options);
+        } catch (err) {
+            throw _.extend(new Error("Failed to fetch movie from Trakt. " + err.message),
+                {response: err.response});
+        }
+    },
+
+    getShow: function(id) {
+        try {
+            var config = ServiceConfiguration.configurations.findOne({service: 'trakt'});
+            if (!config)
+                throw new ServiceConfiguration.ConfigError();
+
+            var options = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'trakt-api-version': '2',
+                    'trakt-api-key': config.clientId
+                }
+            };
+
+            return HTTP.get(
+                'https://api-v2launch.trakt.tv/shows/' +
+                id +
+                "?extended=full,images",
                 options);
         } catch (err) {
             throw _.extend(new Error("Failed to fetch movie from Trakt. " + err.message),

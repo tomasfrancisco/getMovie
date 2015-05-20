@@ -1,0 +1,107 @@
+
+body{
+    background-color:#1c1c1c;
+    font-family: "Quicksand", sans-serif;
+
+    margin:0;
+    padding: 0;
+
+}
+
+
+.menu{
+    color: #ffec00;
+
+}
+
+
+
+/*menu*/
+
+.menuList{
+    padding-left: 0px;
+    margin-left: 0px;
+    text-align: center;
+    margin-top: 250px;
+
+}
+
+.menuList li{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    list-style: none;
+    font-size: 3em;
+    font-weight: 300;
+    color: #ececec;
+    margin-bottom: 10px;
+}
+
+.menuList li:hover{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    color: #ffec00;
+    cursor: pointer;
+}
+
+
+
+.content{
+    position: absolute;
+    margin-top: 250px;
+
+    width: 100%;
+    height: 50%;
+}
+
+.content .sectionS{
+    display: inline-block;
+    width: 24%;
+    height: auto;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 30px;
+}
+
+.content .sectionS img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: auto;
+    border-bottom: 4px solid #ffec00;
+}
+
+.content .sectionS img:hover{
+    cursor: pointer;
+}
+
+.sectionS .movieName{
+    color: #ffec00;
+    font-size: 0.8em;
+
+}
+
+.sectionS .Name2{
+    color: #ececec;
+    font-size: 0.5em;
+}
+
+.sectionS .value{
+    color: #ffec00;
+}
+
+.sectionS p{
+    text-align: center;
+
+}
+
+
+

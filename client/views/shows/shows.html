@@ -6,7 +6,7 @@
 
     {{/with}}
 
-    {{#with getMovie}}
+    {{#with getShow}}
 
     {{/with}}
 
@@ -16,9 +16,9 @@
             <div class = "content">
 
                 {{#each data}}
-                    <div class ="sectionM" id = "f1">
-                        <img class = "thumb" src="{{this.movie.images.poster.medium}}">
-                        <p><span class = "movieName">{{this.movie.title}} <br> </span><span class = "Name2">VOTES: <span class = "value">{{this.movie.votes}}</span> RANKING: <span class = "value">{{this.movie.rating}}</span></span></p>
+                    <div class ="sectionS" id = "show1">
+                        <img class = "thumb" src="{{this.show.images.poster.medium}}">
+                        <p><span class = "movieName">{{this.show.title}} <br> </span><span class = "Name2">VOTES: <span class = "value">{{this.show.votes}}</span> RANKING: <span class = "value">{{this.show.rating}}</span></span></p>
                     </div>
                 {{/each}}
 

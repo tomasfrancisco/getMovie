@@ -1,0 +1,50 @@
+<template name="showsInfo">
+    {{> navbar}}
+
+    {{#with show}}
+
+        <section class = "sectionMovieInfo">
+            <div class = "sectionI1">
+                <div class = "movieInfo">
+                        <img src="{{this.data.show.images.poster.medium}}">
+                        <p>VOTES: <span id = "votes">{{this.data.show.votes}}</span></p>
+                        <p>RATE: <span id = "rate">{{this.data.show.rating}}</span></p>
+
+                </div>
+            </div>
+
+
+            <div class = "sectionI2">
+                <div class = "profileInfo">
+                    <p id = "movieNameInfo">{{this.data.show.title}} <span style = "color: #ececec; font-weight: 100; font-size: 0.7em;">({{this.data.show.released}})</span></p>
+                    <p id = "subNameInfo">{{this.data.show.tagline}}</p>
+                    <p id = "resumeInfo">{{this.data.show.overview}}</p>
+                    <p id = "genresInfo"><span style = "color: #ffec00">Géneros:</span> {{this.data.show.genres}} </p>
+                </div>
+            </div>
+
+        </section>
+    {{/with}}
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class = "menuBack">
+        <ul class="menuList">
+            <li>home</li>
+            <li>friends</li>
+            <li>recommendations</li>
+            <li>movies</li>
+            <li>shows</li>
+            <li>get out</li>
+        </ul>
+    </div>
+</template>

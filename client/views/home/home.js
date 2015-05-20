@@ -23,7 +23,6 @@ Template.home.events({
         $("#seeMore5").animate({"opacity": "1"}, 200);
     },
 
-
     "mouseleave #s1": function () {
         $("#grafo").animate({"opacity": "1"}, 200);
         $("#seeMore1").animate({"opacity": "0"}, 200);
@@ -51,6 +50,10 @@ Template.home.events({
 
     "click #s1": function (event) {
         Router.go("/friends");
+    },
+
+    "click #s2": function (event) {
+        Router.go("/shows");
     },
 
     "click #s4": function (event) {
