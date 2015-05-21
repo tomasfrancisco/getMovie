@@ -39,7 +39,7 @@
 .sectionR1 #resumeInfo{
     color: #ececec;
     position: relative;
-    width: 70%;
+    width: 50%;
     overflow: scroll;
     overflow-x: hidden;
     heigth:330px;

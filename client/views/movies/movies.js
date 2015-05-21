@@ -93,43 +93,11 @@ Template.movies.helpers({
                 Session.setPersistent("movie-id-" + watched.data[0].movie.ids.trakt, result);
             });*/
 
-            for(var i = 0; i < watchedLength; i++){
-                Meteor.call('getMovie', watched.data[i].movie.ids.trakt, function (err, result) {
-                    Session.setPersistent("movie-id-" + watched.data[i].movie.ids.trakt, result);
+            //for(var i = 0; i < watchedLength; i++){
+                Meteor.call('getMovie', watched.data[0].movie.ids.trakt, function (err, result) {
+                    Session.setPersistent("movie-id-" + watched.data[0].movie.ids.trakt, result);
                 });
-            }
-
-
-        }
-    },
-
-    movieImages: function() {
-        if(Meteor.user()) {
-            if (Session.get("movieImages")) {
-                Session.set("movieImagesListed", true);
-                console.log(Session.get("movieImages"));
-                return Session.get("movieImages");
-            }
-        }
-    },
-
-    getMovieImages: function () {
-        if(Meteor.user()) {
-            var watched = Session.get("watched");
-            var watchedLength = watched.data.length;
-
-            console.log(watchedLength);
-            /*Meteor.call('getMovieImages', watched.data[0].movie.ids.trakt, function (err, result) {
-                Session.setPersistent("movieImages-id-" + watched.data[0].movie.ids.trakt, result);
-            });*/
-
-            for(var i = 0; i < watchedLength; i++){
-                console.log(i);
-                console.log(watched);
-                Meteor.call('getMovieImages', watched.data[i].movie.ids.trakt, function (err, result) {
-                    Session.setPersistent("movieImages-id-" + watched.data[i].movie.ids.trakt, result);
-                });
-            }
+            //}
 
 
         }

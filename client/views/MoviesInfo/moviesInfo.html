@@ -17,12 +17,11 @@
                 <div class = "sectionI1">
                     <div class = "movieInfo">
 
-                        {{#with movieImages}}
-                            <img src="{{this.data.images.poster.medium}}">
-                        {{/with}}
-
-
                         {{#with movie}}
+                            <img src="{{this.data.images.poster.medium}}">
+
+
+
                             <p>VOTES: <span id = "votes">{{this.data.votes}}</span></p>
                             <p>RATE: <span id = "rate">{{this.data.rating}}</span></p>
                             <p>VER <a style="text-decoration: none" href="{{this.data.trailer}}" target="_blank" ><span id = "seeTrailer">TRAILER</span></a></p>

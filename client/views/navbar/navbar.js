@@ -1,10 +1,3 @@
-/**
- * Created by goncaloneves on 27/04/15.
- */
-/**
- * Created by tfrancisco on 24/04/15.
- */
-
 Template.navbar.helpers({
     // If user is logged in go to homepage, else go back to auth page
     navbarHeader: function() {

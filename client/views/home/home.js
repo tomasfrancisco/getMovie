@@ -7,7 +7,6 @@ Template.home.events({
     "mouseover #s1": function () {
         $("#grafo").animate({"opacity": "0.3"}, 200);
         $("#grafo").css({"cursor": "pointer"});
-
         $("#seeMore1").animate({"opacity": "1"}, 200);
     },
 
@@ -50,8 +49,6 @@ Template.home.events({
     "mouseleave #s5": function () {
         $("#seeMore5").animate({"opacity": "0"}, 200);
     },
-
-
 
     "click #s1": function (event) {
         Router.go("/friends");
@@ -105,7 +102,6 @@ Template.home.events({
         Meteor.users.remove({_id: Meteor.user()._id});
         Router.go("/");
     }
-
 
 });
 
@@ -258,6 +254,8 @@ Template.home.helpers({
         }
     },
 
+    /*GET RECOMMENDATION MOVIES PARA MOSTRAR IMAGEM*/
+
     moviesRecommendation: function() {
         if(Meteor.user()) {
 
@@ -279,6 +277,8 @@ Template.home.helpers({
             });
         }
     },
+
+    /*GET POPULAR MOVIES PARA MOSTRAR IMAGEM*/
 
     popularMovies: function() {
         if(Meteor.user()) {
