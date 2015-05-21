@@ -82,25 +82,6 @@ Template.movies.helpers({
                 return Session.get("movie");
             }
         }
-    },
-
-    getMovie: function () {
-        if(Meteor.user()) {
-            var watched = Session.get("watched");
-            var watchedLength = watched.data.length;
-
-            /*Meteor.call('getMovie', watched.data[0].movie.ids.trakt, function (err, result) {
-                Session.setPersistent("movie-id-" + watched.data[0].movie.ids.trakt, result);
-            });*/
-
-            //for(var i = 0; i < watchedLength; i++){
-                Meteor.call('getMovie', watched.data[0].movie.ids.trakt, function (err, result) {
-                    Session.setPersistent("movie-id-" + watched.data[0].movie.ids.trakt, result);
-                });
-            //}
-
-
-        }
     }
 });
 

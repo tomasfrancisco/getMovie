@@ -150,6 +150,43 @@ body{
     margin-right: 20px;
 }
 
+.formSection{
+
+    position: absolute;
+    width: 100%;
+
+    margin-top: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+}
+
+.formSection input{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 40px;
+    border: 1px solid #ffec00;
+
+}
+
+input[type=text] {
+    border-left: 6px solid #ffec00;
+    padding-left: 20px;
+    font-size: 1.5em;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 100;
+    background: none;
+}
+
+input[type=text]:focus {
+    outline: none;
+    color: #ffec00;
+}
+
+
 
 
 

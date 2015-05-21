@@ -37,13 +37,21 @@ Template.showsInfo.events({
 Template.showsInfo.helpers({
     show: function() {
         if(Meteor.user()) {
-            var movieToShow = Session.get("movie-to-show");
-            console.log(Session.get("show"));
-            if (movieToShow) {
-                var show = Session.get("movie-id-" + movieToShow);
-                console.log(movieToShow);
-                return show;
+            var showToShow = Session.get("show-to-show");
+            var showInfo = Session.get("show-id-" + showToShow);
+            console.log(showInfo);
+
+            if(showInfo) {
+                return showInfo;
             }
+            else {
+                Meteor.call('getShow', showToShow, function (err, result) {
+                    Session.setPersistent("show-id-" + showToShow, result);
+                    return Session.get("show-id-" + showToShow);
+                });
+            }
+
+
         }
     }
 

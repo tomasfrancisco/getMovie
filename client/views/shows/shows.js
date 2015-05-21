@@ -12,7 +12,7 @@ Template.shows.events({
     'click #show1':function(e,t) {
         //console.log(this.movie.title);
 
-        Session.setPersistent("movie-to-show", this.show.ids.trakt);
+        Session.setPersistent("show-to-show", this.show.ids.trakt);
         Router.go("/showsInfo");
     },
 
@@ -80,17 +80,6 @@ Template.shows.helpers({
                 console.log(Session.get("show"));
                 return Session.get("show");
             }
-        }
-    },
-
-    getShow: function () {
-        if(Meteor.user()) {
-            var watched = Session.get("show");
-                Meteor.call('getShow', watched.data[1].show.ids.trakt, function (err, result) {
-                    Session.setPersistent("movie-id-" + watched.data[1].show.ids.trakt, result);
-                })
-
-
         }
     }
 });

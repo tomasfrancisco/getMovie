@@ -1,6 +1,19 @@
 
 Template.recommendations.events({
 
+    'click #refuse':function(e,t) {
+        //console.log(this.movie.title);
+        Meteor.call("hideMovieRecommendation", Meteor.user().profile.accessToken, this.ids.trakt);
+        var movies = Session.get("moviesRecommendation");
+
+        Meteor.call('getMoviesRecommendation', Meteor.user().profile.accessToken, function (err, result) {
+            Session.setPersistent("moviesRecommendation", result);
+            console.log("Get Movies Recommendations");
+        });
+
+        console.log("Deleted");
+    },
+
 
     /*MENU LINKS E HIPERLIGAÇÕES*/
 
@@ -48,27 +61,27 @@ Template.recommendations.helpers({
 
                 for(var i = 0; i < movieRec.data.length; i++){
 
-                    //var url = movieRec.data[i].trailer;
-                    //console.log(url);
                     movieRec.data[i].trailer = movieRec.data[i].trailer.replace('watch?v=', 'embed/');
-                    //embedURL =
-                    //console.log(embedURL);
+                    movieRec.data[i].trailer = movieRec.data[i].trailer.replace('https', 'http');
+
 
                 }
-                console.dir(movieRec);
+                //console.dir(movieRec);
 
-                console.log(Session.get("moviesRecommendation"));
+                //console.log(Session.get("moviesRecommendation"));
 
-                return Session.get("moviesRecommendation");
+                return movieRec;
             }
         }
     },
 
     getMoviesRecommendation: function() {
+
         if(Meteor.user()) {
 
             Meteor.call('getMoviesRecommendation', Meteor.user().profile.accessToken, function (err, result) {
                 Session.setPersistent("moviesRecommendation", result);
+                console.log("Get Movies Recommendations");
             });
         }
 

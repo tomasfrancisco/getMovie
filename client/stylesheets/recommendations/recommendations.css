@@ -1,6 +1,6 @@
 .sectionMovieInfo{
     position: relative;
-    height: 800px;
+    height: 850px;
     margin-bottom: 100px;
 }
 
@@ -39,7 +39,7 @@
 .sectionR1 #resumeInfo{
     color: #ececec;
     position: relative;
-    width: 50%;
+    width: 70%;
     overflow: scroll;
     overflow-x: hidden;
     heigth:330px;
@@ -124,6 +124,10 @@
     display: inline-block;
     margin-top: 20px;
     margin-left: 0;
+}
+
+#refuse:hover{
+    cursor: pointer;
 }
 
 

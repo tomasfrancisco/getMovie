@@ -2,13 +2,19 @@ Template.moviesInfo.helpers({
     movie: function() {
         if(Meteor.user()) {
             var movieToShow = Session.get("movie-to-show");
-            console.log(movieToShow);
-            if (movieToShow) {
-                var movie = Session.get("movie-id-" + movieToShow);
-                console.log(movie);
+            var movieInfo = Session.get("movie-id-" + movieToShow);
 
-                return movie;
+            if(movieInfo) {
+                return movieInfo;
             }
+            else {
+                Meteor.call('getMovie', movieToShow, function (err, result) {
+                    Session.setPersistent("movie-id-" + movieToShow, result);
+                    return Session.get("movie-id-" + movieToShow);
+                });
+            }
+
+
         }
     }
 

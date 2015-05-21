@@ -278,6 +278,19 @@ Template.home.helpers({
         }
     },
 
+    /*FAZER SEARCH DE UM FILME/SHOW fazer isto dentro de um POST de um TEXT FIELD*/
+
+    getTextQueryResults: function() {
+        if(Meteor.user()) {
+
+            Meteor.call('getTextQueryResults', Meteor.user().profile.accessToken, function (err, result) {
+                Session.setPersistent("getTextQueryResults", result);
+            });
+        }
+
+
+    },
+
     /*GET POPULAR MOVIES PARA MOSTRAR IMAGEM*/
 
     popularMovies: function() {
