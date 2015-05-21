@@ -247,7 +247,7 @@ Meteor.methods({
                 {response: err.response});
         }
     },
-    
+
 
     getShow: function(id) {
         try {
@@ -368,6 +368,40 @@ Meteor.methods({
             throw _.extend(new Error("Failed to fetch movie recommendation from Trakt. " + err.message),
                 {response: err.response});
         }
+    },
+
+
+
+    /*TESTE SEARCH ?????? FAZ-SE?*/
+
+    getTextQueryResults: function(acessToken){
+        try {
+            var config = ServiceConfiguration.configurations.findOne({service: 'trakt'});
+            if (!config)
+                throw new ServiceConfiguration.ConfigError();
+
+            var options = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + accessToken,
+                    'trakt-api-version': '2',
+                    'trakt-api-key': config.clientId
+                },
+                params: {
+                    movie_id: movieId
+                }
+            };
+
+            return HTTP.get(
+                "https://api-v2launch.trakt.tv/search?query="+
+                "/" + mQuery +
+                "/?page=1&limit=5",
+                options);
+        } catch (err) {
+            throw _.extend(new Error("Failed to fetch text query from Trakt. " + err.message),
+                {response: err.response});
+        }
+
     },
 
     getShowsRecommendation: function(accessToken) {
