@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fa2483d-3c7f-426e-910a-ee0be8db691e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/friends/friends.css" afterPath="$PROJECT_DIR$/client/stylesheets/friends/friends.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/friends/friends.js" afterPath="$PROJECT_DIR$/client/views/friends/friends.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/home/home.css" afterPath="$PROJECT_DIR$/client/stylesheets/home/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/home/home.html" afterPath="$PROJECT_DIR$/client/views/home/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/home/home.js" afterPath="$PROJECT_DIR$/client/views/home/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/movies/movies.js" afterPath="$PROJECT_DIR$/client/views/movies/movies.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/moviesInfo/moviesInfo.css" afterPath="$PROJECT_DIR$/client/stylesheets/moviesInfo/moviesInfo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.html" afterPath="$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.js" afterPath="$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/recommendations/recommendations.js" afterPath="$PROJECT_DIR$/client/views/recommendations/recommendations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/showsRecommendations/showsRecommendations.html" afterPath="$PROJECT_DIR$/client/views/showsRecommendations/showsRecommendations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/showsRecommendations/showsRecommendations.js" afterPath="$PROJECT_DIR$/client/views/showsRecommendations/showsRecommendations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/accounts-trakt/trakt_server.js" afterPath="$PROJECT_DIR$/packages/accounts-trakt/trakt_server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="getMovie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,11 +38,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="friends.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="friends.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/friends/friends.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6994992" vertical-offset="1516" max-vertical-offset="2700">
-              <caret line="129" column="0" selection-start-line="128" selection-start-column="85" selection-end-line="129" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.296296" vertical-offset="4891" max-vertical-offset="7275">
+              <caret line="341" column="0" selection-start-line="341" selection-start-column="0" selection-end-line="341" selection-end-column="23" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="friends.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/stylesheets/friends/friends.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.64057505" vertical-offset="1144" max-vertical-offset="3645">
+              <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/stylesheets/home/home.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="3780">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -112,11 +124,11 @@
         <option value="$PROJECT_DIR$/client/views/recommendations/recommendations.js" />
         <option value="$PROJECT_DIR$/client/views/movies/movies.js" />
         <option value="$PROJECT_DIR$/client/stylesheets/moviesInfo/moviesInfo.css" />
-        <option value="$PROJECT_DIR$/client/views/home/home.js" />
         <option value="$PROJECT_DIR$/packages/accounts-trakt/trakt_server.js" />
         <option value="$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.js" />
-        <option value="$PROJECT_DIR$/client/stylesheets/friends/friends.css" />
+        <option value="$PROJECT_DIR$/client/views/home/home.js" />
         <option value="$PROJECT_DIR$/client/views/friends/friends.js" />
+        <option value="$PROJECT_DIR$/client/stylesheets/friends/friends.css" />
       </list>
     </option>
   </component>
@@ -125,7 +137,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1680" />
+    <option name="width" value="1679" />
     <option name="height" value="989" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -387,6 +399,28 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="MoviesInfo">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="getMovie">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="client">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="movies">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -1106,7 +1140,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="989" extended-state="6" />
+    <frame x="0" y="23" width="1679" height="989" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1114,7 +1148,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13140446" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13148372" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23765786" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24913892" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1146,7 +1180,9 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -1421,13 +1457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/stylesheets/home/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2250" max-vertical-offset="3780">
-          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/recommendations/recommendations.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4362745" vertical-offset="333" max-vertical-offset="1005">
@@ -1484,14 +1513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1620">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="975">
@@ -1500,26 +1521,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/stylesheets/friends/friends.css">
+    <entry file="file://$PROJECT_DIR$/client/views/home/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="2580">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2250" max-vertical-offset="5565">
+          <caret line="206" column="0" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/home/home.js">
+    <entry file="file://$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1710" max-vertical-offset="5640">
-          <caret line="178" column="24" selection-start-line="178" selection-start-column="24" selection-end-line="178" selection-end-column="24" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1620">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/stylesheets/home/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="3780">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/friends/friends.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6994992" vertical-offset="1516" max-vertical-offset="2700">
-          <caret line="129" column="0" selection-start-line="128" selection-start-column="85" selection-end-line="129" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.296296" vertical-offset="4891" max-vertical-offset="7275">
+          <caret line="341" column="0" selection-start-line="341" selection-start-column="0" selection-end-line="341" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/stylesheets/friends/friends.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64057505" vertical-offset="1144" max-vertical-offset="3645">
+          <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
           <folding />
         </state>
       </provider>
