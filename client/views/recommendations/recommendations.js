@@ -1,14 +1,13 @@
-
 Template.recommendations.events({
 
     'click #refuse':function(e,t) {
         //console.log(this.movie.title);
         Meteor.call("hideMovieRecommendation", Meteor.user().profile.accessToken, this.ids.trakt);
-        var movies = Session.get("moviesRecommendation");
+        //var movies = Session.get("moviesRecommendation");
 
         Meteor.call('getMoviesRecommendation', Meteor.user().profile.accessToken, function (err, result) {
             Session.setPersistent("moviesRecommendation", result);
-            console.log("Get Movies Recommendations");
+            //console.log("Get Movies Recommendations");
         });
 
         console.log("Deleted");
@@ -59,6 +58,7 @@ Template.recommendations.helpers({
             if (Session.get("moviesRecommendation")) {
                 var movieRec = Session.get("moviesRecommendation");
 
+                console.log(Session.get("moviesRecommendation"));
                 for(var i = 0; i < movieRec.data.length; i++){
 
                     movieRec.data[i].trailer = movieRec.data[i].trailer.replace('watch?v=', 'embed/');
@@ -81,7 +81,6 @@ Template.recommendations.helpers({
 
             Meteor.call('getMoviesRecommendation', Meteor.user().profile.accessToken, function (err, result) {
                 Session.setPersistent("moviesRecommendation", result);
-                console.log("Get Movies Recommendations");
             });
         }
 

@@ -1,5 +1,18 @@
 Template.showsRecommendations.events({
 
+    'click #refuse':function(e,t) {
+        //console.log(this.movie.title);
+        Meteor.call("hideShowsRecommendation", Meteor.user().profile.accessToken, this.ids.trakt);
+        var shows = Session.get("showsRecommendation");
+
+        Meteor.call('getShowsRecommendation', Meteor.user().profile.accessToken, function (err, result) {
+            Session.setPersistent("showsRecommendation", result);
+            console.log("Get Shows Recommendations");
+        });
+
+        console.log("Deleted");
+    },
+
 
     /*MENU LINKS E HIPERLIGAÇÕES*/
 

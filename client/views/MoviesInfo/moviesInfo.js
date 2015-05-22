@@ -2,25 +2,57 @@ Template.moviesInfo.helpers({
     movie: function() {
         if(Meteor.user()) {
             var movieToShow = Session.get("movie-to-show");
+
             var movieInfo = Session.get("movie-id-" + movieToShow);
+            var imdbID = Session.get("movieImdb-to-show");
+
+            console.log(imdbID);
+            console.log(movieInfo);
+
+
+/*
+            Meteor.call('getImdbInfo', function (err, result){
+
+            }),*/
 
             if(movieInfo) {
+
                 return movieInfo;
             }
             else {
                 Meteor.call('getMovie', movieToShow, function (err, result) {
+
+
+                    console.log("GetMovie");
+
+
+                    console.log(result);
+
+                    result.data.trailer = result.data.trailer.replace('watch?v=', 'embed/');
+                    result.data.trailer = result.data.trailer.replace('https', 'http');
+
                     Session.setPersistent("movie-id-" + movieToShow, result);
-                    return Session.get("movie-id-" + movieToShow);
+                    return result;
                 });
             }
-
-
         }
     }
 
 });
 
+function blurElement(element, size){
+    var filterVal = 'blur('+size+'px)';
+    $(element)
+        .css('filter',filterVal)
+        .css('webkitFilter',filterVal)
+        .css('mozFilter',filterVal)
+        .css('oFilter',filterVal)
+        .css('msFilter',filterVal);
+}
+
 Template.moviesInfo.events({
+
+
 
     /*MENU LINKS E HIPERLIGAÇÕES*/
 
@@ -52,5 +84,20 @@ Template.moviesInfo.events({
         Session.clear();
         Meteor.users.remove({_id: Meteor.user()._id});
         Router.go("/");
+    },
+
+
+
+
+    "click #seeTrailerPopup": function (event) {
+
+        $("#popUp").css( "display", "inline");
+        blurElement(".sectionMovieInfo", 8);
+    },
+
+    "click #closePopup": function (event) {
+
+        $("#popUp").css( "display", "none");
+        blurElement(".sectionMovieInfo", 0);
     }
 });

@@ -151,10 +151,8 @@ body{
 }
 
 .formSection{
-
     position: absolute;
     width: 100%;
-
     margin-top: 830px;
     margin-left: auto;
     margin-right: auto;
@@ -186,12 +184,6 @@ input[type=text]:focus {
     color: #ffec00;
 }
 
-
-
-
-
-
-
 @media (max-width: 1000px) {
     .content .section{
         width: 49.6%;
@@ -205,6 +197,15 @@ input[type=text]:focus {
         font-size: 3em;
     }
 
+    .formSection{
+        position: absolute;
+        width: 100%;
+        margin-top: 1100px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 50px;
+    }
 }
 
 @media (max-width: 720px) {
@@ -224,8 +225,8 @@ input[type=text]:focus {
     .top-nav .options{
         margin-left: -20px;
         padding-left: 0px;
-
     }
+
     #seeMore1, #seeMore2, #seeMore3, #seeMore4, #seeMore5{
         width: 100%;
     }
@@ -234,5 +235,13 @@ input[type=text]:focus {
         font-size: 2em;
     }
 
-
+    .formSection{
+        position: absolute;
+        width: 100%;
+        margin-top: 1850px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 50px;
+    }
 }
