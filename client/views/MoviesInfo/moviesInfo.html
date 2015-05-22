@@ -1,4 +1,5 @@
-<template name="moviesInfo">
+<template name= "moviesInfo">
+
     {{> navbar}}
 
     <div class = "menuBack">
@@ -12,25 +13,33 @@
             <li class = "olink">Get out</li>
         </ul>
     </div>
+    {{#with movie}}
+    <section id = "popUp">
+        <div>
+            <p id = "trailerNameInfo" style = "color: #ffec00; font-weight: 500; font-size: 1.4em;">{{this.data.title}}</p>
+            <img id = "closePopup" src="img/closeBtn.png">
+            <iframe id = "trailerPopup" border="none" src="{{this.data.trailer}}"></iframe>
+        </div>
+    </section>
 
             <section class = "sectionMovieInfo">
                 <div class = "sectionI1">
                     <div class = "movieInfo">
 
-                        {{#with movie}}
+
                             <img src="{{this.data.images.poster.medium}}">
 
 
 
                             <p>VOTES: <span id = "votes">{{this.data.votes}}</span></p>
                             <p>RATE: <span id = "rate">{{this.data.rating}}</span></p>
-                            <p>VER <a style="text-decoration: none" href="{{this.data.trailer}}" target="_blank" ><span id = "seeTrailer">TRAILER</span></a></p>
-                        {{/with}}
+                            <p id = seeTrailerPopup>VER <span id = "seeTrailer">TRAILER</span></p>
+
 
                     </div>
                 </div>
 
-                {{#with movie}}
+
                     <div class = "sectionI2">
                         <div class = "profileInfo">
                             <p id = "movieNameInfo">{{this.data.title}} <span style = "color: #ececec; font-weight: 100; font-size: 0.7em;">({{this.data.released}})</span></p>
@@ -39,8 +48,11 @@
                             <p id = "genresInfo"><span style = "color: #ffec00">Géneros:</span> {{this.data.genres}} </p>
                         </div>
                     </div>
-                {{/with}}
+
             </section>
+                        {{/with}}
+
+
 
 
 

@@ -83,6 +83,50 @@
     color: #ececec;
 }
 
+#popUp{
+    z-index: 9999;
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+
+}
+
+#trailerPopup{
+    position: fixed;
+
+    margin-left: 15%;
+    margin-right: 15%;
+
+    top:20%;
+    bottom: 10%;
+    border:1px solid #ffec00;
+    width: 70%;
+    height: 70%;
+}
+
+#seeTrailerPopup:hover{
+    cursor: pointer;
+}
+
+#closePopup{
+    width: 4%;
+    height: auto;
+    position: fixed;
+    margin-top: 2%;
+    right: 2%;
+    z-index: 99999;
+}
+
+#trailerNameInfo{
+    position: fixed;
+    margin-right: 10%;
+    margin-left: 10%;
+    top:11%;
+    width: 80%;
+    text-align: center;
+
+}
 
 
 

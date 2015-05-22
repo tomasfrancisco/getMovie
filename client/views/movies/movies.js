@@ -15,6 +15,7 @@ Template.movies.events({
         //console.log(this.movie.title);
 
         Session.setPersistent("movie-to-show", this.movie.ids.trakt);
+        Session.setPersistent("movieImdb-to-show", this.movie.ids.imdb);
         Router.go("/moviesInfo");
     },
 
@@ -72,8 +73,6 @@ Template.movies.helpers({
         }
     },
 
-
-
     movie: function() {
         if(Meteor.user()) {
             if (Session.get("movie")) {
@@ -83,58 +82,7 @@ Template.movies.helpers({
             }
         }
     }
+
 });
 
 
-
-
-
-/*
- "mouseover #f1": function () {
- $("#seeMore1").animate({"opacity": "1"}, 200);
- },
-
- "mouseover #f2": function () {
- $("#seeMore2").animate({"opacity": "1"}, 200);
- },
-
- "mouseover #f3": function () {
- $("#seeMore3").animate({"opacity": "1"}, 200);
- },
-
- "mouseover #f4": function () {
- $("#seeMore4").animate({"opacity": "1"}, 200);
- },
-
- "mouseover #f5": function () {
- $("#seeMore5").animate({"opacity": "1"}, 200);
- },
-
- "mouseover #f6": function () {
- $("#seeMore6").animate({"opacity": "1"}, 200);
- },
-
- "mouseleave #f1": function () {
-
- $("#seeMore1").animate({"opacity": "0"}, 200);
- },
-
- "mouseleave #f2": function () {
- $("#seeMore2").animate({"opacity": "0"}, 200);
- },
-
- "mouseleave #f3": function () {
- $("#seeMore3").animate({"opacity": "0"}, 200);
- },
-
- "mouseleave #f4": function () {
- $("#seeMore4").animate({"opacity": "0"}, 200);
- },
-
- "mouseleave #f5": function () {
- $("#seeMore5").animate({"opacity": "0"}, 200);
- },
- "mouseleave #f6": function () {
- $("#seeMore6").animate({"opacity": "0"}, 200);
- },
- */

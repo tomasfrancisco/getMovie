@@ -299,6 +299,7 @@ Template.home.helpers({
                 var mrec = Session.get("popularMovies");
                 var idPop = mrec.data[0].ids.trakt;
                 console.log(mrec);
+                console.log(idPop);
 
                 return Session.get("popularMovies");
             }
@@ -311,6 +312,59 @@ Template.home.helpers({
             Meteor.call('getPopularMovies', Meteor.user().profile.accessToken, function (err, result) {
                 Session.setPersistent("popularMovies", result);
             });
+        }
+    },
+
+    getPopularShows: function() {
+        if(Meteor.user()) {
+            Meteor.call('getPopularShows', Meteor.user().profile.accessToken, function (err, result) {
+                Session.setPersistent("popularShows", result);
+            });
+        }
+    },
+
+    popularShows: function() {
+        if(Meteor.user()) {
+            if(Session.get("popularShows")) {
+                return Session.get("popularShows");
+            }
+        }
+    },
+
+
+    getTrendingMovies: function() {
+        if(Meteor.user()) {
+
+            Meteor.call('getTrendingMovies', Meteor.user().profile.accessToken, function (err, result) {
+                Session.setPersistent("trendingMovies", result);
+            });
+        }
+    },
+
+    trendingMovies: function() {
+        if(Meteor.user()) {
+            if(Session.get("trendingMovies")) {
+                console.log(Session.get("trendingMovies"));
+                return Session.get("trendingMovies");
+            }
+        }
+    },
+
+    getTrendingShows: function() {
+        if(Meteor.user()) {
+
+            Meteor.call('getTrendingShows', Meteor.user().profile.accessToken, function (err, result) {
+                Session.setPersistent("trendingShows", result);
+            });
+        }
+    },
+
+    trendingShows: function() {
+        if(Meteor.user()) {
+            if(Session.get("trendingShows")) {
+                console.log(Session.get("trendingShows"));
+                return Session.get("trendingShows");
+            }
         }
     }
 

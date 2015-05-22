@@ -536,6 +536,31 @@ Meteor.methods({
         }
     },
 
+    hideShowsRecommendation: function(accessToken, id) {
+        try {
+            var config = ServiceConfiguration.configurations.findOne({service: 'trakt'});
+            if (!config)
+                throw new ServiceConfiguration.ConfigError();
+
+            var options = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + accessToken,
+                    'trakt-api-version': '2',
+                    'trakt-api-key': config.clientId
+                }
+            };
+
+            return HTTP.del(
+                "https://api-v2launch.trakt.tv/recommendations/shows/" +
+                id,
+                options);
+        } catch (err) {
+            throw _.extend(new Error("Failed to fetch hide movie recommendation from Trakt. " + err.message),
+                {response: err.response});
+        }
+    },
+
     getPopularMovies: function(){
         try {
             var config = ServiceConfiguration.configurations.findOne({service: 'trakt'});
@@ -551,14 +576,101 @@ Meteor.methods({
             };
 
             return HTTP.get(
-                "https://api-v2launch.trakt.tv/movies/popular/?extended=full,images/?page=1&limit=1",
+                "https://api-v2launch.trakt.tv/movies/popular/?extended=images,full/?page=1&limit=1",
                 options);
         } catch (err) {
             throw _.extend(new Error("Failed to fetch movie recommendation from Trakt. " + err.message),
                 {response: err.response});
         }
 
+    },
+
+    getPopularShows: function(){
+        try {
+            var config = ServiceConfiguration.configurations.findOne({service: 'trakt'});
+            if (!config)
+                throw new ServiceConfiguration.ConfigError();
+
+            var options = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'trakt-api-version': '2',
+                    'trakt-api-key': config.clientId
+                }
+            };
+
+            return HTTP.get(
+                "https://api-v2launch.trakt.tv/shows/popular/?extended=images,full/?page=1&limit=1",
+                options);
+        } catch (err) {
+            throw _.extend(new Error("Failed to fetch movie recommendation from Trakt. " + err.message),
+                {response: err.response});
+        }
+
+    },
+
+    getTrendingMovies: function(){
+        try {
+            var config = ServiceConfiguration.configurations.findOne({service: 'trakt'});
+            if (!config)
+                throw new ServiceConfiguration.ConfigError();
+
+            var options = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'trakt-api-version': '2',
+                    'trakt-api-key': config.clientId
+                }
+            };
+
+            return HTTP.get(
+                "https://api-v2launch.trakt.tv/movies/trending/?extended=images,full/?page=1&limit=1",
+                options);
+        } catch (err) {
+            throw _.extend(new Error("Failed to fetch movie recommendation from Trakt. " + err.message),
+                {response: err.response});
+        }
+
+    },
+
+    getTrendingShows: function(){
+        try {
+            var config = ServiceConfiguration.configurations.findOne({service: 'trakt'});
+            if (!config)
+                throw new ServiceConfiguration.ConfigError();
+
+            var options = {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'trakt-api-version': '2',
+                    'trakt-api-key': config.clientId
+                }
+            };
+
+            return HTTP.get(
+                "https://api-v2launch.trakt.tv/shows/trending/?extended=images,full/?page=1&limit=1",
+                options);
+        } catch (err) {
+            throw _.extend(new Error("Failed to fetch movie recommendation from Trakt. " + err.message),
+                {response: err.response});
+        }
+
+    },
+
+    /*TESTE API OMDB ------> IMDB*/
+
+    getImbdInfo: function(){
+        try {
+
+            return HTTP.get(
+                "http://www.omdbapi.com/?t=batman&y=&plot=short&r=json");
+        } catch (err) {
+            throw _.extend(new Error("Failed to fetch. " + err.message),
+                {response: err.response});
+        }
+
     }
+
 });
 
 
