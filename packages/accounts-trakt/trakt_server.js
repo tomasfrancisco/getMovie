@@ -343,6 +343,88 @@ Meteor.methods({
         return result;
     },
 
+    getStatsGenresFriends: function(username) {
+
+        var friends = Meteor.call("getFriends", username);
+        var myGenres = Meteor.call("getStatsGenres", username);
+
+        var total = 0;
+        var top = [];
+        var counter = 0;
+        for(var item in myGenres) {
+            if(counter < 5) {
+                top[item] = myGenres[item];
+                top[item].value = Math.round(top[item].value * 100);
+                total += top[item].value;
+                //console.log(total);
+
+            }
+            else
+                break;
+            counter++;
+        }
+        top.push({name:'other', value: (1.0 - total/100 ) * 100});
+
+        friends.me = top;
+
+        for(var i = 0; i < friends.data.length; i++) {
+            var watchedMovies = Meteor.call("getWatched", friends.data[i].user.username, 'movies');
+            var watchedMoviesTotal = 0;
+
+            var watchedGenres = {};
+            watchedMovies.data.forEach(function(entry) {
+                var genres = Meteor.call("getMovie", entry.movie.ids.trakt).data.genres;
+                console.log(genres);
+                genres.forEach(function(genre) {
+                    if(watchedGenres[genre] === undefined) {
+                        watchedGenres[genre] = 1;
+                    } else {
+                        watchedGenres[genre] = watchedGenres[genre] + 1;
+                    }
+                    watchedMoviesTotal = watchedMoviesTotal + 1;
+                });
+            });
+
+            console.log(watchedGenres);
+
+            for(key in watchedGenres) {
+                watchedGenres[key] = watchedGenres[key] / watchedMoviesTotal;
+            }
+
+            console.log(watchedGenres);
+
+            var result = [];
+            for (var key in watchedGenres)
+                result.push({name:key,value:watchedGenres[key]});
+
+
+            result.sort(function(a,b) {
+                return parseFloat(b.value) - parseFloat(a.value);
+            });
+
+            var total = 0;
+            var top = [];
+            var counter = 0;
+            for(var item in result) {
+                if(counter < 5) {
+                    top[item] = result[item];
+                    top[item].value = Math.round(top[item].value * 100);
+                    total += top[item].value;
+                    //console.log(total);
+
+                }
+                else
+                    break;
+                counter++;
+            }
+            top.push({name:'other', value: (1.0 - total/100 ) * 100});
+
+            friends.data[i].genres = top;
+        }
+
+        return friends;
+    },
+
     getMoviesRecommendation: function(accessToken) {
         try {
             var config = ServiceConfiguration.configurations.findOne({service: 'trakt'});
