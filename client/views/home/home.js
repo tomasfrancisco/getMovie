@@ -181,10 +181,7 @@ Template.home.helpers({
                 ];
 
                 Session.set("pieData", pieData);
-
-                //console.log(document.getElementById("genre-chart"));
-                //var ctx = document.getElementById("genre-chart").getContext("2d");
-                //window.myPie = new Chart(ctx).Pie(pieData, pieOptions);
+                
 
                 return top;
             }
