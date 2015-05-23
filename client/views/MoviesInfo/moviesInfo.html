@@ -6,23 +6,12 @@
 
     {{/with}}
 
-    <div class = "menuBack">
-        <ul class="menuList">
-            <li class = "hlink">Home</li>
-            <li class = "flink">Friends</li>
-            <li class = "mlink">Movies</li>
-            <li class = "rmlink">Movies Recommendations</li>
-            <li class = "slink">Shows</li>
-            <li class = "rslink">Shows recommendations</li>
-            <li class = "olink">Get out</li>
-        </ul>
-    </div>
     {{#with movie}}
     <section id = "popUp">
         <div>
-            <p id = "trailerNameInfo" style = "color: #ffec00; font-weight: 500; font-size: 1.4em;">{{this.data.title}}</p>
+            <p id = "trailerNameInfo" style = "color: #ffec00; font-weight: 500; font-size: 1.4em;">{{this.movie.title}}</p>
             <img id = "closePopup" src="img/closeBtn.png">
-            <iframe id = "trailerPopup" border="none" src="{{this.data.trailer}}"></iframe>
+            <iframe id = "trailerPopup" border="none" src="{{this.movie.trailer}}"></iframe>
         </div>
     </section>
 
@@ -31,12 +20,12 @@
                     <div class = "movieInfo">
 
 
-                            <img src="{{this.data.images.poster.medium}}">
+                            <img src="{{this.movie.images.poster.medium}}">
 
 
 
-                            <p>VOTES: <span id = "votes">{{this.data.votes}}</span></p>
-                            <p>RATE: <span id = "rate">{{this.imdb.data.imdbRating}}</span></p>
+                            <p>VOTES: <span id = "votes">{{this.movie.votes}}</span></p>
+                            <p>RATE: <span id = "rate">{{this.movie.imdb.data.imdbRating}}</span></p>
                             <p id = seeTrailerPopup>VER <span id = "seeTrailer">TRAILER</span></p>
 
 
@@ -46,12 +35,12 @@
 
                     <div class = "sectionI2">
                         <div class = "profileInfo">
-                            <p id = "movieNameInfo">{{this.data.title}} <span style = "color: #ececec; font-weight: 100; font-size: 0.7em;">({{this.data.released}})</span></p>
-                            <p id = "subNameInfo">{{this.data.tagline}}</p>
-                            <p id = "resumeInfo">{{this.data.overview}}</p>
-                            <p id = "genresInfo"><span style = "color: #ffec00">Géneros:</span> {{this.data.genres}} </p>
-                            <p id = "genresInfo"><span style = "color: #ffec00">Director:</span> {{this.imdb.data.Director}} </p>
-                            <p id = "genresInfo"><span style = "color: #ffec00">Actor(s):</span> {{this.imdb.data.Actors}} </p>
+                            <p id = "movieNameInfo">{{this.movie.title}} <span style = "color: #ececec; font-weight: 100; font-size: 0.7em;">({{this.movie.released}})</span></p>
+                            <p id = "subNameInfo">{{this.movie.tagline}}</p>
+                            <p id = "resumeInfo">{{this.movie.overview}}</p>
+                            <p id = "genresInfo"><span style = "color: #ffec00">Géneros:</span> {{this.movie.genres}} </p>
+                            <p id = "genresInfo"><span style = "color: #ffec00">Director:</span> {{this.movie.imdb.data.Director}} </p>
+                            <p id = "genresInfo"><span style = "color: #ffec00">Actor(s):</span> {{this.movie.imdb.data.Actors}} </p>
                         </div>
                     </div>
 

@@ -65,42 +65,35 @@ Template.home.events({
 
     "click #s5": function (event) {
         Router.go("/recommendations");
-    },
-
-
-    /*MENU LINKS E HIPERLIGAÇÕES*/
-
-    "click .hlink": function (event) {
-        Router.go("/home");
-    },
-
-    "click .flink": function (event) {
-        Router.go("/friends");
-    },
-
-    "click .mlink": function (event) {
-        Router.go("/movies");
-    },
-
-    "click .rmlink": function (event) {
-        Router.go("/recommendations");
-    },
-
-    "click .slink": function (event) {
-        Router.go("/shows");
-    },
-
-    "click .rslink": function (event) {
-        Router.go("/showsRecommendations");
-    },
-
-    'click .olink': function() {
-        Session.clear();
-        Meteor.users.remove({_id: Meteor.user()._id});
-        Router.go("/");
     }
-
 });
+
+var pieData = [
+    {
+        value: 30,
+        color:"#edda2f"
+    },
+    {
+        value : 25,
+        color : "#ffec00"
+    },
+    {
+        value : 20,
+        color : "#a8941a"
+    },
+    {
+        value : 15,
+        color : "#fff803"
+    },
+    {
+        value : 10,
+        color : "#efde97"
+    },
+    {
+        value : 5,
+        color : "#e2c73d"
+    }
+];
 
 var pieOptions = {
     segmentShowStroke : false,
@@ -108,14 +101,10 @@ var pieOptions = {
 };
 
 Template.home.rendered = function() {
-
     var self = this;
-
     self.reactiveData = Deps.autorun(function () {
-
         var ctx = document.getElementById("genre-chart").getContext("2d");
-        window.myPie = new Chart(ctx).Pie(Session.get("pieData"), pieOptions)
-
+        window.myPie = new Chart(ctx).Pie(Session.get("pieData"), pieOptions);
     });
 };
 
@@ -126,6 +115,10 @@ Template.home.helpers({
             console.log(obj);
             if(obj) {
 
+
+                Session.setPersistent("watchedMovies", obj.watched);
+                obj = obj.stats;
+
                 var total = 0;
                 var top = [];
                 var counter = 0;
@@ -134,7 +127,7 @@ Template.home.helpers({
                         top[item] = obj[item];
                         top[item].value = Math.round(top[item].value * 100);
                         total += top[item].value;
-                        console.log(total);
+                        //console.log(total);
 
                     }
                     else
@@ -142,7 +135,7 @@ Template.home.helpers({
                     counter++;
                 }
                 top.push({name:'other', value: (1.0 - total/100 ) * 100})
-                console.log(top);
+                //console.log(top);
 
                 Session.setPersistent("myTop", top);
 
@@ -181,7 +174,7 @@ Template.home.helpers({
                 ];
 
                 Session.set("pieData", pieData);
-                
+
 
                 return top;
             }
@@ -193,63 +186,33 @@ Template.home.helpers({
 
     getChartGenre: function() {
         if(Meteor.user()) {
-            console.log("Session: " + Session.get("genresStats"));
-            var stats = /*undefined;*/Session.get("genresStats");
+            var stats = Session.get("genresStats");
             if(stats === undefined) {
                 Meteor.call('getStatsGenres', Meteor.user().profile.username, function(err, result) {
-
                     Session.setPersistent("genresStats", result);
-                    console.log("Session now: " + Session.get("genresStats"));
                 });
             }
-            else
-            {
-                //console.log(stats);
-            }
         }
     },
-
     stats: function() {
         if(Meteor.user()) {
-            if(Session.get("stats")) {
-                console.log(Session.get("stats"))
-                return Session.get("stats");
+            var stats = Session.get("stats");
+            if(stats) {
+                console.log(stats);
+                return stats;
             }
         }
     },
-
     getStats: function(){
         if(Meteor.user()) {
-            Meteor.call('getStats', Meteor.user().profile.username, function (err, result) {
-                Session.setPersistent("stats", result);
-            });
-        }
-    },
-
-    /*GET RECOMMENDATION MOVIES PARA MOSTRAR IMAGEM*/
-
-    moviesRecommendation: function() {
-        if(Meteor.user()) {
-
-            if (Session.get("moviesRecommendation")) {
-                /*var mrec = Session.get("moviesRecommendation");
-                var randomImg = mrec.data[Math.round(Math.random(10))].images.thumb.full;
-                console.log(randomImg);*/
-                return Session.get("moviesRecommendation");
+            var stats = Session.get("stats");
+            if(stats === undefined) {
+                Meteor.call('getStats', Meteor.user().profile.username, function (err, result) {
+                    Session.setPersistent("stats", result);
+                });
             }
         }
     },
-
-
-    getMoviesRecommendation: function() {
-        if(Meteor.user()) {
-
-            Meteor.call('getMoviesRecommendation', Meteor.user().profile.accessToken, function (err, result) {
-                Session.setPersistent("moviesRecommendation", result);
-            });
-        }
-    },
-
     /*FAZER SEARCH DE UM FILME/SHOW fazer isto dentro de um POST de um TEXT FIELD*/
 
     getTextQueryResults: function() {
@@ -259,85 +222,82 @@ Template.home.helpers({
                 Session.setPersistent("getTextQueryResults", result);
             });
         }
-
-
     },
-
     /*GET POPULAR MOVIES PARA MOSTRAR IMAGEM*/
 
     popularMovies: function() {
         if(Meteor.user()) {
-            if(Session.get("popularMovies")) {
-                var mrec = Session.get("popularMovies");
-                var idPop = mrec.data[0].ids.trakt;
-                console.log(mrec);
-                console.log(idPop);
-
-                return Session.get("popularMovies");
+            var popularMovies = Session.get("popularMovies");
+            if(popularMovies) {
+                return popularMovies;
             }
         }
     },
-
     getPopularMovies: function() {
         if(Meteor.user()) {
-
-            Meteor.call('getPopularMovies', Meteor.user().profile.accessToken, function (err, result) {
-                Session.setPersistent("popularMovies", result);
-            });
-        }
-    },
-
-    getPopularShows: function() {
-        if(Meteor.user()) {
-            Meteor.call('getPopularShows', Meteor.user().profile.accessToken, function (err, result) {
-                Session.setPersistent("popularShows", result);
-            });
-        }
-    },
-
-    popularShows: function() {
-        if(Meteor.user()) {
-            if(Session.get("popularShows")) {
-                return Session.get("popularShows");
+            var popularMovies = Session.get("popularMovies");
+            if(popularMovies === undefined) {
+                Meteor.call('getPopularMovies', Meteor.user().profile.accessToken, function (err, result) {
+                    Session.setPersistent("popularMovies", result);
+                });
             }
         }
     },
-
-
-    getTrendingMovies: function() {
+    getPopularShows: function() {
         if(Meteor.user()) {
-
-            Meteor.call('getTrendingMovies', Meteor.user().profile.accessToken, function (err, result) {
-                Session.setPersistent("trendingMovies", result);
-            });
+            var popularShows = Session.get("popularShows");
+            if(popularShows === undefined) {
+                Meteor.call('getPopularShows', Meteor.user().profile.accessToken, function (err, result) {
+                    Session.setPersistent("popularShows", result);
+                });
+            }
         }
     },
-
+    popularShows: function() {
+        if(Meteor.user()) {
+            var popularShows = Session.get("popularShows");
+            if(popularShows) {
+                return popularShows;
+            }
+        }
+    },
+    getTrendingMovies: function() {
+        if(Meteor.user()) {
+            var trendingMovies = Session.get("trendingMovies");
+            if(trendingMovies === undefined) {
+                Meteor.call('getTrendingMovies', Meteor.user().profile.accessToken, function (err, result) {
+                    Session.setPersistent("trendingMovies", result);
+                });
+            }
+        }
+    },
     trendingMovies: function() {
         if(Meteor.user()) {
-            if(Session.get("trendingMovies")) {
-                console.log(Session.get("trendingMovies"));
-                return Session.get("trendingMovies");
+            var trendingMovies = Session.get("trendingMovies");
+            if(trendingMovies) {
+                console.log(trendingMovies);
+                return trendingMovies;
             }
         }
     },
 
     getTrendingShows: function() {
         if(Meteor.user()) {
-
-            Meteor.call('getTrendingShows', Meteor.user().profile.accessToken, function (err, result) {
-                Session.setPersistent("trendingShows", result);
-            });
+            var trendingShows = Session.get("trendingShows");
+            if(trendingShows === undefined) {
+                Meteor.call('getTrendingShows', Meteor.user().profile.accessToken, function (err, result) {
+                    Session.setPersistent("trendingShows", result);
+                });
+            }
         }
     },
-
     trendingShows: function() {
         if(Meteor.user()) {
-            if(Session.get("trendingShows")) {
-                console.log(Session.get("trendingShows"));
-                return Session.get("trendingShows");
+            var trendingShows = Session.get("trendingShows");
+            if(trendingShows) {
+                console.log(trendingShows);
+                return trendingShows;
             }
         }
     }
-
 });

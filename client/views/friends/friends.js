@@ -280,19 +280,25 @@ d3.tip = function() {
 };
 
 
+var pieOptions = {
+    segmentShowStroke : false,
+    animateScale : true
+};
+
 Template.friends.helpers({
     friends: function() {
-
         if (Meteor.user()) {
-            if (Session.get("friends")) {
+            var friendsList = Session.get("friends");
+            console.log("FriendsList");
+            console.log(friendsList);
 
-                var friendsList = Session.get("friends");
+            if (friendsList) {
 
-                console.log(friendsList);
+                //console.log(friendsList);
 
 
                 var friends = {"nodes": [], "links": []};
-                friends.nodes.push({"name": "tomasfrancisco", "genre": 0, "avatar": Meteor.user().profile.picture});
+                friends.nodes.push({"name": "tomasfrancisco", "genre": 0, "top": friendsList.me[0].name,  "avatar": Meteor.user().profile.picture, "size": 0});
 
                 var genresColor = [];
                 var i = 0;
@@ -301,8 +307,8 @@ Template.friends.helpers({
                     i++;
                 });
 
-                console.log("GenresColor");
-                console.log(genresColor);
+                /*console.log("GenresColor");
+                console.log(genresColor);*/
 
                 console.log("FriendsList");
                 console.log(friendsList);
@@ -311,29 +317,34 @@ Template.friends.helpers({
 
                 i = 1;
                 friendsList.data.forEach(function (value) {
-                    console.log("Friend");
-                    console.log(value);
+                    //console.log("Friend");
+                    //console.log(value);
                     var color = 5;
-                    var size = 1;
+                    var size = 2;
 
                     for (var j = 0; j < genresColor.length; j++) {
-                        if (value.genres[0].name == genresColor[j].name) {
-                            if (j == 0) {
+                        if (value.genres[0].name === genresColor[j].name) {
+                            if (j === 0) {
+                                size = 0;
+                            } else if(j === 1){
                                 size = 1;
                             } else {
-                                size = 0;
+                                size = 2;
                             }
-                            console.log(value.user.username + " top: " + value.genres[0].name + " color: " + genresColor[j].color);
+                            //console.log(value.user.username + " top: " + value.genres[0].name + " color: " + genresColor[j].color);
                             color = genresColor[j].color;
                         }
                     }
+                    console.log(value.user.username + " top: " + value.genres[0].name + " color: " + color);
 
                     friends.nodes.push({
                         "name": value.user.username,
                         "genre": color,
+                        "top": value.genres[0].name,
                         "avatar": value.user.images.avatar.full,
                         "size": size
-                    });
+
+                        });
                     friends.links.push({"source": 0, "target": i, "value": 10});
                     i++;
                 });
@@ -349,48 +360,148 @@ Template.friends.helpers({
     getFriends: function() {
         if(Meteor.user()) {
             if(Session.get("friends") === undefined) {
-                if(Session.get("myTop")) {
-                    Meteor.call('getStatsGenresFriends', Meteor.user().profile.username, Session.get("myTop"), function (err, result) {
-                        console.log("getStatsGenresFriends");
-                        console.log(result);
-
+                var myTop = Session.get("myTop");
+                console.log("myTop:");
+                console.log(myTop);
+                if(myTop) {
+                    Meteor.call('getStatsGenresFriends', Meteor.user().profile.username, myTop, function (err, result) {
                         Session.setPersistent("friends", result);
                     });
                 }
             }
         }
+    },
+    chartGenre: function() {
+        if(Meteor.user()) {
+            var obj = Session.get("genresStats");
+            console.log(obj);
+            if(obj) {
+
+
+                Session.setPersistent("watchedMovies", obj.watched);
+                obj = obj.stats;
+
+                var total = 0;
+                var top = [];
+                var counter = 0;
+                for(var item in obj) {
+                    if(counter < 5) {
+                        top[item] = obj[item];
+                        top[item].value = Math.round(top[item].value * 100);
+                        total += top[item].value;
+                        //console.log(total);
+
+                    }
+                    else
+                        break;
+                    counter++;
+                }
+                top.push({name:'other', value: (1.0 - total/100 ) * 100})
+                //console.log(top);
+
+                Session.setPersistent("myTop", top);
+
+
+                var pieData = [
+                    {
+                        value: top[0].value,
+                        color:"#edda2f",
+                        label: obj[0].name
+                    },
+                    {
+                        value : top[1].value,
+                        color : "#ffec00",
+                        label: obj[1].name
+                    },
+                    {
+                        value : top[2].value,
+                        color : "#a8941a",
+                        label: obj[2].name
+                    },
+                    {
+                        value : top[3].value,
+                        color : "#fff803",
+                        label: obj[3].name
+                    },
+                    {
+                        value : top[4].value,
+                        color : "#efde97",
+                        label: obj[4].name
+                    },
+                    {
+                        value : top[5].value,
+                        color : "#e2c73d",
+                        label: "other"
+                    }
+                ];
+
+                Session.set("pieData", pieData);
+
+
+                return top;
+            }
+        }
+        else {
+            return null;
+        }
+    },
+    getChartGenre: function() {
+        if(Meteor.user()) {
+            var stats = Session.get("genresStats");
+            if(stats === undefined) {
+                Meteor.call('getStatsGenres', Meteor.user().profile.username, function(err, result) {
+                    Session.setPersistent("genresStats", result);
+                });
+            }
+        }
     }
 });
+
+var pieOptions = {
+    segmentShowStroke : false,
+    animateScale : true
+};
 
 /**
  * Created by goncaloneves on 24/04/15.
  */
 Template.friends.rendered = function() {
 
-<<<<<<< HEAD
+    var ctx = document.getElementById("genre-chart").getContext("2d");
+    window.myPie = new Chart(ctx).Pie(Session.get("pieData"), pieOptions);
+
     var self = this;
 
     self.reactiveData = Deps.autorun(function () {
 
         console.log("REACTIVE");
 
-
-
         var friends = Session.get("friendsGraph");
+        console.log("Friends:");
+        console.log(friends);
 
         if(friends) {
 
-            /*var width = 1200,
+            var width = 1200,
                 height = 900;
+
+            var tip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([0, 0])
+                .html(function(d) {
+                    return "<span id ='hoverGraph'>" + d.name + "</br>" + '<span class="menu">TOP: </span>' + d.top + "</span>";
+                });
 
             var svg = d3.select("#grafo").append("svg")
                 .attr("width", width)
                 .attr("height", height);
 
-
             var color = d3.scale.ordinal()
                 .range(["#edda2f", "#ffec00", "#a8941a", "#fff803", "#efde97", "#e2c73d", "#e2c73d"]);
 
+            var valor = [120,80,40];
+
+            var pos = [-80,-50,-20];
 
             var force = d3.layout.force()
                 .charge(-800)
@@ -398,9 +509,7 @@ Template.friends.rendered = function() {
                 .linkStrength(0.1)
                 .friction(0.9)
                 .gravity(0.05)
-
                 .size([width, height]);
-
 
             force
                 .nodes(friends.nodes)
@@ -422,249 +531,63 @@ Template.friends.rendered = function() {
 
             node.append("svg:image")
                 .attr("class", "circle")
-                .attr("width", function (d) {
-                    if (d.size) {
-                        return 80;
-                    } else {
-                        return 50;
-                    }
-                })
-                .attr("height", function (d) {
-                    if (d.size) {
-                        return 80;
-                    } else {
-                        return 50;
-                    }
-                })
-                .attr("xlink:href", function (d) {
-                    return d.avatar;
-                })
-                .attr("x", function (d) {
-                    if (d.size) {
-                        return -40;
-                    } else {
-                        return -25;
-                    }
-                })
-                .attr("y", function (d) {
-                    if (d.size) {
-                        return -40;
-                    } else {
-                        return -25;
-                    }
-                });
+                .attr("width", function(d) { return valor[d.size];})
+                .attr("height", function(d) { return valor[d.size];})
+                .attr("xlink:href", function(d) { return d.avatar;})
+                .attr("x", function(d) { return pos[d.size];})
+                .attr("y", function(d) { return pos[d.size];})
+                ;
+
+            node.append("text")
+                .attr("x", 0)
+                .attr("y", 0)
+                .attr("dx", 12)
+                .attr("dy", "0.35em")
+                .text(function(d) { return d.name })
+                .style("font-family", "Quicksand")
+                .style("font-size", "1em")
+                .style("text-align", "center")
+                .style("fill", "red")
+                .style("opacity", "0.0")
+                ;
+
+            node.call(tip);
 
             node.append("rect")
                 .attr("class", "circle")
-                .attr("width", function (d) {
-                    if (d.size) {
-                        return 80;
-                    } else {
-                        return 50;
-                    }
-                })
-                .attr("height", function (d) {
-                    if (d.size) {
-                        return 80;
-                    } else {
-                        return 50;
-                    }
-                })
-                .attr("x", function (d) {
-                    if (d.size) {
-                        return -40;
-                    } else {
-                        return -25;
-                    }
-                })
-                .attr("y", function (d) {
-                    if (d.size) {
-                        return -40;
-                    } else {
-                        return -25;
-                    }
-                })
-                .style("stroke", function (d) {
-                    return color(d.genre);
-                })
-                .style("fill", "transparent");
+                .attr("width", function(d) { return valor[d.size];})
+                .attr("height", function(d) { return valor[d.size];})
+                .attr("x", function(d) { return pos[d.size];})
+                .attr("y", function(d) { return pos[d.size];})
+                .style("stroke", function(d) { return color(d.genre); })
+                .style("fill", "transparent")
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide);
 
-            force.on("tick", function () {
+            force.on("tick", function() {
                 link.attr("x1", function (d) {
                     return d.source.x;
-                })
+                    }
+                )
                     .attr("y1", function (d) {
                         return d.source.y;
-                    })
+                    }
+                )
                     .attr("x2", function (d) {
                         return d.target.x;
-                    })
+                    }
+                )
                     .attr("y2", function (d) {
                         return d.target.y;
-                    });
+                    }
+                );
 
                 node.attr("transform", function (d) {
                     return "translate(" + d.x + "," + d.y + ")";
                 });
             });
-        } */
-
-
-
-        var width = 1200,
-            height = 900;
-
-        var tip = d3.tip()
-            .attr('class', 'd3-tip')
-            .offset([0, 0])
-            .html(function(d) {
-                return "<span id ='hoverGraph'>" + d.name + "</span>";
-            });
-
-        var svg = d3.select("#grafo").append("svg")
-            .attr("width", width)
-            .attr("height", height);
-
-
-        var color = d3.scale.ordinal()
-            .range(["#edda2f", "#ffec00", "#a8941a", "#fff803", "#efde97", "#e2c73d", "#e2c73d"]);
-
-        var valor = [120,80,40];
-
-        var pos = [-80,-50,-20];
-
-
-
-        var force = d3.layout.force()
-            .charge(-800)
-            .linkDistance(200)
-            .linkStrength(0.1)
-            .friction(0.9)
-            .gravity(0.05)
-            .size([width, height]);
-
-
-        force
-            .nodes(friends.nodes)
-            .links(friends.links)
-            .start();
-
-
-
-
-
-        var link = svg.selectAll(".link")
-            .data(friends.links)
-            .enter().append("line")
-            .attr("class", "link");
-
-        var node = svg.selectAll(".node")
-            .data(friends.nodes)
-            .enter().append("g")
-            .attr("class", "node")
-            .call(force.drag);
-
-        var raio = 45;
-
-
-
-        node.append("svg:image")
-            .attr("class", "circle")
-            .attr("width", function(d) { return valor[d.value];})
-            .attr("height", function(d) { return valor[d.value];})
-            .attr("xlink:href", "img/g.jpg")
-            .attr("x", function(d) { return pos[d.value];})
-            .attr("y", function(d) { return pos[d.value];})
-            ;
-
-        node.append("text")
-            .attr("x", 0)
-            .attr("y", 0)
-            .attr("dx", 12)
-            .attr("dy", "0.35em")
-            .text(function(d) { return d.name })
-            .style("font-family", "Quicksand")
-            .style("font-size", "1em")
-            .style("text-align", "center")
-            .style("fill", "red")
-            .style("opacity", "0.0")
-            ;
-
-
-
-        node.call(tip);
-
-        node.append("rect")
-            .attr("class", "circle")
-            .attr("width", function(d) { return valor[d.value];})
-            .attr("height", function(d) { return valor[d.value];})
-            .attr("x", function(d) { return pos[d.value];})
-            .attr("y", function(d) { return pos[d.value];})
-            .style("stroke", function(d) { return color(d.group); })
-            .style("fill", "transparent")
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide);
-
-
-
-
-
-
-
-        force.on("tick", function() {
-            link.attr("x1", function (d) {
-                return d.source.x;
-            })
-                .attr("y1", function (d) {
-                    return d.source.y;
-                })
-                .attr("x2", function (d) {
-                    return d.target.x;
-                })
-                .attr("y2", function (d) {
-                    return d.target.y;
-                });
-
-            node.attr("transform", function (d) {
-                return "translate(" + d.x + "," + d.y + ")";
-            });
         }
-        }
-
     });
 }
 
-Template.friends.events({
 
-    /*MENU LINKS E HIPERLIGAÇÕES*/
-
-    "click .hlink": function (event) {
-        Router.go("/home");
-    },
-
-    "click .flink": function (event) {
-        Router.go("/friends");
-    },
-
-    "click .mlink": function (event) {
-        Router.go("/movies");
-    },
-
-    "click .rmlink": function (event) {
-        Router.go("/recommendations");
-    },
-
-    "click .slink": function (event) {
-        Router.go("/shows");
-    },
-
-    "click .rslink": function (event) {
-        Router.go("/showsRecommendations");
-    },
-
-    'click .olink': function() {
-        Session.clear();
-        Meteor.users.remove({_id: Meteor.user()._id});
-        Router.go("/");
-    }
-});

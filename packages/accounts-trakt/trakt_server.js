@@ -108,32 +108,6 @@ var getIdentity = function (accessToken) {
   }
 };
 
-var getMovie = function(id) {
-    try {
-        var config = ServiceConfiguration.configurations.findOne({service: 'trakt'});
-        if (!config)
-            throw new ServiceConfiguration.ConfigError();
-
-        var options = {
-            headers: {
-                'Content-Type': 'application/json',
-                'trakt-api-version': '2',
-                'trakt-api-key': config.clientId
-            }
-        };
-
-        return HTTP.get(
-            'https://api-v2launch.trakt.tv/movies/' +
-            id +
-            "?extended=full",
-            options);
-    } catch (err) {
-        throw _.extend(new Error("Failed to fetch movies from Trakt. " + err.message),
-            {response: err.response});
-    }
-}
-
-
 Trakt.retrieveCredential = function(credentialToken, credentialSecret) {
   return OAuth.retrieveCredential(credentialToken, credentialSecret);
 };
@@ -155,7 +129,7 @@ Meteor.methods({
                 }
             };
 
-
+            console.log("Getting " + type + " watched...");
             var watched = HTTP.get(
                 "https://api-v2launch.trakt.tv/users" +
                 "/" + username +
@@ -164,23 +138,17 @@ Meteor.methods({
                 options);
 
             if(type === "movies") {
-
                 watched.data.forEach(function(entry) {
                     var imdbInfo = Meteor.call("getMoviePlus", entry.movie.ids.imdb);
-
                     entry.movie.imdb = imdbInfo;
                 });
-
-
-
             } else {
                 watched.data.forEach(function(entry) {
                     var imdbInfo = Meteor.call("getShowPlus", entry.show.ids.imdb);
-
                     entry.show.imdb = imdbInfo;
                 });
             }
-
+            console.log("Returning " + type + " watched...");
             return watched;
 
         } catch (err) {
@@ -258,8 +226,9 @@ Meteor.methods({
             };
 
 
-
+            console.log("Getting movie...");
             var imdbInfo = Meteor.call("getMoviePlus", imdb);
+
 
             var movie = HTTP.get(
                 'https://api-v2launch.trakt.tv/movies/' +
@@ -268,6 +237,8 @@ Meteor.methods({
                 options);
 
             movie.imdb = imdbInfo;
+
+            console.log("Returning movie...");
             return movie;
 
         } catch (err) {
@@ -291,7 +262,12 @@ Meteor.methods({
                 }
             };
 
+
+            console.log("Getting show...");
+
             var imdbInfo = Meteor.call("getShowPlus", imdb);
+
+
 
             var show = HTTP.get(
                 'https://api-v2launch.trakt.tv/shows/' +
@@ -301,6 +277,7 @@ Meteor.methods({
 
             show.imdb = imdbInfo;
 
+            console.log("Returning show...");
             return show;
         } catch (err) {
             throw _.extend(new Error("Failed to fetch show from Trakt. " + err.message),
@@ -346,7 +323,7 @@ Meteor.methods({
         var watchedGenres = {};
         watchedMovies.data.forEach(function(entry) {
             var genres = entry.movie.genres;
-            console.log(genres);
+            //console.log(genres);
             genres.forEach(function(genre) {
                if(watchedGenres[genre] === undefined) {
                    watchedGenres[genre] = 1;
@@ -357,22 +334,25 @@ Meteor.methods({
             });
         });
 
-        console.log(watchedGenres);
+        //console.log(watchedGenres);
 
         for(key in watchedGenres) {
             watchedGenres[key] = watchedGenres[key] / watchedMoviesTotal;
         }
 
-        console.log(watchedGenres);
+        //console.log(watchedGenres);
 
-        var result = [];
+        var result = {"stats": []};
+        //console.log(result);
         for (var key in watchedGenres)
-            result.push({name:key,value:watchedGenres[key]});
+            result.stats.push({name:key,value:watchedGenres[key]});
 
 
-        result.sort(function(a,b) {
+        result.stats.sort(function(a,b) {
             return parseFloat(b.value) - parseFloat(a.value);
         });
+
+        result.watched = watchedMovies;
 
         return result;
     },
@@ -390,7 +370,6 @@ Meteor.methods({
             var watchedGenres = {};
             watchedMovies.data.forEach(function(entry) {
                 var genres = entry.movie.genres;
-                console.log(genres);
                 genres.forEach(function(genre) {
                     if(watchedGenres[genre] === undefined) {
                         watchedGenres[genre] = 1;
@@ -401,13 +380,13 @@ Meteor.methods({
                 });
             });
 
-            console.log(watchedGenres);
+            //console.log(watchedGenres);
 
             for(key in watchedGenres) {
                 watchedGenres[key] = watchedGenres[key] / watchedMoviesTotal;
             }
 
-            console.log(watchedGenres);
+            console.log(i);
 
             var result = [];
             for (var key in watchedGenres)
@@ -460,7 +439,7 @@ Meteor.methods({
             };
 
 
-
+            console.log("Getting movies recommendations...");
             var movies = HTTP.get(
                 "https://api-v2launch.trakt.tv/recommendations/movies/?extended=full,images",
                 options);
@@ -468,10 +447,11 @@ Meteor.methods({
 
             movies.data.forEach(function(entry) {
                 var imdbInfo = Meteor.call("getMoviePlus", entry.ids.imdb);
+                entry.trailer = entry.trailer.replace('watch?v=', 'embed/');
                 entry.imdb = imdbInfo;
             });
 
-
+            console.log("Returning movies recommendations...");
             return movies;
 
 

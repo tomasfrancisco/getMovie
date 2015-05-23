@@ -2,26 +2,15 @@
 
     {{> navbar}}
 
-    {{#with getStats}}
-    {{/with}}
+    {{#with getStats}}{{/with}}
 
-    {{#with getMoviesRecommendation}}
-    {{/with}}
+    {{#with getPopularMovies}}{{/with}}
 
-    {{#with moviesRecommendation}}
-    {{/with}}
+    {{#with getPopularShows}}{{/with}}
 
-    {{#with getPopularMovies}}
-    {{/with}}
+    {{#with getTrendingMovies}}{{/with}}
 
-    {{#with getPopularShows}}
-    {{/with}}
-
-    {{#with getTrendingMovies}}
-    {{/with}}
-
-    {{#with getTrendingShows}}
-    {{/with}}
+    {{#with getTrendingShows}}{{/with}}
 
     <section>
         <div class = "content">
@@ -35,8 +24,6 @@
                 {{/with}}
 
             </div>
-
-
             <div class = "section" id = "s2">
                 <p>SHOWS <span class = "Name1">WATCHED</span></p>
                 <div id = "seeMore2"><img src="img/seeMore.png"></div>
@@ -46,8 +33,6 @@
                     {{/each}}
                 {{/with}}
             </div>
-
-
             <div class = "section" id = "s3">
                 <p>SHOWS <span class = "Name1">RECOMMENDED</span></p>
                 <div id = "seeMore3"><img src="img/seeMore.png"></div>
@@ -57,10 +42,7 @@
                         <div class = "thumbH"><img src="{{this.images.thumb.full}}"></div>
                     {{/each}}
                 {{/with}}
-
             </div>
-
-
             <div class = "section" id = "s4">
                 <p>MOVIES <span class = "Name1">WATCHED</span></p>
                 <div id = "seeMore4"><img src="img/seeMore.png"></div>
@@ -70,61 +52,40 @@
                         <div class = "thumbH"><img src="{{this.movie.images.thumb.full}}"></div>
                     {{/each}}
                 {{/with}}
-
             </div>
-
-
-                <div class = "section" id = "s5">
-                    <p>MOVIES <span class = "Name1">RECOMMENDED</span></p>
-                    <div id = "seeMore5"><img src="img/seeMore.png"></div>
-                    <div class = "gradient"></div>
-                    {{#with popularMovies}}
-                        {{#each data}}
-                        <div class = "thumbH"><img src="{{this.images.thumb.full}}"></div>
-                        {{/each}}
-                    {{/with}}
-                </div>
-
-
-
+            <div class = "section" id = "s5">
+                <p>MOVIES <span class = "Name1">RECOMMENDED</span></p>
+                <div id = "seeMore5"><img src="img/seeMore.png"></div>
+                <div class = "gradient"></div>
+                {{#with popularMovies}}
+                    {{#each data}}
+                    <div class = "thumbH"><img src="{{this.images.thumb.full}}"></div>
+                    {{/each}}
+                {{/with}}
+            </div>
             <div class = "section" id = "s6">
                 <p>FAVORITE <span class = "Name1">GENRES</span></p>
                 <div id = "sectionGenre">
-
-                    {{#with getChartGenre}}
-                    {{/with}}
-
-
+                    {{#with getChartGenre}}{{/with}}
                     <div class="chart">
                         <canvas id="genre-chart" width="150" height="150"></canvas>
                     </div>
+                    <div id="canvas-holder">
+                        <div class="genreList">
+                            <ul>
+                                {{#each chartGenre}}
+                                    <li id = "sq1">
+                                        <div class = "square" style="background-color: #edda2f"></div>
+                                        {{this.name}} - <span style="color: #ffec00; font-weight: 500;"> {{this.value}} % </span>
+                                    </li>
+                                {{/each}}
 
-
-
-                        <div id="canvas-holder">
-                            <div class="genreList">
-                                <ul>
-                                    {{#each chartGenre}}
-                                        <li id = "sq1">
-                                            <div class = "square" style="background-color: #edda2f"></div>
-                                            {{this.name}} - <span style="color: #ffec00; font-weight: 500;"> {{this.value}} % </span>
-                                        </li>
-                                    {{/each}}
-
-                                </ul>
-                            </div>
+                            </ul>
                         </div>
-
+                    </div>
                 </div>
             </div>
-
         </div>
-
-
-
-
-
-
     </section>
 
     <div class = "formSection">
@@ -132,19 +93,4 @@
             <input type="text" class="search-query" placeholder="Get Movie">
         </form>
     </div>
-
-    <div class = "menuBack">
-        <ul class="menuList">
-            <li class = "hlink">Home</li>
-            <li class = "flink">Friends</li>
-            <li class = "mlink">Movies</li>
-            <li class = "rmlink">Movies Recommendations</li>
-            <li class = "slink">Shows</li>
-            <li class = "rslink">Shows recommendations</li>
-            <li class = "olink">Get out</li>
-        </ul>
-    </div>
-
-
-
 </template>

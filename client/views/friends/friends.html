@@ -4,18 +4,6 @@
     {{#with getFriends}}
     {{/with}}
 
-    <div class = "menuBack">
-        <ul class="menuList">
-            <li class = "hlink">Home</li>
-            <li class = "flink">Friends</li>
-            <li class = "mlink">Movies</li>
-            <li class = "rmlink">Movies Recommendations</li>
-            <li class = "slink">Shows</li>
-            <li class = "rslink">Shows recommendations</li>
-            <li class = "olink">Get out</li>
-        </ul>
-    </div>
-
     {{#with friends}}
     {{/with}}
 
@@ -23,6 +11,36 @@
 
     </div>
 
+
+    <div id = "genreGrafo">
+        <div id = "grafoGenre">
+
+            {{#with getChartGenre}}
+            {{/with}}
+
+
+            <div class="chart">
+                <canvas id="genre-chart" width="150" height="150"></canvas>
+            </div>
+
+
+
+            <div id="canvas-holder">
+                <div class="genreList">
+                    <ul>
+                        {{#each chartGenre}}
+                            <li id = "sq1">
+                                <div class = "square" style="background-color: #edda2f"></div>
+                                {{this.name}} - <span style="color: #ffec00; font-weight: 500;"> {{this.value}} % </span>
+                            </li>
+                        {{/each}}
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
 
