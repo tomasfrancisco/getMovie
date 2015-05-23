@@ -2,6 +2,10 @@
     {{> navbar}}
 
 
+    {{#with getShowInfo}}
+
+    {{/with}}
+
     <div class = "menuBack">
         <ul class="menuList">
             <li class = "hlink">Home</li>
@@ -21,7 +25,7 @@
                 <div class = "movieInfo">
                         <img src="{{this.data.images.poster.medium}}">
                         <p>VOTES: <span id = "votes">{{this.data.votes}}</span></p>
-                        <p>RATE: <span id = "rate">{{this.data.rating}}</span></p>
+                        <p>RATE: <span id = "rate">{{this.imdb.data.imdbRating}}</span></p>
 
                 </div>
             </div>
@@ -33,6 +37,8 @@
                     <p id = "subNameInfo">{{this.data.tagline}}</p>
                     <p id = "resumeInfo">{{this.data.overview}}</p>
                     <p id = "genresInfo"><span style = "color: #ffec00">Géneros:</span> {{this.data.genres}} </p>
+                    <p id = "genresInfo"><span style = "color: #ffec00">Director:</span> {{this.imdb.data.Director}} </p>
+                    <p id = "genresInfo"><span style = "color: #ffec00">Actor(s):</span> {{this.imdb.data.Actors}} </p>
                 </div>
             </div>
 

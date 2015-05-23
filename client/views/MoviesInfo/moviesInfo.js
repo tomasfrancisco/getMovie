@@ -1,40 +1,35 @@
+
 Template.moviesInfo.helpers({
     movie: function() {
         if(Meteor.user()) {
             var movieToShow = Session.get("movie-to-show");
-
             var movieInfo = Session.get("movie-id-" + movieToShow);
-            var imdbID = Session.get("movieImdb-to-show");
-
-            console.log(imdbID);
-            console.log(movieInfo);
-
-
-/*
-            Meteor.call('getImdbInfo', function (err, result){
-
-            }),*/
 
             if(movieInfo) {
 
+                console.log(movieInfo);
                 return movieInfo;
             }
-            else {
-                Meteor.call('getMovie', movieToShow, function (err, result) {
+        }
+    },
+
+    getMovieInfo: function() {
+        var movieToShow = Session.get("movie-to-show");
+        var movieInfo = Session.get("movie-id-" + movieToShow);
+
+        if(!movieInfo) {
+            var imdbID = Session.get("movieImdb-to-show");
 
 
-                    console.log("GetMovie");
+            Meteor.call('getMovie', movieToShow, imdbID, function (err, result) {
 
+                result.data.trailer = result.data.trailer.replace('watch?v=', 'embed/');
+                result.data.trailer = result.data.trailer.replace('https', 'http');
 
-                    console.log(result);
+                Session.setPersistent("movie-id-" + movieToShow, result);
 
-                    result.data.trailer = result.data.trailer.replace('watch?v=', 'embed/');
-                    result.data.trailer = result.data.trailer.replace('https', 'http');
-
-                    Session.setPersistent("movie-id-" + movieToShow, result);
-                    return result;
-                });
-            }
+                return result;
+            });
         }
     }
 

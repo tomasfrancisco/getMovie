@@ -13,6 +13,7 @@ Template.shows.events({
         //console.log(this.movie.title);
 
         Session.setPersistent("show-to-show", this.show.ids.trakt);
+        Session.setPersistent("showImdb-to-show", this.show.ids.imdb);
         Router.go("/showsInfo");
     },
 

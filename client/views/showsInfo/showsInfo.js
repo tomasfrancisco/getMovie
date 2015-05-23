@@ -35,7 +35,7 @@ Template.showsInfo.events({
 });
 
 Template.showsInfo.helpers({
-    show: function() {
+    /*show: function() {
         if(Meteor.user()) {
             var showToShow = Session.get("show-to-show");
             var showInfo = Session.get("show-id-" + showToShow);
@@ -52,6 +52,37 @@ Template.showsInfo.helpers({
             }
 
 
+        }
+    },
+*/
+    show: function() {
+        if(Meteor.user()) {
+            var showToShow = Session.get("show-to-show");
+            var showInfo = Session.get("show-id-" + showToShow);
+            console.log(showToShow);
+
+            if(showInfo) {
+                console.log(showInfo);
+
+                return showInfo;
+            }
+        }
+    },
+
+    getShowInfo: function() {
+        var showToShow = Session.get("show-to-show");
+        var showInfo = Session.get("show-id-" + showToShow);
+
+        if(!showInfo) {
+            var imdbID = Session.get("showImdb-to-show");
+
+
+            Meteor.call('getShow', showToShow, imdbID, function (err, result) {
+
+                Session.setPersistent("show-id-" + showToShow, result);
+
+                return result;
+            });
         }
     }
 

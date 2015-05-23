@@ -1,8 +1,5 @@
 
 Template.home.events({
-    "click .menu": function () {
-        $(".menuBack").slideToggle(1000);
-    },
 
     "mouseover #s1": function () {
         $("#grafo").animate({"opacity": "0.3"}, 200);
@@ -105,46 +102,22 @@ Template.home.events({
 
 });
 
-var pieData = [
-    {
-        value: 30,
-        color:"#edda2f"
-    },
-    {
-        value : 25,
-        color : "#ffec00"
-    },
-    {
-        value : 20,
-        color : "#a8941a"
-    },
-    {
-        value : 15,
-        color : "#fff803"
-    },
-    {
-        value : 10,
-        color : "#efde97"
-    },
-    {
-        value : 5,
-        color : "#e2c73d"
-    }
-];
-
-
 var pieOptions = {
     segmentShowStroke : false,
     animateScale : true
 };
 
-
-
 Template.home.rendered = function() {
-    var ctx = document.getElementById("genre-chart").getContext("2d");
-    window.myPie = new Chart(ctx).Pie(pieData, pieOptions);
-};
 
+    var self = this;
+
+    self.reactiveData = Deps.autorun(function () {
+
+        var ctx = document.getElementById("genre-chart").getContext("2d");
+        window.myPie = new Chart(ctx).Pie(Session.get("pieData"), pieOptions)
+
+    });
+};
 
 Template.home.helpers({
     chartGenre: function() {
@@ -171,8 +144,10 @@ Template.home.helpers({
                 top.push({name:'other', value: (1.0 - total/100 ) * 100})
                 console.log(top);
 
+                Session.setPersistent("myTop", top);
 
-                pieData = [
+
+                var pieData = [
                     {
                         value: top[0].value,
                         color:"#edda2f",
@@ -205,7 +180,7 @@ Template.home.helpers({
                     }
                 ];
 
-
+                Session.set("pieData", pieData);
 
                 //console.log(document.getElementById("genre-chart"));
                 //var ctx = document.getElementById("genre-chart").getContext("2d");
