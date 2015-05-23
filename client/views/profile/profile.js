@@ -27,7 +27,7 @@ Template.profile.helpers({
     getStats: function(){
         if(Meteor.user()) {
             var stats = Session.get("stats");
-            if(stats) {
+            if(stats === undefined) {
                 Meteor.call('getStats', Meteor.user().profile.username, function (err, result) {
                     Session.setPersistent("stats", result);
                 });

@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7ff32ed-1c97-47da-97aa-1a4a6c508c65" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/auth/auth.css" afterPath="$PROJECT_DIR$/client/stylesheets/auth/auth.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/friends/friends.css" afterPath="$PROJECT_DIR$/client/stylesheets/friends/friends.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/friends/friends.html" afterPath="$PROJECT_DIR$/client/views/friends/friends.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/friends/friends.js" afterPath="$PROJECT_DIR$/client/views/friends/friends.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/home/home.html" afterPath="$PROJECT_DIR$/client/views/home/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/home/home.js" afterPath="$PROJECT_DIR$/client/views/home/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/movies/movies.html" afterPath="$PROJECT_DIR$/client/views/movies/movies.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/movies/movies.js" afterPath="$PROJECT_DIR$/client/views/movies/movies.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.html" afterPath="$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.js" afterPath="$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/navbar/navbar.css" afterPath="$PROJECT_DIR$/client/stylesheets/navbar/navbar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/navbar/navbar.html" afterPath="$PROJECT_DIR$/client/views/navbar/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/navbar/navbar.js" afterPath="$PROJECT_DIR$/client/views/navbar/navbar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/profile/profile.html" afterPath="$PROJECT_DIR$/client/views/profile/profile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/profile/profile.js" afterPath="$PROJECT_DIR$/client/views/profile/profile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/recommendations/recommendations.html" afterPath="$PROJECT_DIR$/client/views/recommendations/recommendations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/recommendations/recommendations.js" afterPath="$PROJECT_DIR$/client/views/recommendations/recommendations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/shows/shows.html" afterPath="$PROJECT_DIR$/client/views/shows/shows.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/shows/shows.js" afterPath="$PROJECT_DIR$/client/views/shows/shows.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/showsInfo/showsInfo.html" afterPath="$PROJECT_DIR$/client/views/showsInfo/showsInfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/showsInfo/showsInfo.js" afterPath="$PROJECT_DIR$/client/views/showsInfo/showsInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/showsRecommendations/showsRecommendations.html" afterPath="$PROJECT_DIR$/client/views/showsRecommendations/showsRecommendations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/showsRecommendations/showsRecommendations.js" afterPath="$PROJECT_DIR$/client/views/showsRecommendations/showsRecommendations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/accounts-trakt/trakt_server.js" afterPath="$PROJECT_DIR$/packages/accounts-trakt/trakt_server.js" />
     </list>
     <ignored path="getMovie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,11 +36,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="moviesInfo.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="moviesInfo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24064171">
-              <caret line="9" column="100" selection-start-line="9" selection-start-column="100" selection-end-line="9" selection-end-column="100" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/views/profile/profile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6684492">
+              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/profile/profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.875">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -152,7 +149,6 @@
         <option value="$PROJECT_DIR$/client/views/movies/movies.html" />
         <option value="$PROJECT_DIR$/client/views/home/home.html" />
         <option value="$PROJECT_DIR$/client/views/navbar/navbar.js" />
-        <option value="$PROJECT_DIR$/client/views/profile/profile.js" />
         <option value="$PROJECT_DIR$/client/views/movies/movies.js" />
         <option value="$PROJECT_DIR$/client/views/shows/shows.html" />
         <option value="$PROJECT_DIR$/client/views/shows/shows.js" />
@@ -164,6 +160,7 @@
         <option value="$PROJECT_DIR$/client/views/home/home.js" />
         <option value="$PROJECT_DIR$/client/views/friends/friends.js" />
         <option value="$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.js" />
+        <option value="$PROJECT_DIR$/client/views/profile/profile.js" />
       </list>
     </option>
   </component>
@@ -268,6 +265,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="getMovie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="getMovie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profile" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -494,14 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/profile/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/recommendations/recommendations.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.625">
@@ -530,14 +541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10714286">
           <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/profile/profile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64285713">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -655,8 +658,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/MoviesInfo/moviesInfo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24064171">
-          <caret line="9" column="100" selection-start-line="9" selection-start-column="100" selection-end-line="9" selection-end-column="100" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/profile/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.875">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/profile/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6684492">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
           <folding />
         </state>
       </provider>
