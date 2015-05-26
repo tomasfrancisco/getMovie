@@ -134,7 +134,7 @@ Template.home.helpers({
                         break;
                     counter++;
                 }
-                top.push({name:'other', value: (1.0 - total/100 ) * 100})
+                top.push({name:'other', value: Math.round((1.0 - total/100 ) * 100)});
                 //console.log(top);
 
                 Session.setPersistent("myTop", top);
